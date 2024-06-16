@@ -87,13 +87,13 @@
 /* Add this to your global CSS file */
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #d4a5ff;
+    box-shadow: 0 0 5px #f9ff55;
   }
   50% {
-    box-shadow: 0 0 20px #d4a5ff;
+    box-shadow: 0 0 20px #f9ff55;
   }
   100% {
-    box-shadow: 0 0 5px #d4a5ff;
+    box-shadow: 0 0 5px #f9ff55;
   }
 }
 

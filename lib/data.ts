@@ -24,6 +24,7 @@ import {
   SiTwitter,
   SiGithub,
   SiLinkedin,
+  SiTelegram,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IconType } from "react-icons";
@@ -240,6 +241,11 @@ export const socials: Social[] = [
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/ayushagr91",
     icon: SiLinkedin,
+  },
+  {
+    name: "Telegram",
+    link: "https://t.me/AyushAgr91",
+    icon: SiTelegram,
   }
 ];
 

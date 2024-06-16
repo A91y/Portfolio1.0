@@ -174,10 +174,28 @@ export const projects: Project[] = [
     tags: ["Python", "OpenCV", "Pytorch", "YoloV5", "Deep Learning", "Streamlit"],
   },
   {
+    title: "ERC20 Indexer",
+    description: "Indexer for ERC20 tokens for wallet address.",
+    link: "https://github.com/A91y/erc20-indexer",
+    tags: ["JavaScript", "React.js", "Ethers.js", "ERC20 Tokens", "Chakra UI", "Alchemy SDK"],
+  },
+  {
     title: "AyDictionary",
     description: "A Python package for fetching word meanings, synonyms, antonyms, and translations.",
     link: "https://pypi.org/project/AyDictionary/",
     tags: ["Python", "CLI", "PyPI", "Web Scraping", "Beautiful Soup", "Object Oriented Programming"],
+  },
+  {
+    title: "USASalesTaxAPI",
+    description: "A REST API for fetching sales tax data for US states.",
+    link: "https://github.com/A91y/USASalesTaxAPI",
+    tags: ["Python", "REST API", "Flask", "Web Scraping", "Beautiful Soup", "Django Rest Framework", "Django", "Caching"],
+  },
+  {
+    title: "AyImageBot",
+    description: "A Telegram bot, to send free images.",
+    link: "https://github.com/AysBots/AyImageBot",
+    tags: ["Python", "Telegram Bot", "API", "Telegram Bot API"],
   },
 ];
 

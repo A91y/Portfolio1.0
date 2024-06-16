@@ -2,6 +2,7 @@ import { WorkExperience } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import DateRange from "./date-range";
+import { ExternalLink } from "lucide-react";
 
 interface WorkShowcaseProps {
   experience: WorkExperience;
@@ -28,7 +29,9 @@ export default function WorkShowcase({
           <DateRange date={experience.years} />
         </div>
         <p className="text-sm text-muted-foreground pb-2">
+          {experience.position}: &nbsp;
           {experience.description}
+        {!!experience.link ? <a target="_blank" className="ml-1" href={experience.link}>visit</a> : null}
         </p>
         {whetherlast ? <></> : <Separator />}
       </div>

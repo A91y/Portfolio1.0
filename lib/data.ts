@@ -164,57 +164,73 @@ export interface WorkExperience {
   position: string;
   description: string;
   years: string;
+  link?: string;
 }
 
 export const workExperiences: WorkExperience[] = [
   {
-    company: "Company 3",
-    logo: "/company-logo.png",
-    position: "Company 3 Position",
-    description: "Write briefly on your experience working at Company 3.",
-    years: "Apr, 2022 - Aug, 2023",
+    company: "Innogeeks",
+    logo: "/innogeeks.jpg",
+    position: "ML Coordinator",
+    description: "Led the ML division to increase membership and participation, conducted numerous data science and machine learning training sessions, and fostered peer-to-peer learning among members.",
+    years: "Dec, 2022 - Present",
   },
   {
-    company: "Company 2",
-    logo: "/company-logo.png",
-    position: "Company 2 Position",
-    description: "Write briefly on your experience working at Company 2.",
-    years: "Jan, 2020 - Mar, 2022",
+    company: "Freelance",
+    logo: "/skeleton.jpg",
+    position: "Python Developer",
+    description: "Engineered python based web scraper bypassing Cloudflare bot protection, while streamlining deployment with Docker and earning 5-star reviews.",
+    years: "May, 2023 - June, 2024",
+    link: "https://www.upwork.com/freelancers/~015e68d4915ac74f75?mp_source=share",
   },
   {
-    company: "Company 1",
-    logo: "/company-logo.png",
-    position: "Company 1 Position",
-    description: "Write briefly on your experience working at Company 1.",
-    years: "Aug, 2018 - Sep, 2018",
+    company: "FOSSCU",
+    logo: "/fosscu.png",
+    position: "Core Member",
+    description: "Contributing and Maintaining Open Source Projects under FOSSCU, a student-run community.",
+    years: "Nov, 2023 - Present",
   },
   {
-    company: "Uni Name",
-    logo: "/company-logo.png",
+    company: "Freelance",
+    logo: "/skeleton.jpg",
+    position: "Blockchain Developer",
+    description: "Worked on Liquidity Pool, DEX utilizing UniswapV2 on EVM based L2 blockchain.",
+    years: "May, 2024 - June, 2024",
+  },
+  {
+    company: "Superteam",
+    logo: "/superteam.jpg",
+    position: "Contributor",
+    description: "Contributed to OSS Projects under Superteam. Helping me develop my web3 based startups.",
+    years: "June, 2024- Present",
+  },
+  {
+    company: "KIET",
+    logo: "/kiet.png",
     position: "Student",
     description:
-      "Write briefly about your university experience (degree, subject, etc.)",
-    years: "Aug, 2015 - Jun, 2019",
+      "Pursuing Computer Science Engineering degree from KIET Group of Institutions, Ghaziabad.",
+    years: "Nov, 2022 - July, 2026",
   },
 ];
 
 export const aboutYou = {
-  name: "Your Name",
+  name: "Ayush Agrawal",
   description:
-    "👋 Hi, I'm Random Person. Developer. I'm passionate about.... This is a short description about yourself.... goes in the left sidebar of the landing page.",
-  yearsOfExperience: "x years",
-  location: "Your Place",
-  email: "email@example.com",
+    "👋 Hi, I'm Ayush. Backend & Blockchain Developer. I've massive experience in Full Stack development. Blockchains like Ethereum, Solana, TON. For a long time I've been a Python guy. But now list is just endless! ",
+  yearsOfExperience: "5 years",
+  location: "Delhi, India",
+  email: "ayush.agr254@gmail.com",
 };
 
-export const logoText = "@yourname";
+export const logoText = "@a91y";
 
 export const marketingHeadlines = {
-  mainHeadline: "This is the MAIN headline.",
-  subHeadline: "Bottom. Sub. Headline.",
+  mainHeadline: "Hi There 👋",
+  subHeadline: "Let's Code it! 🚀",
 };
 
 export const websiteMetadata = {
-  title: "Your Name | Designation",
-  description: "👋 Hey, Random Person here. Welcome to my portflio/blog.",
+  title: "Ayush Agrawal | Developer",
+  description: "👋 Hey, Ayush Agrawal here. Welcome to my portflio/blog.",
 };

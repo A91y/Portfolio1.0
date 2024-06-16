@@ -10,7 +10,7 @@ export default function Sidebar() {
       {/* Description */}
       <p className="text-sm text-muted-foreground tracking-tight">
         {aboutYou.description}
-        <a target="_blank" className="ml-1" href="https://github.com/abhinishere">My&nbsp;GitHub</a>
+        <a target="_blank" className="ml-1" href="https://github.com/A91y">My&nbsp;GitHub</a>
       </p>
     </div>
   );

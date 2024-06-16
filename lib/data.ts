@@ -142,35 +142,42 @@ export const projects: Project[] = [
     title: "MintGovernance",
     description: "A robust governance system in Solidity on the Ethereum blockchain using OpenZeppelin contracts.",
     link: "https://github.com/A91y/MintGovernance",
+    tags: ["Solidity", "Ethereum", "Blockchain", "OpenZeppelin"],
   },
   {
     title: "Ludic.fun (in progress)",
     description: "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
     link: "https://ludic.fun/",
+    tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],
   },
   {
     title: "Uniswap Liquidity Pools",
     description: "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contibution)",
+    tags: ["Solidity", "Ethereum", "UniswapV2", "JavaScript"],
   },
   {
     title: "Delaton (in progress)",
     description: "A blogging platform on the TON Blockchain featuring a reward system that drove a significant increase in user activity and content creation, employing TON, Tact, React.js, Django, and TMA.js technologies.",
     link: "https://github.com/A91y/Delaton",
+    tags: ["TON Blockchain", "Tact", "React.js", "Django", "TMA.js"],
   },
   {
     title: "ResQConnect",
     description: "Robust API build using Django and Django Rest Framework for connecting rescue agencies and help seekers.",
     link: "https://github.com/TeamDRex/ResQConnect",
+    tags: ["Django", "Django Rest Framework", "Python", "REST API"],
   },
   {
     title: "Vision Wave",
     description: "An award winning drowsiness detection system using OpenCV, Python, Pytorch, YoloV5, Streamlit and Deep Learning.",
     link: "https://github.com/A91y/VisionWave-BinaryBharat",
+    tags: ["Python", "OpenCV", "Pytorch", "YoloV5", "Deep Learning", "Streamlit"],
   },
   {
     title: "AyDictionary",
     description: "A Python package for fetching word meanings, synonyms, antonyms, and translations.",
     link: "https://pypi.org/project/AyDictionary/",
+    tags: ["Python", "CLI", "PyPI", "Web Scraping", "Beautiful Soup", "Object Oriented Programming"],
   },
 ];
 

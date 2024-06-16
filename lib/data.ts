@@ -9,22 +9,34 @@ import {
   SiMongodb,
   SiHtml5,
   SiCss3,
-  SiAmazonaws,
-  SiSupabase,
   SiFirebase,
   SiRedux,
   SiGit,
   SiDocker,
   SiBootstrap,
-  SiMui,
-  SiPrisma,
-  SiFlutter,
-  SiHeroku,
   SiTailwindcss,
+  SiSolidity,
+  SiRust,
+  SiDjango,
+  SiFlask,
+  SiEthereum,
+  SiApachecassandra,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 export const skills = [
+  {
+    icon: SiEthereum,
+    text: "Ethereum"
+  },
+  {
+    icon: SiSolidity,
+    text: "Solidity"
+  },
+  {
+    icon: SiRust,
+    text: "Rust"
+  },
   {
     icon: SiTypescript,
     text: "TypeScript",
@@ -50,10 +62,6 @@ export const skills = [
     text: "Redux",
   },
   {
-    icon: SiFlutter,
-    text: "Flutter",
-  },
-  {
     icon: SiHtml5,
     text: "HTML5",
   },
@@ -74,30 +82,6 @@ export const skills = [
     text: "Python",
   },
   {
-    icon: BiLogoPostgresql,
-    text: "PostgreSQL",
-  },
-  {
-    icon: SiMongodb,
-    text: "MongoDB",
-  },
-  {
-    icon: SiAmazonaws,
-    text: "AWS",
-  },
-  {
-    icon: SiHeroku,
-    text: "Heroku",
-  },
-  {
-    icon: SiSupabase,
-    text: "Supabase",
-  },
-  {
-    icon: SiFirebase,
-    text: "Firebase",
-  },
-  {
     icon: SiGit,
     text: "Git",
   },
@@ -106,16 +90,32 @@ export const skills = [
     text: "Docker",
   },
   {
-    icon: SiPrisma,
-    text: "Prisma",
-  },
-  {
     icon: SiBootstrap,
     text: "Bootstrap",
   },
   {
-    icon: SiMui,
-    text: "MUI",
+    icon: SiDjango,
+    text: "Django"
+  },
+  {
+    icon: SiFlask,
+    text: "Flask"
+  },
+  {
+    icon: SiApachecassandra,
+    text: "Apache Cassandra"
+  },
+  {
+    icon: BiLogoPostgresql,
+    text: "PostgreSQL",
+  },
+  {
+    icon: SiMongodb,
+    text: "MongoDB",
+  },
+  {
+    icon: SiFirebase,
+    text: "Firebase",
   },
 ];
 

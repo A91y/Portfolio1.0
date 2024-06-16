@@ -186,6 +186,12 @@ export const projects: Project[] = [
     tags: ["Python", "CLI", "PyPI", "Web Scraping", "Beautiful Soup", "Object Oriented Programming"],
   },
   {
+    title: "SuperchatJs",
+    description: "A chat application using React.js and Firebase Firestore for real-time messaging.",
+    link: "https://github.com/A91y/superchatjs",
+    tags: ["Javascript", "React.js", "Netlify", "Firebase", "Firestore"],
+  },
+  {
     title: "USASalesTaxAPI",
     description: "A REST API for fetching sales tax data for US states.",
     link: "https://github.com/A91y/USASalesTaxAPI",

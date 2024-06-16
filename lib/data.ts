@@ -324,7 +324,7 @@ export const logoText = "@a91y";
 
 export const marketingHeadlines = {
   mainHeadline: "Hi There 👋",
-  subHeadline: "Let's Code it! 🚀",
+  subHeadline: "Eat. Sleep. Code. Repeat.",
 };
 
 export const websiteMetadata = {

@@ -21,21 +21,26 @@ import {
   SiFlask,
   SiEthereum,
   SiApachecassandra,
+  SiTwitter,
+  SiGithub,
+  SiLinkedin,
+  SiGmail,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { IconType } from "react-icons";
 
 export const skills = [
   {
     icon: SiEthereum,
-    text: "Ethereum"
+    text: "Ethereum",
   },
   {
     icon: SiSolidity,
-    text: "Solidity"
+    text: "Solidity",
   },
   {
     icon: SiRust,
-    text: "Rust"
+    text: "Rust",
   },
   {
     icon: SiTypescript,
@@ -95,15 +100,15 @@ export const skills = [
   },
   {
     icon: SiDjango,
-    text: "Django"
+    text: "Django",
   },
   {
     icon: SiFlask,
-    text: "Flask"
+    text: "Flask",
   },
   {
     icon: SiApachecassandra,
-    text: "Apache Cassandra"
+    text: "Apache Cassandra",
   },
   {
     icon: BiLogoPostgresql,
@@ -122,40 +127,73 @@ export const skills = [
 export interface Project {
   title: string;
   description: string;
-  link: string;
+  link?: string;
 }
 
 export const projects: Project[] = [
   {
-    title: "Project 1",
-    description: "Give a short description about project 1",
-    link: "https://github.com/",
+    title: "Arachnid",
+    description: "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",
+    link: "https://github.com/A91y/Arachnid",
   },
   {
-    title: "Project 2",
-    description: "Give a short description about project 2",
-    link: "https://github.com/",
+    title: "MintGovernance",
+    description: "A robust governance system in Solidity on the Ethereum blockchain using OpenZeppelin contracts.",
+    link: "https://github.com/A91y/MintGovernance",
   },
   {
-    title: "Project 3",
-    description: "Give a short description about project 3",
-    link: "https://github.com/",
+    title: "Ludic.fun (in progress)",
+    description: "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
+    link: "https://ludic.fun/",
   },
   {
-    title: "Project 4",
-    description: "Give a short description about project 4",
-    link: "https://github.com/",
+    title: "Uniswap Liquidity Pools",
+    description: "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contibution)",
   },
   {
-    title: "Project 5",
-    description: "Give a short description about project 5",
-    link: "https://github.com/",
+    title: "Delaton (in progress)",
+    description: "A blogging platform on the TON Blockchain featuring a reward system that drove a significant increase in user activity and content creation, employing TON, Tact, React.js, Django, and TMA.js technologies.",
+    link: "https://github.com/A91y/Delaton",
   },
   {
-    title: "Project 6",
-    description: "Give a short description about project 6",
-    link: "https://github.com/",
+    title: "ResQConnect",
+    description: "Robust API build using Django and Django Rest Framework for connecting rescue agencies and help seekers.",
+    link: "https://github.com/TeamDRex/ResQConnect",
   },
+  {
+    title: "Vision Wave",
+    description: "An award winning drowsiness detection system using OpenCV, Python, Pytorch, YoloV5, Streamlit and Deep Learning.",
+    link: "https://github.com/A91y/VisionWave-BinaryBharat",
+  },
+  {
+    title: "AyDictionary",
+    description: "A Python package for fetching word meanings, synonyms, antonyms, and translations.",
+    link: "https://pypi.org/project/AyDictionary/",
+  },
+];
+
+export interface Social {
+  name: string;
+  link: string;
+  icon: IconType;
+}
+
+export const socials: Social[] = [
+  {
+    name: "Twitter",
+    link: "https://twitter.com/ayushagr91",
+    icon: SiTwitter,
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/A91y",
+    icon: SiGithub,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/ayushagr91",
+    icon: SiLinkedin,
+  }
 ];
 
 export interface WorkExperience {
@@ -172,14 +210,16 @@ export const workExperiences: WorkExperience[] = [
     company: "Innogeeks",
     logo: "/innogeeks.jpg",
     position: "ML Coordinator",
-    description: "Led the ML division to increase membership and participation, conducted numerous data science and machine learning training sessions, and fostered peer-to-peer learning among members.",
+    description:
+      "Led the ML division to increase membership and participation, conducted numerous data science and machine learning training sessions, and fostered peer-to-peer learning among members.",
     years: "Dec, 2022 - Present",
   },
   {
     company: "Freelance",
     logo: "/skeleton.jpg",
     position: "Python Developer",
-    description: "Engineered python based web scraper bypassing Cloudflare bot protection, while streamlining deployment with Docker and earning 5-star reviews.",
+    description:
+      "Engineered python based web scraper bypassing Cloudflare bot protection, while streamlining deployment with Docker and earning 5-star reviews.",
     years: "May, 2023 - June, 2024",
     link: "https://www.upwork.com/freelancers/~015e68d4915ac74f75?mp_source=share",
   },
@@ -187,21 +227,24 @@ export const workExperiences: WorkExperience[] = [
     company: "FOSSCU",
     logo: "/fosscu.png",
     position: "Core Member",
-    description: "Contributing and Maintaining Open Source Projects under FOSSCU, a student-run community.",
+    description:
+      "Contributing and Maintaining Open Source Projects under FOSSCU, a student-run community.",
     years: "Nov, 2023 - Present",
   },
   {
     company: "Freelance",
     logo: "/skeleton.jpg",
     position: "Blockchain Developer",
-    description: "Worked on Liquidity Pool, DEX utilizing UniswapV2 on EVM based L2 blockchain.",
+    description:
+      "Worked on Liquidity Pool, DEX utilizing UniswapV2 on EVM based L2 blockchain.",
     years: "May, 2024 - June, 2024",
   },
   {
     company: "Superteam",
     logo: "/superteam.jpg",
     position: "Contributor",
-    description: "Contributed to OSS Projects under Superteam. Helping me develop my web3 based startups.",
+    description:
+      "Contributed to OSS Projects under Superteam. Helping me develop my web3 based startups.",
     years: "June, 2024- Present",
   },
   {
@@ -221,6 +264,7 @@ export const aboutYou = {
   yearsOfExperience: "5 years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
+  twitter: "ayush_agr254",
 };
 
 export const logoText = "@a91y";

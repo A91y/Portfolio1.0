@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import ProjectShowcase from "@/components/project-showcase";
 import Sidebar from "@/components/sidebar";
 import SkillOutline from "@/components/skill-outline";
+import SocialOutline from "@/components/social-outline";
 import { Separator } from "@/components/ui/separator";
 import WorkShowcase from "@/components/work-showcase";
 
@@ -15,6 +16,7 @@ import {
   projects,
   skills,
   workExperiences,
+  socials
 } from "@/lib/data";
 
 export default function Home() {
@@ -99,6 +101,21 @@ export default function Home() {
                 Best way to reach me is through:{" "}
                 <a href={`mailto:${aboutYou.email}`}>{aboutYou.email}</a>
               </p>
+              <Separator />
+              <div className="p-4 space-y-4">
+                <div className="flex justify-between">
+                  <div className="space-x-3">
+                    {socials.map((social) => (
+                      <SocialOutline
+                        key={social.name}
+                        Icon={social.icon}
+                        name={social.name}
+                        link={social.link}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>

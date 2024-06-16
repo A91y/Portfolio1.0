@@ -83,3 +83,20 @@
     @apply underline underline-offset-4 hover:text-primary;
   }
 }
+
+/* Add this to your global CSS file */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #d4a5ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #d4a5ff;
+  }
+  100% {
+    box-shadow: 0 0 5px #d4a5ff;
+  }
+}
+
+.glow-border {
+  animation: glow 1s infinite;
+}

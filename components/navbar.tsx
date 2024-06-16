@@ -2,7 +2,6 @@
 
 import { Button } from "./ui/button";
 import Logo from "./logo";
-import { ModeToggle } from "./mode-toggle";
 import { Home, Briefcase, Mail, Presentation } from "lucide-react";
 import { useRouter } from "next/navigation";
 
@@ -11,6 +10,12 @@ export default function Navbar() {
 
   function navigateTo(path: string) {
     router.push(path);
+
+    // Emit the hashchange event if the path contains a hash
+    if (path.includes("#")) {
+      window.location.hash = path.split("#")[1];
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    }
   }
 
   return (

@@ -15,6 +15,8 @@ export default function ActionButton({ actionText }: ActionButtonProps) {
   function navigateTo(path: string) {
     router.push(path);
   }
+  // If screen size is small don't show this button
+  if (typeof window !== "undefined" && window.innerWidth < 640) return null;
   return (
     <Button onClick={() => navigateTo("/#contact")}>
       <CheckCircle className="mr-2 h-4 w-4" />

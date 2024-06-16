@@ -24,10 +24,11 @@ import {
   SiTwitter,
   SiGithub,
   SiLinkedin,
-  SiGmail,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IconType } from "react-icons";
+import { text } from "stream/consumers";
+import { Anchor } from "lucide-react";
 
 export const skills = [
   {
@@ -41,6 +42,10 @@ export const skills = [
   {
     icon: SiRust,
     text: "Rust",
+  },
+  {
+    icon: Anchor,
+    text: "Anchor"
   },
   {
     icon: SiTypescript,
@@ -121,6 +126,15 @@ export const skills = [
   {
     icon: SiFirebase,
     text: "Firebase",
+  },
+  {
+    text: "Tact"
+  },
+  {
+    text: "Solana"
+  },
+  {
+    text: "TON"
   },
 ];
 

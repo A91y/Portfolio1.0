@@ -1,7 +1,8 @@
+import { LucideIcon } from "lucide-react";
 import { IconType } from "react-icons";
 
 interface SkillOutlineProps {
-  Icon?: IconType;
+  Icon?: IconType | LucideIcon;
   text: string;
 }
 

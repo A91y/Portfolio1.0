@@ -1,11 +1,12 @@
 export default function Footer() {
   return (
     <p className="mb-8 text-sm text-muted-foreground text-center">
-      Built by <a href="https://abhinmahipal.com">Abhin</a> • With TypeScript,
+      Built with TypeScript,
       Next.js, Tailwind • Code on{" "}
-      <a href="https://github.com/abhinishere/portfolio-nextjs-tailwind">
+      <a href="https://github.com/A91y/Portfolio1.0">
         GitHub
       </a>{" "}
+      • <a href="https://github.com/A91y/Portfolio1.0/LICENSE">MIT LICENSE</a>{" "}
       • Deployed on Vercel.
     </p>
   );

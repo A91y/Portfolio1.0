@@ -54,7 +54,7 @@ export default function Navbar() {
           <Mail className=" h-4 w-4" />
           <span className="hidden md:block ml-2">Contact</span>
         </Button>
-        <ModeToggle />
+        {/* <ModeToggle /> */}
       </div>
     </div>
   );

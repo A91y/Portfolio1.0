@@ -270,7 +270,7 @@ export const aboutYou = {
   name: "Ayush Agrawal",
   description:
     "👋 Hi, I'm Ayush. Backend & Blockchain Developer. I've massive experience in Full Stack development. Blockchains like Ethereum, Solana, TON. For a long time I've been a Python guy. But now list is just endless! ",
-  yearsOfExperience: "5 years",
+  yearsOfExperience: "5+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
   twitter: "ayush_agr254",

@@ -27,7 +27,7 @@ export default function Projects() {
   return (
     <section id="projects" key="projects">
       <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
-      <div id="projects-section" className="mt-5 rounded-xl border bg-card text-card-foreground shadow">
+      <div id="projects-section" className="mt-5 rounded-xl bg-card text-card-foreground shadow">
         <div className="space-y-5 mt-5">
           {projects.map((project: Project) => (
             <ProjectShowcase key={project.title} project={project} />

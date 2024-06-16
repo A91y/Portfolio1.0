@@ -28,6 +28,16 @@ export default function ProjectShowcase({ project }: ProjectShowcaseProps) {
           {(project.link) ? <ExternalLink height={15} width={15} /> : <Lock height={15} width={15} />}
         </div>
         <p className="text-sm text-muted-foreground">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.tags?.map((tag) => (
+            <span
+              key={tag}
+              className="px-2 py-1 text-xs bg-opacity-10 rounded-full border border-opacity-20"
+            >
+              {tag}
+            </span>
+          ))}
+          </div>
       </div>
     </div>
   );

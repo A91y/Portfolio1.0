@@ -128,6 +128,7 @@ export interface Project {
   title: string;
   description: string;
   link?: string;
+  tags?: string[];
 }
 
 export const projects: Project[] = [
@@ -135,6 +136,7 @@ export const projects: Project[] = [
     title: "Arachnid",
     description: "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",
     link: "https://github.com/A91y/Arachnid",
+    tags: ["Python", "NLP", "Async Programming", "Apache Cassandra"],
   },
   {
     title: "MintGovernance",

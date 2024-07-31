@@ -166,7 +166,7 @@ export const projects: Project[] = [
     tags: ["Solidity", "Ethereum", "Blockchain", "OpenZeppelin"],
   },
   {
-    title: "Ludic.fun (on hold)",
+    title: "Ludic.fun (in progress)",
     description: "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
     link: "https://ludic.fun/",
     tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],

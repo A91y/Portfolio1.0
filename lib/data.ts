@@ -293,12 +293,20 @@ export const workExperiences: WorkExperience[] = [
     years: "May, 2024 - June, 2024",
   },
   {
+    company: "TimeOnSolana",
+    logo: "/timeonsolana.jpg",
+    position: "Backend Developer",
+    description:
+      "Fixed authentication and authorization issues with twitter and fixed other bugs in platform.",
+    years: "June, 2024 - July, 2024",
+  },
+  {
     company: "Superteam",
     logo: "/superteam.jpg",
     position: "Contributor",
     description:
       "Contributed to OSS Projects under Superteam. Helping me develop my web3 based startups.",
-    years: "June, 2024- Present",
+    years: "June, 2024 - Present",
   },
   {
     company: "KIET",

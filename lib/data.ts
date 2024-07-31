@@ -148,6 +148,12 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Octasol (in progress)",
+    description: "An Opensource trustless bounty platform on Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing escrow, developer profiles, and github authentication.",
+    link: "https://github.com/octasol/octasol",
+    tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript", "Blockchain", "Escrow", "Github"],
+  },
+  {
     title: "Arachnid",
     description: "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",
     link: "https://github.com/A91y/Arachnid",
@@ -160,7 +166,7 @@ export const projects: Project[] = [
     tags: ["Solidity", "Ethereum", "Blockchain", "OpenZeppelin"],
   },
   {
-    title: "Ludic.fun (in progress)",
+    title: "Ludic.fun (on hold)",
     description: "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
     link: "https://ludic.fun/",
     tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],
@@ -169,12 +175,6 @@ export const projects: Project[] = [
     title: "Uniswap Liquidity Pools",
     description: "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contibution)",
     tags: ["Solidity", "Ethereum", "UniswapV2", "JavaScript"],
-  },
-  {
-    title: "Delaton (in progress)",
-    description: "A blogging platform on the TON Blockchain featuring a reward system that drove a significant increase in user activity and content creation, employing TON, Tact, React.js, Django, and TMA.js technologies.",
-    link: "https://github.com/A91y/Delaton",
-    tags: ["TON Blockchain", "Tact", "React.js", "Django", "TMA.js"],
   },
   {
     title: "ResQConnect",

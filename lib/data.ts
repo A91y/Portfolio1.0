@@ -390,6 +390,7 @@ export const websiteMetadata = {
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",
+  twitterSite: "@ayushagr91",
   keywords: [
     "Ayush Agrawal",
     "Developer",

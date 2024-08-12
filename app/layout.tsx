@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: websiteMetadata.title,
   description: websiteMetadata.description,
+  // <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  // <meta content="width=device-width, initial-scale=1" name="viewport" />
+
   openGraph: {
     title: websiteMetadata.title,
     description: websiteMetadata.description,
@@ -26,6 +29,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
+    site: websiteMetadata.twitterSite,
     card: "summary_large_image",
     title: websiteMetadata.title,
     description: websiteMetadata.description,

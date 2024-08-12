@@ -386,7 +386,7 @@ export const marketingHeadlines = {
 
 export const websiteMetadata = {
   title: "Ayush Agrawal | Developer",
-  description: "👋 Hey, Ayush Agrawal here. Welcome to my portflio/blog.",
+  description: "👋 Hey, Ayush Agrawal here. Welcome to my portfolio.",
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",

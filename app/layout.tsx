@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     description: websiteMetadata.description,
     url: websiteMetadata.url,
     type: "website",
+    siteName: websiteMetadata.title,
     images: [
       {
         url: websiteMetadata.image_url,
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: websiteMetadata.url,
   },
+  keywords: websiteMetadata.keywords,
 };
 
 export default function RootLayout({

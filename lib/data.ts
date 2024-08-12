@@ -390,4 +390,18 @@ export const websiteMetadata = {
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",
+  keywords: [
+    "Ayush Agrawal",
+    "Developer",
+    "Blockchain",
+    "Python",
+    "Solana",
+    "Superteam",
+    "FOSSCU",
+    "Innogeeks",
+    "Ayush TON",
+    "A91y",
+    "Ayush Agr",
+    "KIET",
+  ],
 };

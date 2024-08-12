@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: websiteMetadata.title,
     description: websiteMetadata.description,
     url: websiteMetadata.url,
+    type: "website",
     images: [
       {
         url: websiteMetadata.image_url,

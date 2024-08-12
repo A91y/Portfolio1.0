@@ -30,6 +30,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { IconType } from "react-icons";
 import { text } from "stream/consumers";
 import { Anchor } from "lucide-react";
+import { log } from "console";
 
 export const skills = [
   {
@@ -46,7 +47,7 @@ export const skills = [
   },
   {
     icon: Anchor,
-    text: "Anchor"
+    text: "Anchor",
   },
   {
     icon: SiTypescript,
@@ -129,13 +130,13 @@ export const skills = [
     text: "Firebase",
   },
   {
-    text: "Tact"
+    text: "Tact",
   },
   {
-    text: "Solana"
+    text: "Solana",
   },
   {
-    text: "TON"
+    text: "TON",
   },
 ];
 
@@ -149,60 +150,99 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Octasol (in progress)",
-    description: "An Opensource trustless bounty platform on Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing escrow, developer profiles, and github authentication.",
+    description:
+      "An Opensource trustless bounty platform on Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing escrow, developer profiles, and github authentication.",
     link: "https://github.com/octasol/octasol",
-    tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript", "Blockchain", "Escrow", "Github"],
+    tags: [
+      "Solana",
+      "Rust",
+      "Anchor",
+      "Next.js",
+      "TypeScript",
+      "Blockchain",
+      "Escrow",
+      "Github",
+    ],
   },
   {
     title: "Arachnid",
-    description: "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",
+    description:
+      "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",
     link: "https://github.com/A91y/Arachnid",
     tags: ["Python", "NLP", "Async Programming", "Apache Cassandra"],
   },
   {
     title: "MintGovernance",
-    description: "A robust governance system in Solidity on the Ethereum blockchain using OpenZeppelin contracts.",
+    description:
+      "A robust governance system in Solidity on the Ethereum blockchain using OpenZeppelin contracts.",
     link: "https://github.com/A91y/MintGovernance",
     tags: ["Solidity", "Ethereum", "Blockchain", "OpenZeppelin"],
   },
   {
     title: "Ludic.fun (in progress)",
-    description: "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
+    description:
+      "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
     link: "https://ludic.fun/",
     tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],
   },
   {
     title: "Uniswap Liquidity Pools",
-    description: "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contibution)",
+    description:
+      "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contibution)",
     tags: ["Solidity", "Ethereum", "UniswapV2", "JavaScript"],
   },
   {
     title: "ResQConnect",
-    description: "Robust API build using Django and Django Rest Framework for connecting rescue agencies and help seekers.",
+    description:
+      "Robust API build using Django and Django Rest Framework for connecting rescue agencies and help seekers.",
     link: "https://github.com/TeamDRex/ResQConnect",
     tags: ["Django", "Django Rest Framework", "Python", "REST API"],
   },
   {
     title: "Vision Wave",
-    description: "An award winning drowsiness detection system using OpenCV, Python, Pytorch, YoloV5, Streamlit and Deep Learning.",
+    description:
+      "An award winning drowsiness detection system using OpenCV, Python, Pytorch, YoloV5, Streamlit and Deep Learning.",
     link: "https://github.com/A91y/VisionWave-BinaryBharat",
-    tags: ["Python", "OpenCV", "Pytorch", "YoloV5", "Deep Learning", "Streamlit"],
+    tags: [
+      "Python",
+      "OpenCV",
+      "Pytorch",
+      "YoloV5",
+      "Deep Learning",
+      "Streamlit",
+    ],
   },
   {
     title: "ERC20 Indexer",
     description: "Indexer for ERC20 tokens for wallet address.",
     link: "https://github.com/A91y/erc20-indexer",
-    tags: ["JavaScript", "React.js", "Ethers.js", "ERC20 Tokens", "Chakra UI", "Alchemy SDK"],
+    tags: [
+      "JavaScript",
+      "React.js",
+      "Ethers.js",
+      "ERC20 Tokens",
+      "Chakra UI",
+      "Alchemy SDK",
+    ],
   },
   {
     title: "AyDictionary",
-    description: "A Python package for fetching word meanings, synonyms, antonyms, and translations.",
+    description:
+      "A Python package for fetching word meanings, synonyms, antonyms, and translations.",
     link: "https://pypi.org/project/AyDictionary/",
-    tags: ["Python", "CLI", "PyPI", "Web Scraping", "Beautiful Soup", "Object Oriented Programming"],
+    tags: [
+      "Python",
+      "CLI",
+      "PyPI",
+      "Web Scraping",
+      "Beautiful Soup",
+      "Object Oriented Programming",
+    ],
   },
   {
     title: "SuperchatJs",
-    description: "A chat application using React.js and Firebase Firestore for real-time messaging.",
+    description:
+      "A chat application using React.js and Firebase Firestore for real-time messaging.",
     link: "https://github.com/A91y/superchatjs",
     tags: ["Javascript", "React.js", "Netlify", "Firebase", "Firestore"],
   },
@@ -210,7 +250,16 @@ export const projects: Project[] = [
     title: "USASalesTaxAPI",
     description: "A REST API for fetching sales tax data for US states.",
     link: "https://github.com/A91y/USASalesTaxAPI",
-    tags: ["Python", "REST API", "Flask", "Web Scraping", "Beautiful Soup", "Django Rest Framework", "Django", "Caching"],
+    tags: [
+      "Python",
+      "REST API",
+      "Flask",
+      "Web Scraping",
+      "Beautiful Soup",
+      "Django Rest Framework",
+      "Django",
+      "Caching",
+    ],
   },
   {
     title: "AyImageBot",
@@ -246,7 +295,7 @@ export const socials: Social[] = [
     name: "Telegram",
     link: "https://t.me/AyushAgr91",
     icon: SiTelegram,
-  }
+  },
 ];
 
 export interface WorkExperience {
@@ -339,5 +388,6 @@ export const websiteMetadata = {
   title: "Ayush Agrawal | Developer",
   description: "👋 Hey, Ayush Agrawal here. Welcome to my portflio/blog.",
   url: "https://ayushagr.me",
-  image_url: "https://ayushagr.me/og_image_ayushagr.png" 
+  image_url: "https://ayushagr.me/og_image_ayushagr.png",
+  logo_url: "https://ayushagr.me/logo.jpg",
 };

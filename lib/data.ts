@@ -172,6 +172,20 @@ export const projects: Project[] = [
     tags: ["Python", "NLP", "Async Programming", "Apache Cassandra"],
   },
   {
+    title: "ERC20Launcher",
+    description:
+      "A comprehensive tool for deploying ERC-20 tokens on any EVM-based blockchain",
+    link: "https://erc20launcher.ayushagr.me/",
+    tags: [
+      "Solidity",
+      "Ethereum",
+      "Blockchain",
+      "TypeScript",
+      "Next.js",
+      "Hardhat",
+    ],
+  },
+  {
     title: "MintGovernance",
     description:
       "A robust governance system in Solidity on the Ethereum blockchain using OpenZeppelin contracts.",

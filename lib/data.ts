@@ -174,7 +174,7 @@ export const projects: Project[] = [
   {
     title: "ERC20Launcher",
     description:
-      "A comprehensive tool for deploying ERC-20 tokens on any EVM-based blockchain",
+      "A comprehensive tool for deploying ERC-20 tokens on any EVM-based blockchain.",
     link: "https://erc20launcher.ayushagr.me/",
     tags: [
       "Solidity",

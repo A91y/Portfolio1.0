@@ -165,6 +165,21 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Blinks By Ayush",
+    description: "Directory of Multiple Solana Blinks",
+    link: "https://blinks.ayushagr.me/",
+    tags: [
+      "Solana",
+      "Rust",
+      "Anchor",
+      "Next.js",
+      "TypeScript",
+      "Blockchain",
+      "NFT",
+      "Smart Contracts",
+    ],
+  },
+  {
     title: "Arachnid",
     description:
       "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",

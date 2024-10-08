@@ -366,10 +366,18 @@ export const workExperiences: WorkExperience[] = [
   {
     company: "Superteam",
     logo: "/superteam.jpg",
+    position: "Member",
+    description:
+      "Building web3 based startups, and contributing to Solana Ecosystem.",
+    years: "Oct, 2024 - Present",
+  },
+  {
+    company: "Superteam",
+    logo: "/superteam.jpg",
     position: "Contributor",
     description:
       "Contributed to OSS Projects under Superteam. Helping me develop my web3 based startups.",
-    years: "June, 2024 - Present",
+    years: "June, 2024 - Oct, 2024",
   },
   {
     company: "KIET",

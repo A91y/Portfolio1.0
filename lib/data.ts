@@ -165,6 +165,12 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "CollectiveX (in progress)",
+    description: "Multisig & DAO on SOON SVM",
+    link: "https://github.com/CollectiveX-Org",
+    tags: ["Solana", "Rust", "Anchor", "TypeScript", "MultiSig", "DAO"],
+  },
+  {
     title: "Blinks By Ayush",
     description: "Directory of Multiple Solana Blinks",
     link: "https://blinks.ayushagr.me/",

@@ -37,34 +37,34 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --muted: 217 33% 11%;
+    --muted-foreground: 215 16% 60%;
 
-    --accent: 216 34% 17%;
+    --accent: 217 33% 13%;
     --accent-foreground: 210 40% 98%;
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
+    --popover: 222 47% 5%;
+    --popover-foreground: 210 40% 98%;
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: 217 33% 15%;
+    --input: 217 33% 15%;
 
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
+    --card: 222 47% 5%;
+    --card-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
+    --primary-foreground: 222 47% 5%;
 
-    --secondary: 222.2 47.4% 11.2%;
+    --secondary: 217 33% 13%;
     --secondary-foreground: 210 40% 98%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 63% 45%;
     --destructive-foreground: 210 40% 98%;
 
-    --ring: 216 34% 17%;
+    --ring: 217 33% 20%;
 
     --radius: 0.5rem;
   }
@@ -77,26 +77,93 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
   }
 
   a {
-    @apply underline underline-offset-4 hover:text-primary;
+    @apply underline underline-offset-4 hover:text-primary transition-colors duration-200;
+  }
+  
+  /* Improved scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
   }
 }
 
-/* Add this to your global CSS file */
+/* Subtle glow animation for hash navigation */
 @keyframes glow {
-  0% {
-    box-shadow: 0 0 5px #f9ff55;
+  0%, 100% {
+    box-shadow: 0 0 0 0 hsl(var(--foreground) / 0);
+    border-color: hsl(var(--border));
   }
   50% {
-    box-shadow: 0 0 20px #f9ff55;
-  }
-  100% {
-    box-shadow: 0 0 5px #f9ff55;
+    box-shadow: 0 0 0 2px hsl(var(--foreground) / 0.1);
+    border-color: hsl(var(--foreground) / 0.3);
   }
 }
 
 .glow-border {
-  animation: glow 1s infinite;
+  animation: glow 1.5s ease-in-out 2;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply subtle fade-in to sections */
+section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Subtle background texture */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, hsl(210 40% 98% / 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, hsl(210 40% 98% / 0.015) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Professional card styling */
+.modern-card {
+  background: hsl(var(--card));
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  transition: all 0.3s ease;
+}
+
+/* Subtle hover lift */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -8px hsl(0 0% 0% / 0.3);
 }

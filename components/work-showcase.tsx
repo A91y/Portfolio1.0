@@ -14,26 +14,42 @@ export default function WorkShowcase({
   whetherlast,
 }: WorkShowcaseProps) {
   return (
-    <div className="">
-      <div className="space-y-2 ">
-        <div className="flex justify-between">
-          <div className="flex items-center md:space-x-4 space-x-2 mr-2">
-            <Avatar>
-              <AvatarImage src={experience.logo} />
-              <AvatarFallback>AB</AvatarFallback>
+    <div className="group">
+      <div className="space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+          <div className="flex items-center gap-3 flex-1 min-w-0">
+            <Avatar className="h-12 w-12 border-2 border-border">
+              <AvatarImage src={experience.logo} alt={experience.company} />
+              <AvatarFallback className="text-xs">{experience.company.slice(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
-            <h3 className="font-semibold leading-none tracking-tight">
-              {experience.company}
-            </h3>
+            <div className="min-w-0 flex-1">
+              <h3 className="font-semibold text-base leading-tight tracking-tight group-hover:text-primary transition-colors">
+                {experience.company}
+              </h3>
+              <p className="text-sm font-medium text-muted-foreground mt-0.5">
+                {experience.position}
+              </p>
+            </div>
           </div>
-          <DateRange date={experience.years} />
+          <div className="flex-shrink-0">
+            <DateRange date={experience.years} />
+          </div>
         </div>
-        <p className="text-sm text-muted-foreground pb-2">
-          {experience.position}: &nbsp;
+        
+        <p className="text-sm text-muted-foreground leading-relaxed">
           {experience.description}
-        {!!experience.link ? <a target="_blank" className="ml-1" href={experience.link}>visit</a> : null}
+          {!!experience.link && (
+            <a 
+              target="_blank" 
+              href={experience.link}
+              className="inline-flex items-center gap-1 ml-2 text-primary hover:underline font-medium"
+            >
+              Visit <ExternalLink className="h-3 w-3" />
+            </a>
+          )}
         </p>
-        {whetherlast ? <></> : <Separator />}
+        
+        {!whetherlast && <Separator className="mt-4" />}
       </div>
     </div>
   );

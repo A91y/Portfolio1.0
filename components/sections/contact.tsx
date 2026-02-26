@@ -26,20 +26,29 @@ if (typeof window !== "undefined") {
 
 export default function Contact() {
   return (
-    <section id="contact" key="contact">
-      <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
+    <section id="contact" key="contact" className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-4xl font-bold tracking-tight">Get In Touch</h2>
+        <p className="text-muted-foreground">Let's connect and build something amazing</p>
+      </div>
       <div
         id="contact-section"
-        className="mt-5 rounded-xl border bg-card text-card-foreground shadow"
+        className="modern-card shadow-sm"
       >
-        <p className="p-6 text-sm text-muted-foreground">
-          Best way to reach me is through:{" "}
-          <a href={`mailto:${aboutYou.email}`}>{aboutYou.email}</a>
-        </p>
-        <Separator />
-        <div className="p-4 space-y-4">
-          <div className="flex justify-between">
-            <div className="space-x-3">
+        <div className="p-6 space-y-4">
+          <div className="space-y-2">
+            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Email</h3>
+            <a 
+              href={`mailto:${aboutYou.email}`}
+              className="text-base font-medium hover:underline underline-offset-4 inline-block transition-all"
+            >
+              {aboutYou.email}
+            </a>
+          </div>
+          <Separator />
+          <div className="space-y-3">
+            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Social Links</h3>
+            <div className="flex gap-3 flex-wrap">
               {socials.map((social) => (
                 <SocialOutline
                   key={social.name}

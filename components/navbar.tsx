@@ -19,48 +19,50 @@ export default function Navbar() {
   }
 
   return (
-    <div className="border bg-card text-card-foreground p-3 shadow-sm md:rounded-lg flex justify-between items-center top-0 sticky z-50">
-      <Logo onClick={() => navigateTo("/")} />
-      {/* Navigation Menus */}
-      <div className="space-x-3 items-center">
-        <Button
-          onClick={() => navigateTo("/")}
-          variant="outline"
-          size="sm"
-          className="ml-auto h-8"
-        >
-          <Home className=" h-4 w-4" />
-          <span className="hidden md:block ml-2">Home</span>
-        </Button>
-        <Button
-          onClick={() => navigateTo("/#projects")}
-          variant="outline"
-          size="sm"
-          className="ml-auto h-8"
-        >
-          <Presentation className=" h-4 w-4" />
-          <span className="hidden md:block ml-2">Projects</span>
-        </Button>
-        <Button
-          onClick={() => navigateTo("/#work")}
-          variant="outline"
-          size="sm"
-          className="ml-auto h-8"
-        >
-          <Briefcase className=" h-4 w-4" />
-          <span className="hidden md:block ml-2">Work</span>
-        </Button>
-        <Button
-          onClick={() => navigateTo("/#contact")}
-          variant="outline"
-          size="sm"
-          className="ml-auto h-8"
-        >
-          <Mail className=" h-4 w-4" />
-          <span className="hidden md:block ml-2">Contact</span>
-        </Button>
-        {/* <ModeToggle /> */}
+    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-background/80 border-b border-border mb-8">
+      <div className="flex justify-between items-center py-4">
+        <Logo onClick={() => navigateTo("/")} />
+        
+        {/* Navigation Menus */}
+        <div className="flex items-center gap-1">
+          <Button
+            onClick={() => navigateTo("/")}
+            variant="ghost"
+            size="sm"
+            className="h-9"
+          >
+            <Home className="h-4 w-4" />
+            <span className="hidden sm:block ml-2">Home</span>
+          </Button>
+          <Button
+            onClick={() => navigateTo("/#projects")}
+            variant="ghost"
+            size="sm"
+            className="h-9"
+          >
+            <Presentation className="h-4 w-4" />
+            <span className="hidden sm:block ml-2">Projects</span>
+          </Button>
+          <Button
+            onClick={() => navigateTo("/#work")}
+            variant="ghost"
+            size="sm"
+            className="h-9"
+          >
+            <Briefcase className="h-4 w-4" />
+            <span className="hidden sm:block ml-2">Work</span>
+          </Button>
+          <Button
+            onClick={() => navigateTo("/#contact")}
+            variant="ghost"
+            size="sm"
+            className="h-9"
+          >
+            <Mail className="h-4 w-4" />
+            <span className="hidden sm:block ml-2">Contact</span>
+          </Button>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }

@@ -26,9 +26,12 @@ if (typeof window !== "undefined") {
 
 export default function Works() {
   return (
-    <section id="work" key="work">
-      <h2 className="text-2xl font-semibold tracking-tight">Work</h2>
-      <div id="work-section" className="mt-5 rounded-xl border bg-card text-card-foreground shadow">
+    <section id="work" key="work" className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-4xl font-bold tracking-tight">Work Experience</h2>
+        <p className="text-muted-foreground">My professional journey and contributions</p>
+      </div>
+      <div id="work-section" className="modern-card shadow-sm">
         <div className="p-6 space-y-6">
           {workExperiences.map((experience: WorkExperience, index: number) => (
             <WorkShowcase

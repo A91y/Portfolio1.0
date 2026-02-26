@@ -25,14 +25,15 @@ if (typeof window !== "undefined") {
 
 export default function Projects() {
   return (
-    <section id="projects" key="projects">
-      <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
-      <div id="projects-section" className="mt-5 rounded-xl bg-card text-card-foreground shadow">
-        <div className="space-y-5 mt-5">
-          {projects.map((project: Project) => (
-            <ProjectShowcase key={project.title} project={project} />
-          ))}
-        </div>
+    <section id="projects" key="projects" className="space-y-6">
+      <div className="space-y-2">
+        <h2 className="text-4xl font-bold tracking-tight">Projects</h2>
+        <p className="text-muted-foreground">A selection of my recent work and contributions</p>
+      </div>
+      <div id="projects-section" className="space-y-4">
+        {projects.map((project: Project) => (
+          <ProjectShowcase key={project.title} project={project} />
+        ))}
       </div>
     </section>
   );

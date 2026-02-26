@@ -8,18 +8,25 @@ import Sidebar from "@/components/sidebar";
 
 export default function Home() {
   return (
-    <div className="md:max-w-3xl mx-auto md:mt-8 ">
-      <Navbar />
-      <div className="flex flex-col md:flex-row my-10 mx-10 md:mx-0 space-x-0 md:space-x-10 space-y-10 md:space-y-0 ">
-        <Sidebar />
-        <div className="md:min-w-[65vh] min-w-full space-y-10">
-          <Hero />
-          <Projects />
-          <Works />
-          <Contact />
+    <div className="min-h-screen">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <Navbar />
+        <div className="flex flex-col lg:flex-row gap-8 mt-8">
+          {/* Sidebar */}
+          <aside className="lg:w-80 flex-shrink-0">
+            <Sidebar />
+          </aside>
+          
+          {/* Main Content */}
+          <main className="flex-1 min-w-0 space-y-12">
+            <Hero />
+            <Projects />
+            <Works />
+            <Contact />
+          </main>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

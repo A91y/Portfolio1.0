@@ -2,16 +2,29 @@ import { aboutYou } from "@/lib/data";
 
 export default function Sidebar() {
   return (
-    <div className="rounded-xl border bg-card text-card-foreground shadow flex flex-col space-y-2 p-4 h-fit static md:sticky top-24">
+    <div className="modern-card hover-lift rounded-xl shadow-sm flex flex-col space-y-4 p-6 h-fit static md:sticky top-24 md:min-w-[280px] md:max-w-[320px]">
       {/* Title/Name */}
-      <h1 className="font-semibold leading-none tracking-tight">
-        {aboutYou.name}
-      </h1>
+      <div className="space-y-2">
+        <h1 className="text-2xl font-bold tracking-tight">
+          {aboutYou.name}
+        </h1>
+        <div className="h-0.5 w-12 bg-foreground/20 rounded-full" />
+      </div>
+      
       {/* Description */}
-      <p className="text-sm text-muted-foreground tracking-tight">
+      <p className="text-sm text-muted-foreground leading-relaxed">
         {aboutYou.description}
-        <a target="_blank" className="ml-1" href="https://github.com/A91y">My&nbsp;GitHub</a>
       </p>
+      
+      {/* GitHub Link */}
+      <a 
+        target="_blank" 
+        href="https://github.com/A91y"
+        className="group inline-flex items-center gap-1 text-sm font-medium hover:gap-2 transition-all duration-200"
+      >
+        <span>View My GitHub</span>
+        <span className="group-hover:translate-x-1 transition-transform">→</span>
+      </a>
     </div>
   );
 }

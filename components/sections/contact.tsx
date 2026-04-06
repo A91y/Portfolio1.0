@@ -29,7 +29,7 @@ export default function Contact() {
     <section id="contact" key="contact" className="space-y-6">
       <div className="space-y-2">
         <h2 className="text-4xl font-bold tracking-tight">Get In Touch</h2>
-        <p className="text-muted-foreground">Let's connect and build something amazing</p>
+        <p className="text-muted-foreground">Let&apos;s connect and build something amazing</p>
       </div>
       <div
         id="contact-section"

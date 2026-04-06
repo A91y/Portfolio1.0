@@ -149,7 +149,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Octasol (in progress)",
+    title: "Octasol",
     description:
       "An Opensource trustless bounty platform on Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing escrow, developer profiles, and github authentication.",
     link: "https://github.com/octasol/octasol",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "CollectiveX (in progress)",
+    title: "CollectiveX",
     description: "Multisig & DAO on SOON SVM",
     link: "https://github.com/CollectiveX-Org",
     tags: ["Solana", "Rust", "Anchor", "TypeScript", "MultiSig", "DAO"],
@@ -214,7 +214,7 @@ export const projects: Project[] = [
     tags: ["Solidity", "Ethereum", "Blockchain", "OpenZeppelin"],
   },
   {
-    title: "Ludic.fun (in progress)",
+    title: "Ludic.fun",
     description:
       "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
     link: "https://ludic.fun/",
@@ -344,20 +344,20 @@ export interface WorkExperience {
 
 export const workExperiences: WorkExperience[] = [
   {
-    company: "Catoff Gaming",
-    logo: "/catoff.png",
-    position: "Backend Developer",
+    company: "Lince Finance",
+    logo: "/lince.png",
+    position: "Solana Smart Contract & SDK Engineer",
     description:
-      "Building backend services for Catoff Gaming, a gaming platform. Technologies used: Nest.js, Typescript, Cron, Redis, Queue, Solana Actions, Next.js.",
-    years: "Oct, 2024 - Present",
+      "Building yield aggregation infrastructure on Solana. Working on vault logic, strategy integrations, and SDK development.",
+    years: "Aug, 2025 - Feb, 2026",
   },
   {
-    company: "Innogeeks",
-    logo: "/innogeeks.jpg",
-    position: "Core Team | Blockchain Lead",
+    company: "Merkle Labs",
+    logo: "/merklelabs.png",
+    position: "Web3 Developer",
     description:
-      "Managing and leading the blockchain division, organizing workshops, and conducting hackathons to promote blockchain technology.",
-    years: "Oct, 2024 - Present",
+      "Freelance Web3 development projects, building decentralized applications and smart contracts.",
+    years: "Jan, 2025 - Mar, 2025",
   },
   {
     company: "Superteam",
@@ -365,6 +365,22 @@ export const workExperiences: WorkExperience[] = [
     position: "Member",
     description:
       "Building web3 based startups, and contributing to Solana Ecosystem.",
+    years: "Oct, 2024 - Present",
+  },
+  {
+    company: "Catoff Gaming",
+    logo: "/catoff.png",
+    position: "Backend Developer",
+    description:
+      "Built backend services for Catoff Gaming, a gaming platform. Technologies used: Nest.js, Typescript, Cron, Redis, Queue, Solana Actions, Next.js.",
+    years: "Oct, 2024 - Mar, 2025",
+  },
+  {
+    company: "Innogeeks",
+    logo: "/innogeeks.jpg",
+    position: "Core Team | Blockchain Lead",
+    description:
+      "Managing and leading the blockchain division, organizing workshops, and conducting hackathons to promote blockchain technology.",
     years: "Oct, 2024 - Present",
   },
   {
@@ -429,11 +445,11 @@ export const workExperiences: WorkExperience[] = [
 export const aboutYou = {
   name: "Ayush Agrawal",
   description:
-    "👋 Hi, I'm Ayush. Backend & Blockchain Developer. I've massive experience in Full Stack development. Blockchains like Ethereum, Solana, TON. For a long time I've been a Python guy. But now list is just endless! ",
+    "👋 Hi, I'm Ayush - a Backend and Blockchain Developer focused on building high-performance systems. I work deeply in the Solana ecosystem, building smart contracts and backend infrastructure with Rust and TypeScript. I also have experience across Ethereum and TON.",
   yearsOfExperience: "5+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
-  twitter: "ayush_agr254",
+  twitter: "ayushagr91",
 };
 
 export const logoText = "@a91y";

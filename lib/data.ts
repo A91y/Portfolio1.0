@@ -21,6 +21,10 @@ import {
   SiFlask,
   SiEthereum,
   SiApachecassandra,
+  SiNestjs,
+  SiRedis,
+  SiRabbitmq,
+  SiOpentelemetry,
   SiTwitter,
   SiGithub,
   SiLinkedin,
@@ -130,6 +134,22 @@ export const skills = [
     text: "Firebase",
   },
   {
+    icon: SiNestjs,
+    text: "NestJS",
+  },
+  {
+    icon: SiRedis,
+    text: "Redis",
+  },
+  {
+    icon: SiRabbitmq,
+    text: "RabbitMQ",
+  },
+  {
+    icon: SiOpentelemetry,
+    text: "OpenTelemetry",
+  },
+  {
     text: "Tact",
   },
   {
@@ -137,6 +157,27 @@ export const skills = [
   },
   {
     text: "TON",
+  },
+  {
+    text: "Pinocchio",
+  },
+  {
+    text: "MagicBlock",
+  },
+  {
+    text: "x402",
+  },
+  {
+    text: "Base",
+  },
+  {
+    text: "Wagmi",
+  },
+  {
+    text: "Viem",
+  },
+  {
+    text: "TanStack Router",
   },
 ];
 
@@ -148,6 +189,13 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "StealthX",
+    description:
+      "A private-payments protocol on Solana. Built with native Pinocchio for compute efficiency, hand-written MagicBlock delegation/undelegation CPIs, and x402 machine-payment integration with scoped, compliance-aware disclosure. Turbin3 capstone.",
+    link: "https://github.com/Turbin3/accel-StealthX",
+    tags: ["Solana", "Rust", "Pinocchio", "MagicBlock", "x402", "Anchor", "Privacy", "Payments"],
+  },
   {
     title: "Octasol",
     description:
@@ -344,6 +392,30 @@ export interface WorkExperience {
 
 export const workExperiences: WorkExperience[] = [
   {
+    company: "Credible",
+    logo: "/crediblefin.jpeg",
+    position: "Full-Stack Fintech Engineer · Freelance",
+    description:
+      "Freelance engagement delivered through my web3 agency. Full-stack engineering for Credible, a B2B fintech / payments-infrastructure company: built KYC/KYB compliance pipelines (document ingestion, UBO handling, approval-state guards, PII redaction) and integrated third-party financial providers with webhook-driven status sync, HMAC signature verification, idempotency, and retry / dead-letter handling. Implemented RabbitMQ/AMQP async pipelines, built Solana/Anchor transaction logic with multi-wallet (Solana + EVM) auth, and shipped a consumer investment web app end to end.",
+    years: "Sep, 2025 - Present",
+  },
+  {
+    company: "Turbin3",
+    logo: "/turbin3.jpeg",
+    position: "Solana Developer — Accelerated Cohort (Q2 2026)",
+    description:
+      "Selected for Turbin3's accelerated Solana developer cohort. Built multiple on-chain programs across Anchor, native Rust, and Pinocchio, including measured compute-unit optimization (init ~19.5k → ~1.8k CU; account checks ~17.8k → ~1.5k CU). Hand-wrote MagicBlock delegation and Ephemeral Rollup CPIs, integrated x402 machine payments, and shipped a private-payments capstone (StealthX).",
+    years: "Apr, 2026 - Jun, 2026",
+  },
+  {
+    company: "Decharge",
+    logo: "/decharge.png",
+    position: "Full-Stack & Blockchain Engineer · Freelance",
+    description:
+      "Freelance engagement delivered through my web3 agency. Full-stack and on-chain engineering for a DePIN EV-charging network: built the Solana (Anchor) YieldPool client (IDL, PDAs, deposit and claim-yield instructions) and extended the same investment product to a second chain (Base / EVM) with Wagmi, Viem, and RainbowKit, mirroring the deposit/withdraw flow without breaking the existing Solana path. Built a wallet-signature authentication subsystem (nonce challenge, Ed25519 verification, JWT sessions), shipped the lending dApp front-end end to end, and delivered marketing sites and product dashboards.",
+    years: "Apr, 2025 - Apr, 2026",
+  },
+  {
     company: "Lince Finance",
     logo: "/lince.png",
     position: "Solana Smart Contract & SDK Engineer",
@@ -445,7 +517,7 @@ export const workExperiences: WorkExperience[] = [
 export const aboutYou = {
   name: "Ayush Agrawal",
   description:
-    "👋 Hi, I'm Ayush - a Solana Smart Contract Engineer and Backend Developer. I build on-chain programs with Rust and Anchor, and the backend infrastructure that powers them, with full-stack range to ship the rest of the product. Started out deep in Python, and picked up Ethereum and TON along the way, but Solana is home.",
+    "👋 Hi, I'm Ayush - a Solana and full-stack web3 developer. I go deep on-chain with native Rust, Pinocchio, Anchor, and MagicBlock, and ship the full product around it: backends, third-party integrations, and multi-chain frontends. I've built production systems across fintech payments, DePIN, and DeFi - from KYC/KYB compliance pipelines to cross-chain investment products. Started out deep in Python, picked up Ethereum and TON along the way, but Solana is home. On the side, I also run a small web3 engineering agency, delivering the same kind of work for clients.",
   yearsOfExperience: "5+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
@@ -460,9 +532,9 @@ export const marketingHeadlines = {
 };
 
 export const websiteMetadata = {
-  title: "Ayush Agrawal | Solana Smart Contract & Backend Developer",
+  title: "Ayush Agrawal | Solana & Full-Stack Web3 Developer",
   description:
-    "👋 Hey, Ayush Agrawal here - Solana Smart Contract Engineer and Backend Developer building on-chain programs with Rust and Anchor.",
+    "👋 Hey, Ayush Agrawal here - a Solana and full-stack web3 developer building on-chain programs (Rust, Pinocchio, Anchor, MagicBlock) and the backends and frontends around them, across fintech, DePIN, and DeFi.",
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",
@@ -479,6 +551,15 @@ export const websiteMetadata = {
     "Ayush TON",
     "A91y",
     "Ayush Agr",
+    "Pinocchio",
+    "MagicBlock",
+    "NestJS",
+    "DePIN",
+    "Full-Stack Web3",
+    "Base",
+    "x402",
+    "Turbin3",
+    "StealthX",
     "KIET",
   ],
 };

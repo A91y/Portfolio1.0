@@ -35,7 +35,6 @@ import { IconType } from "react-icons";
 import { text } from "stream/consumers";
 import { Anchor } from "lucide-react";
 import { log } from "console";
-
 export const skills = [
   {
     icon: SiEthereum,
@@ -150,13 +149,7 @@ export const skills = [
     text: "OpenTelemetry",
   },
   {
-    text: "Tact",
-  },
-  {
     text: "Solana",
-  },
-  {
-    text: "TON",
   },
   {
     text: "Pinocchio",
@@ -179,15 +172,19 @@ export const skills = [
   {
     text: "TanStack Router",
   },
+  {
+    text: "TON",
+  },
+  {
+    text: "Tact",
+  },
 ];
-
 export interface Project {
   title: string;
   description: string;
   link?: string;
   tags?: string[];
 }
-
 export const projects: Project[] = [
   {
     title: "StealthX",
@@ -211,12 +208,6 @@ export const projects: Project[] = [
       "Escrow",
       "Github",
     ],
-  },
-  {
-    title: "CollectiveX",
-    description: "Multisig & DAO on SOON SVM",
-    link: "https://github.com/CollectiveX-Org",
-    tags: ["Solana", "Rust", "Anchor", "TypeScript", "MultiSig", "DAO"],
   },
   {
     title: "Blinks By Ayush",
@@ -267,6 +258,12 @@ export const projects: Project[] = [
       "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
     link: "https://ludic.fun/",
     tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],
+  },
+  {
+    title: "CollectiveX",
+    description: "Contributed to a multisig & DAO platform on the SOON SVM.",
+    link: "https://github.com/CollectiveX-Org",
+    tags: ["Solana", "Rust", "Anchor", "TypeScript", "MultiSig", "DAO"],
   },
   {
     title: "Uniswap Liquidity Pools",
@@ -351,13 +348,11 @@ export const projects: Project[] = [
     tags: ["Python", "Telegram Bot", "API", "Telegram Bot API"],
   },
 ];
-
 export interface Social {
   name: string;
   link: string;
   icon: IconType;
 }
-
 export const socials: Social[] = [
   {
     name: "Twitter",
@@ -380,7 +375,6 @@ export const socials: Social[] = [
     icon: SiTelegram,
   },
 ];
-
 export interface WorkExperience {
   company: string;
   logo: string;
@@ -389,7 +383,6 @@ export interface WorkExperience {
   years: string;
   link?: string;
 }
-
 export const workExperiences: WorkExperience[] = [
   {
     company: "Credible",
@@ -420,15 +413,15 @@ export const workExperiences: WorkExperience[] = [
     logo: "/lince.png",
     position: "Solana Smart Contract & SDK Engineer",
     description:
-      "Building yield aggregation infrastructure on Solana. Working on vault logic, strategy integrations, and SDK development.",
+      "Built yield-aggregation infrastructure on Solana: vault logic, strategy integrations, composition-based rebalancing, and TypeScript SDK development.",
     years: "Aug, 2025 - Feb, 2026",
   },
   {
     company: "Merkle Labs",
     logo: "/merklelabs.png",
-    position: "Web3 Developer",
+    position: "Solana Backend & Smart Contract Engineer · Freelance",
     description:
-      "Freelance Web3 development projects, building decentralized applications and smart contracts.",
+      "Freelance Solana backend and smart-contract engineering. Contributed to on-chain subsystems for a token launchpad (Rust/Anchor) within a multi-engineer team — staking, reward distribution across AMM/DLMM pools, whitelist allocation, Merkle-proof authorization, and pool-migration flows — plus the TypeScript automation driving them. Solely built an automated DLMM liquidity-management bot end to end (rebalancing cron + Express API).",
     years: "Jan, 2025 - Mar, 2025",
   },
   {
@@ -442,7 +435,7 @@ export const workExperiences: WorkExperience[] = [
   {
     company: "Catoff Gaming",
     logo: "/catoff.png",
-    position: "Backend Developer",
+    position: "Backend Intern",
     description:
       "Built backend services for Catoff Gaming, a gaming platform. Technologies used: Nest.js, Typescript, Cron, Redis, Queue, Solana Actions, Next.js.",
     years: "Oct, 2024 - Mar, 2025",
@@ -513,7 +506,6 @@ export const workExperiences: WorkExperience[] = [
     years: "Nov, 2022 - July, 2026",
   },
 ];
-
 export const aboutYou = {
   name: "Ayush Agrawal",
   description:
@@ -523,14 +515,11 @@ export const aboutYou = {
   email: "ayush.agr254@gmail.com",
   twitter: "ayushagr91",
 };
-
 export const logoText = "@a91y";
-
 export const marketingHeadlines = {
   mainHeadline: "Hi There 👋",
   subHeadline: "Eat. Sleep. Code. Repeat.",
 };
-
 export const websiteMetadata = {
   title: "Ayush Agrawal | Solana & Full-Stack Web3 Developer",
   description:

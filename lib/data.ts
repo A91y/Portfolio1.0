@@ -396,7 +396,7 @@ export const workExperiences: WorkExperience[] = [
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer · Freelance",
     description:
-      "Freelance engagement delivered through my web3 agency. Full-stack engineering for Credible, a B2B fintech / payments-infrastructure company: built KYC/KYB compliance pipelines (document ingestion, UBO handling, approval-state guards, PII redaction) and integrated third-party financial providers with webhook-driven status sync, HMAC signature verification, idempotency, and retry / dead-letter handling. Implemented RabbitMQ/AMQP async pipelines, built Solana/Anchor transaction logic with multi-wallet (Solana + EVM) auth, and shipped a consumer investment web app end to end.",
+      "Freelance engagement delivered through my web3 agency. Full-stack engineering for a B2B fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, and Solana/EVM wallet auth and transaction logic.",
     years: "Sep, 2025 - Present",
   },
   {
@@ -412,7 +412,7 @@ export const workExperiences: WorkExperience[] = [
     logo: "/decharge.png",
     position: "Full-Stack & Blockchain Engineer · Freelance",
     description:
-      "Freelance engagement delivered through my web3 agency. Full-stack and on-chain engineering for a DePIN EV-charging network: built the Solana (Anchor) YieldPool client (IDL, PDAs, deposit and claim-yield instructions) and extended the same investment product to a second chain (Base / EVM) with Wagmi, Viem, and RainbowKit, mirroring the deposit/withdraw flow without breaking the existing Solana path. Built a wallet-signature authentication subsystem (nonce challenge, Ed25519 verification, JWT sessions), shipped the lending dApp front-end end to end, and delivered marketing sites and product dashboards.",
+      "Freelance engagement delivered through my web3 agency. Full-stack and on-chain work for a DePIN EV-charging network: built a Solana investment product client, extended it to a second EVM chain, and built the wallet-signature auth layer for the dApp.",
     years: "Apr, 2025 - Apr, 2026",
   },
   {

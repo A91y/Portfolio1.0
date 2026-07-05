@@ -445,7 +445,7 @@ export const workExperiences: WorkExperience[] = [
 export const aboutYou = {
   name: "Ayush Agrawal",
   description:
-    "👋 Hi, I'm Ayush - a Backend and Blockchain Developer focused on building high-performance systems. I work deeply in the Solana ecosystem, building smart contracts and backend infrastructure with Rust and TypeScript. I also have experience across Ethereum and TON.",
+    "👋 Hi, I'm Ayush - a Solana Smart Contract Engineer and Backend Developer. I build on-chain programs with Rust and Anchor, and the backend infrastructure that powers them, with full-stack range to ship the rest of the product. Started out deep in Python, and picked up Ethereum and TON along the way, but Solana is home.",
   yearsOfExperience: "5+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
@@ -460,8 +460,9 @@ export const marketingHeadlines = {
 };
 
 export const websiteMetadata = {
-  title: "Ayush Agrawal | Developer",
-  description: "👋 Hey, Ayush Agrawal here. Welcome to my portfolio.",
+  title: "Ayush Agrawal | Solana Smart Contract & Backend Developer",
+  description:
+    "👋 Hey, Ayush Agrawal here - Solana Smart Contract Engineer and Backend Developer building on-chain programs with Rust and Anchor.",
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",

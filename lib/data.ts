@@ -453,7 +453,7 @@ export const workExperiences: WorkExperience[] = [
     position: "Core Team | Blockchain Lead",
     description:
       "Managing and leading the blockchain division, organizing workshops, and conducting hackathons to promote blockchain technology.",
-    years: "Oct, 2024 - Present",
+    years: "Oct, 2024 - July, 2026",
   },
   {
     company: "TimeOnSolana",

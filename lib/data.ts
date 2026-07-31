@@ -210,6 +210,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Full-Time",
+    description:
+      "A trust-minimized settlement rail for parametric sports markets on Solana. Settlement is permissionless and proof-based: anyone can submit a TxODDS Merkle proof and the program recomputes the root on-chain via CPI, so there is no admin, oracle key, or dispute committee. Shipped as an installable SDK (@fulltime/settle), an autonomous keeper, and a Next.js reference dApp.",
+    link: "https://fulltime.ayushagr.me",
+    tags: [
+      "Solana",
+      "Rust",
+      "Anchor",
+      "TypeScript",
+      "Next.js",
+      "Oracles",
+      "Merkle Proofs",
+      "Prediction Markets",
+      "SDK",
+    ],
+  },
+  {
     title: "Blinks By Ayush",
     description: "Directory of Multiple Solana Blinks",
     link: "https://blinks.ayushagr.me/",

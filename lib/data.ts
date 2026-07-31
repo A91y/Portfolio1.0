@@ -285,7 +285,7 @@ export const projects: Project[] = [
   {
     title: "Uniswap Liquidity Pools",
     description:
-      "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contibution)",
+      "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contribution)",
     tags: ["Solidity", "Ethereum", "UniswapV2", "JavaScript"],
   },
   {

@@ -1,11 +1,11 @@
-import { WorkExperience } from "@/lib/data";
+import { Experience } from "@/lib/data";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import DateRange from "./date-range";
 import { ExternalLink } from "lucide-react";
 
 interface WorkShowcaseProps {
-  experience: WorkExperience;
+  experience: Experience;
   whetherlast: boolean;
 }
 

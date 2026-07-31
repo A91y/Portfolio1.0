@@ -2,8 +2,9 @@
 
 import { Button } from "./ui/button";
 import Logo from "./logo";
-import { Home, Briefcase, Mail, Presentation } from "lucide-react";
+import { Home, Briefcase, Mail, Presentation, FileText } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { resume } from "@/lib/data";
 
 export default function Navbar() {
   const router = useRouter();
@@ -60,6 +61,12 @@ export default function Navbar() {
           >
             <Mail className="h-4 w-4" />
             <span className="hidden sm:block ml-2">Contact</span>
+          </Button>
+          <Button asChild variant="ghost" size="sm" className="h-9">
+            <a href={resume.href} target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4" />
+              <span className="hidden sm:block ml-2">{resume.label}</span>
+            </a>
           </Button>
         </div>
       </div>

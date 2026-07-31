@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { Project, projects } from "@/lib/data";
 import ProjectShowcase from "@/components/project-showcase";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 // Function to handle hash change
 const handleHashChange = () => {
@@ -23,7 +26,13 @@ if (typeof window !== "undefined") {
   handleHashChange();
 }
 
+const featuredProjects = projects.filter((project) => project.featured);
+const hasHiddenProjects = featuredProjects.length < projects.length;
+
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : featuredProjects;
+
   return (
     <section id="projects" key="projects" className="space-y-6">
       <div className="space-y-2">
@@ -31,10 +40,26 @@ export default function Projects() {
         <p className="text-muted-foreground">A selection of my recent work and contributions</p>
       </div>
       <div id="projects-section" className="space-y-4">
-        {projects.map((project: Project) => (
+        {visibleProjects.map((project: Project) => (
           <ProjectShowcase key={project.title} project={project} />
         ))}
       </div>
+      {hasHiddenProjects && (
+        <Button
+          onClick={() => setShowAll((previous) => !previous)}
+          variant="outline"
+          size="sm"
+          aria-expanded={showAll}
+          aria-controls="projects-section"
+        >
+          {showAll ? (
+            <ChevronUp className="h-4 w-4 mr-2" />
+          ) : (
+            <ChevronDown className="h-4 w-4 mr-2" />
+          )}
+          {showAll ? "Show fewer projects" : "Show all projects"}
+        </Button>
+      )}
     </section>
   );
 }

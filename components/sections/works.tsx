@@ -1,7 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-import { WorkExperience, workExperiences } from "@/lib/data";
+import {
+  Experience,
+  workExperiences,
+  communityExperiences,
+  educationExperiences,
+} from "@/lib/data";
 import WorkShowcase from "@/components/work-showcase";
 
 // Function to handle hash change
@@ -24,23 +28,52 @@ if (typeof window !== "undefined") {
   handleHashChange();
 }
 
+function ExperienceGroup({
+  experiences,
+  sectionId,
+}: {
+  experiences: Experience[];
+  sectionId?: string;
+}) {
+  return (
+    <div id={sectionId} className="modern-card shadow-sm">
+      <div className="p-6 space-y-6">
+        {experiences.map((experience: Experience, index: number) => (
+          <WorkShowcase
+            key={`${experience.company}-${experience.years}`}
+            experience={experience}
+            whetherlast={experiences.length == index + 1}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Works() {
   return (
-    <section id="work" key="work" className="space-y-6">
-      <div className="space-y-2">
-        <h2 className="text-4xl font-bold tracking-tight">Work Experience</h2>
-        <p className="text-muted-foreground">My professional journey and contributions</p>
-      </div>
-      <div id="work-section" className="modern-card shadow-sm">
-        <div className="p-6 space-y-6">
-          {workExperiences.map((experience: WorkExperience, index: number) => (
-            <WorkShowcase
-              key={experience.company}
-              experience={experience}
-              whetherlast={workExperiences.length == index + 1}
-            />
-          ))}
+    <section id="work" key="work" className="space-y-12">
+      <div className="space-y-6">
+        <div className="space-y-2">
+          <h2 className="text-4xl font-bold tracking-tight">Work</h2>
+          <p className="text-muted-foreground">
+            My professional journey and contributions
+          </p>
         </div>
+        <ExperienceGroup
+          experiences={workExperiences}
+          sectionId="work-section"
+        />
+      </div>
+
+      <div className="space-y-6">
+        <h2 className="text-4xl font-bold tracking-tight">Community</h2>
+        <ExperienceGroup experiences={communityExperiences} />
+      </div>
+
+      <div className="space-y-6">
+        <h2 className="text-4xl font-bold tracking-tight">Education</h2>
+        <ExperienceGroup experiences={educationExperiences} />
       </div>
     </section>
   );

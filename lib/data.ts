@@ -7,18 +7,12 @@ import {
   SiExpress,
   SiPython,
   SiMongodb,
-  SiHtml5,
-  SiCss3,
-  SiFirebase,
-  SiRedux,
   SiGit,
   SiDocker,
-  SiBootstrap,
   SiTailwindcss,
   SiSolidity,
   SiRust,
   SiDjango,
-  SiFlask,
   SiEthereum,
   SiApachecassandra,
   SiNestjs,
@@ -32,182 +26,83 @@ import {
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { IconType } from "react-icons";
-import { text } from "stream/consumers";
-import { Anchor } from "lucide-react";
-import { log } from "console";
-export const skills = [
-  {
-    icon: SiEthereum,
-    text: "Ethereum",
-  },
-  {
-    icon: SiSolidity,
-    text: "Solidity",
-  },
-  {
-    icon: SiRust,
-    text: "Rust",
-  },
-  {
-    icon: Anchor,
-    text: "Anchor",
-  },
-  {
-    icon: SiTypescript,
-    text: "TypeScript",
-  },
-  {
-    icon: SiJavascript,
-    text: "JavaScript",
-  },
-  {
-    icon: SiReact,
-    text: "React",
-  },
-  {
-    icon: SiNextdotjs,
-    text: "Next",
-  },
-  {
-    icon: SiTailwindcss,
-    text: "Tailwind",
-  },
-  {
-    icon: SiRedux,
-    text: "Redux",
-  },
-  {
-    icon: SiHtml5,
-    text: "HTML5",
-  },
-  {
-    icon: SiCss3,
-    text: "CSS3",
-  },
-  {
-    icon: SiNodedotjs,
-    text: "Node",
-  },
-  {
-    icon: SiExpress,
-    text: "Express",
-  },
-  {
-    icon: SiPython,
-    text: "Python",
-  },
-  {
-    icon: SiGit,
-    text: "Git",
-  },
-  {
-    icon: SiDocker,
-    text: "Docker",
-  },
-  {
-    icon: SiBootstrap,
-    text: "Bootstrap",
-  },
-  {
-    icon: SiDjango,
-    text: "Django",
-  },
-  {
-    icon: SiFlask,
-    text: "Flask",
-  },
-  {
-    icon: SiApachecassandra,
-    text: "Apache Cassandra",
-  },
-  {
-    icon: BiLogoPostgresql,
-    text: "PostgreSQL",
-  },
-  {
-    icon: SiMongodb,
-    text: "MongoDB",
-  },
-  {
-    icon: SiFirebase,
-    text: "Firebase",
-  },
-  {
-    icon: SiNestjs,
-    text: "NestJS",
-  },
-  {
-    icon: SiRedis,
-    text: "Redis",
-  },
-  {
-    icon: SiRabbitmq,
-    text: "RabbitMQ",
-  },
-  {
-    icon: SiOpentelemetry,
-    text: "OpenTelemetry",
-  },
-  {
-    text: "Solana",
-  },
-  {
-    text: "Pinocchio",
-  },
-  {
-    text: "MagicBlock",
-  },
-  {
-    text: "x402",
-  },
-  {
-    text: "Base",
-  },
-  {
-    text: "Wagmi",
-  },
-  {
-    text: "Viem",
-  },
-  {
-    text: "TanStack Router",
-  },
-  {
-    text: "TON",
-  },
-  {
-    text: "Tact",
-  },
+import { Anchor, type LucideIcon } from "lucide-react";
+import SolanaIcon from "@/components/icons/solana";
+
+export interface Skill {
+  icon?: IconType | LucideIcon;
+  text: string;
+  group: "onchain" | "chains" | "backend" | "frontend" | "tooling";
+}
+
+export const skills: Skill[] = [
+  // On-chain: lead with this. It is the differentiator.
+  { icon: SolanaIcon, text: "Solana", group: "onchain" },
+  { icon: SiRust, text: "Rust", group: "onchain" },
+  { icon: Anchor, text: "Anchor", group: "onchain" },
+  { text: "Pinocchio", group: "onchain" },
+  { text: "MagicBlock", group: "onchain" },
+  { text: "x402", group: "onchain" },
+
+  // Other chains
+  { text: "Base", group: "chains" },
+  { icon: SiEthereum, text: "Ethereum", group: "chains" },
+  { icon: SiSolidity, text: "Solidity", group: "chains" },
+  { text: "Wagmi", group: "chains" },
+  { text: "Viem", group: "chains" },
+  { text: "TON", group: "chains" },
+  { text: "Tact", group: "chains" },
+
+  // Backend
+  { icon: SiTypescript, text: "TypeScript", group: "backend" },
+  { icon: SiNestjs, text: "NestJS", group: "backend" },
+  { icon: SiNodedotjs, text: "Node", group: "backend" },
+  { icon: SiExpress, text: "Express", group: "backend" },
+  { icon: SiPython, text: "Python", group: "backend" },
+  { icon: SiDjango, text: "Django", group: "backend" },
+  { icon: BiLogoPostgresql, text: "PostgreSQL", group: "backend" },
+  { icon: SiRedis, text: "Redis", group: "backend" },
+  { icon: SiRabbitmq, text: "RabbitMQ", group: "backend" },
+  { icon: SiMongodb, text: "MongoDB", group: "backend" },
+  { icon: SiApachecassandra, text: "Apache Cassandra", group: "backend" },
+  { icon: SiOpentelemetry, text: "OpenTelemetry", group: "backend" },
+
+  // Frontend
+  { icon: SiReact, text: "React", group: "frontend" },
+  { icon: SiNextdotjs, text: "Next.js", group: "frontend" },
+  { text: "TanStack Router", group: "frontend" },
+  { icon: SiTailwindcss, text: "Tailwind", group: "frontend" },
+  { icon: SiJavascript, text: "JavaScript", group: "frontend" },
+
+  // Tooling
+  { icon: SiGit, text: "Git", group: "tooling" },
+  { icon: SiDocker, text: "Docker", group: "tooling" },
 ];
+
 export interface Project {
   title: string;
   description: string;
   link?: string;
   tags?: string[];
+  featured?: boolean;
 }
+
 export const projects: Project[] = [
   {
     title: "StealthX",
     description:
-      "A private-payments protocol on Solana. Built with native Pinocchio for compute efficiency, hand-written MagicBlock delegation/undelegation CPIs, and x402 machine-payment integration with scoped, compliance-aware disclosure. Turbin3 capstone.",
+      "A private-payments protocol on Solana, built with a team as our Turbin3 accelerator capstone. Pinocchio for compute efficiency, hand-written MagicBlock delegation and undelegation CPIs, and x402 machine-payment integration with scoped, compliance-aware disclosure.",
     link: "https://github.com/Turbin3/accel-StealthX",
-    tags: ["Solana", "Rust", "Pinocchio", "MagicBlock", "x402", "Anchor", "Privacy", "Payments"],
-  },
-  {
-    title: "Octasol",
-    description:
-      "An Opensource trustless bounty platform on Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing escrow, developer profiles, and github authentication.",
-    link: "https://github.com/octasol/octasol",
     tags: [
       "Solana",
       "Rust",
-      "Anchor",
-      "Next.js",
-      "TypeScript",
-      "Blockchain",
-      "Escrow",
-      "Github",
+      "Pinocchio",
+      "MagicBlock",
+      "x402",
+      "Privacy",
+      "Payments",
     ],
+    featured: true,
   },
   {
     title: "Full-Time",
@@ -222,177 +117,136 @@ export const projects: Project[] = [
       "Next.js",
       "Oracles",
       "Merkle Proofs",
-      "Prediction Markets",
       "SDK",
     ],
+    featured: true,
   },
   {
-    title: "Blinks By Ayush",
-    description: "Directory of Multiple Solana Blinks",
-    link: "https://blinks.ayushagr.me/",
+    title: "Octasol",
+    description:
+      "An open-source trustless bounty platform on Solana. Escrow, developer profiles, and GitHub authentication, built with Rust, Anchor, Next.js, and TypeScript.",
+    link: "https://github.com/octasol/octasol",
     tags: [
       "Solana",
       "Rust",
       "Anchor",
       "Next.js",
       "TypeScript",
-      "Blockchain",
-      "NFT",
-      "Smart Contracts",
+      "Escrow",
+      "GitHub",
     ],
+    featured: true,
   },
   {
     title: "Arachnid",
     description:
-      "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to enhance availability, using Python, HuggingFace Transformers, Async Programming, and Apache Cassandra.",
+      "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to improve availability. Built with Python, HuggingFace Transformers, async programming, and Apache Cassandra.",
     link: "https://github.com/A91y/Arachnid",
-    tags: ["Python", "NLP", "Async Programming", "Apache Cassandra"],
-  },
-  {
-    title: "ERC20Launcher",
-    description:
-      "A comprehensive tool for deploying ERC-20 tokens on any EVM-based blockchain.",
-    link: "https://erc20launcher.ayushagr.me/",
-    tags: [
-      "Solidity",
-      "Ethereum",
-      "Blockchain",
-      "TypeScript",
-      "Next.js",
-      "Hardhat",
-    ],
-  },
-  {
-    title: "MintGovernance",
-    description:
-      "A robust governance system in Solidity on the Ethereum blockchain using OpenZeppelin contracts.",
-    link: "https://github.com/A91y/MintGovernance",
-    tags: ["Solidity", "Ethereum", "Blockchain", "OpenZeppelin"],
-  },
-  {
-    title: "Ludic.fun",
-    description:
-      "A decentralized gaming platform on the Solana blockchain, leveraging Rust, Solana, Next.js, and TypeScript technologies. Implementing self engineered NFTs, and tokenomics.",
-    link: "https://ludic.fun/",
-    tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],
+    tags: ["Python", "NLP", "Async", "Apache Cassandra"],
+    featured: true,
   },
   {
     title: "CollectiveX",
-    description: "Contributed to a multisig & DAO platform on the SOON SVM.",
+    description: "Contributed to a multisig and DAO platform on the SOON SVM.",
     link: "https://github.com/CollectiveX-Org",
     tags: ["Solana", "Rust", "Anchor", "TypeScript", "MultiSig", "DAO"],
+    featured: true,
+  },
+  {
+    title: "Blinks By Ayush",
+    description:
+      "A directory of Solana Blinks, covering transfers, swaps, and on-chain actions surfaced as shareable links.",
+    link: "https://blinks.ayushagr.me/",
+    tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript", "Blinks"],
+    featured: true,
+  },
+
+  // Below the fold
+  {
+    title: "MintGovernance",
+    description:
+      "A governance system in Solidity on Ethereum, built with OpenZeppelin contracts.",
+    link: "https://github.com/A91y/MintGovernance",
+    tags: ["Solidity", "Ethereum", "OpenZeppelin"],
   },
   {
     title: "Uniswap Liquidity Pools",
     description:
-      "Liquidity pools using UniswapV2, leveraging Solidity, Ethereum, and JavaScript technologies. (Private Freelance Contribution)",
-    tags: ["Solidity", "Ethereum", "UniswapV2", "JavaScript"],
+      "Liquidity pools using Uniswap V2, built with Solidity, Ethereum, and JavaScript. Private freelance engagement.",
+    tags: ["Solidity", "Ethereum", "Uniswap V2", "JavaScript"],
   },
   {
     title: "ResQConnect",
     description:
-      "Robust API build using Django and Django Rest Framework for connecting rescue agencies and help seekers.",
+      "An API built with Django and Django REST Framework connecting rescue agencies and help seekers.",
     link: "https://github.com/TeamDRex/ResQConnect",
-    tags: ["Django", "Django Rest Framework", "Python", "REST API"],
+    tags: ["Django", "Django REST Framework", "Python", "REST API"],
   },
   {
     title: "Vision Wave",
     description:
-      "An award winning drowsiness detection system using OpenCV, Python, Pytorch, YoloV5, Streamlit and Deep Learning.",
+      "An award-winning drowsiness detection system using OpenCV, PyTorch, YOLOv5, Streamlit, and deep learning.",
     link: "https://github.com/A91y/VisionWave-BinaryBharat",
-    tags: [
-      "Python",
-      "OpenCV",
-      "Pytorch",
-      "YoloV5",
-      "Deep Learning",
-      "Streamlit",
-    ],
+    tags: ["Python", "OpenCV", "PyTorch", "YOLOv5", "Deep Learning"],
   },
   {
     title: "ERC20 Indexer",
-    description: "Indexer for ERC20 tokens for wallet address.",
+    description: "An indexer for ERC-20 token balances by wallet address.",
     link: "https://github.com/A91y/erc20-indexer",
-    tags: [
-      "JavaScript",
-      "React.js",
-      "Ethers.js",
-      "ERC20 Tokens",
-      "Chakra UI",
-      "Alchemy SDK",
-    ],
+    tags: ["JavaScript", "React", "Ethers.js", "ERC-20", "Alchemy SDK"],
   },
   {
     title: "AyDictionary",
     description:
       "A Python package for fetching word meanings, synonyms, antonyms, and translations.",
     link: "https://pypi.org/project/AyDictionary/",
-    tags: [
-      "Python",
-      "CLI",
-      "PyPI",
-      "Web Scraping",
-      "Beautiful Soup",
-      "Object Oriented Programming",
-    ],
-  },
-  {
-    title: "SuperchatJs",
-    description:
-      "A chat application using React.js and Firebase Firestore for real-time messaging.",
-    link: "https://github.com/A91y/superchatjs",
-    tags: ["Javascript", "React.js", "Netlify", "Firebase", "Firestore"],
+    tags: ["Python", "CLI", "PyPI", "Web Scraping"],
   },
   {
     title: "USASalesTaxAPI",
     description: "A REST API for fetching sales tax data for US states.",
     link: "https://github.com/A91y/USASalesTaxAPI",
-    tags: [
-      "Python",
-      "REST API",
-      "Flask",
-      "Web Scraping",
-      "Beautiful Soup",
-      "Django Rest Framework",
-      "Django",
-      "Caching",
-    ],
+    tags: ["Python", "REST API", "Web Scraping", "Caching"],
+  },
+  {
+    title: "SuperchatJs",
+    description:
+      "A chat application using React and Firebase Firestore for real-time messaging.",
+    link: "https://github.com/A91y/superchatjs",
+    tags: ["JavaScript", "React", "Firebase", "Firestore"],
   },
   {
     title: "AyImageBot",
-    description: "A Telegram bot, to send free images.",
+    description: "A Telegram bot for sending free images.",
     link: "https://github.com/AysBots/AyImageBot",
-    tags: ["Python", "Telegram Bot", "API", "Telegram Bot API"],
+    tags: ["Python", "Telegram Bot API"],
+  },
+  {
+    title: "Ludic.fun",
+    description:
+      "A decentralized gaming platform on Solana with self-engineered NFTs and tokenomics, built with Rust, Anchor, Next.js, and TypeScript.",
+    tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript"],
   },
 ];
+
 export interface Social {
   name: string;
   link: string;
   icon: IconType;
 }
+
 export const socials: Social[] = [
-  {
-    name: "Twitter",
-    link: "https://twitter.com/ayushagr91",
-    icon: SiTwitter,
-  },
-  {
-    name: "GitHub",
-    link: "https://github.com/A91y",
-    icon: SiGithub,
-  },
+  { name: "Twitter", link: "https://twitter.com/ayushagr91", icon: SiTwitter },
+  { name: "GitHub", link: "https://github.com/A91y", icon: SiGithub },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/ayushagr91",
     icon: SiLinkedin,
   },
-  {
-    name: "Telegram",
-    link: "https://t.me/AyushAgr91",
-    icon: SiTelegram,
-  },
+  { name: "Telegram", link: "https://t.me/AyushAgr91", icon: SiTelegram },
 ];
-export interface WorkExperience {
+
+export interface Experience {
   company: string;
   logo: string;
   position: string;
@@ -400,27 +254,28 @@ export interface WorkExperience {
   years: string;
   link?: string;
 }
-export const workExperiences: WorkExperience[] = [
+
+export const workExperiences: Experience[] = [
   {
     company: "Credible",
     logo: "/crediblefin.jpeg",
-    position: "Full-Stack Fintech Engineer · Freelance",
+    position: "Full-Stack Fintech Engineer, Freelance",
     description:
       "Freelance engagement delivered through my web3 agency. Full-stack engineering for a B2B fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, and Solana/EVM wallet auth and transaction logic.",
-    years: "Sep, 2025 - Present",
+    years: "Oct, 2025 - Present",
   },
   {
     company: "Turbin3",
     logo: "/turbin3.jpeg",
-    position: "Solana Developer — Accelerated Cohort (Q2 2026)",
+    position: "Solana Developer, Accelerated Cohort (Q2 2026)",
     description:
-      "Selected for Turbin3's accelerated Solana developer cohort. Built multiple on-chain programs across Anchor, native Rust, and Pinocchio, including measured compute-unit optimization (init ~19.5k → ~1.8k CU; account checks ~17.8k → ~1.5k CU). Hand-wrote MagicBlock delegation and Ephemeral Rollup CPIs, integrated x402 machine payments, and shipped a private-payments capstone (StealthX).",
+      "Selected for Turbin3's accelerated Solana developer cohort. Built multiple on-chain programs across Anchor and Pinocchio, including measured compute-unit optimization (init ~19.5k to ~1.8k CU; account checks ~17.8k to ~1.5k CU). Hand-wrote MagicBlock delegation and Ephemeral Rollup CPIs, integrated x402 machine payments, and shipped StealthX as the team capstone.",
     years: "Apr, 2026 - Jun, 2026",
   },
   {
-    company: "Decharge",
+    company: "DeCharge",
     logo: "/decharge.png",
-    position: "Full-Stack & Blockchain Engineer · Freelance",
+    position: "Full-Stack & Blockchain Engineer, Freelance",
     description:
       "Freelance engagement delivered through my web3 agency. Full-stack and on-chain work for a DePIN EV-charging network: built a Solana investment product client, extended it to a second EVM chain, and built the wallet-signature auth layer for the dApp.",
     years: "Apr, 2025 - Apr, 2026",
@@ -428,7 +283,7 @@ export const workExperiences: WorkExperience[] = [
   {
     company: "Lince Finance",
     logo: "/lince.png",
-    position: "Solana Smart Contract & SDK Engineer",
+    position: "Solana Smart Contract & SDK Engineer, Freelance",
     description:
       "Built yield-aggregation infrastructure on Solana: vault logic, strategy integrations, composition-based rebalancing, and TypeScript SDK development.",
     years: "Aug, 2025 - Feb, 2026",
@@ -436,136 +291,152 @@ export const workExperiences: WorkExperience[] = [
   {
     company: "Merkle Labs",
     logo: "/merklelabs.png",
-    position: "Solana Backend & Smart Contract Engineer · Freelance",
+    position: "Solana Backend & Smart Contract Engineer, Freelance",
     description:
-      "Freelance Solana backend and smart-contract engineering. Contributed to on-chain subsystems for a token launchpad (Rust/Anchor) within a multi-engineer team — staking, reward distribution across AMM/DLMM pools, whitelist allocation, Merkle-proof authorization, and pool-migration flows — plus the TypeScript automation driving them. Solely built an automated DLMM liquidity-management bot end to end (rebalancing cron + Express API).",
+      "Contributed to on-chain subsystems for a token launchpad (Rust/Anchor) within a multi-engineer team: staking, reward distribution across AMM/DLMM pools, whitelist allocation, Merkle-proof authorization, and pool-migration flows, plus the TypeScript automation driving them. Built an automated DLMM liquidity-management bot end to end (rebalancing cron and Express API).",
     years: "Jan, 2025 - Mar, 2025",
-  },
-  {
-    company: "Superteam",
-    logo: "/superteam.jpg",
-    position: "Member",
-    description:
-      "Building web3 based startups, and contributing to Solana Ecosystem.",
-    years: "Oct, 2024 - Present",
   },
   {
     company: "Catoff Gaming",
     logo: "/catoff.png",
     position: "Backend Intern",
     description:
-      "Built backend services for Catoff Gaming, a gaming platform. Technologies used: Nest.js, Typescript, Cron, Redis, Queue, Solana Actions, Next.js.",
+      "Built backend services for a gaming platform using NestJS, TypeScript, cron jobs, Redis, queues, Solana Actions, and Next.js.",
     years: "Oct, 2024 - Mar, 2025",
-  },
-  {
-    company: "Innogeeks",
-    logo: "/innogeeks.jpg",
-    position: "Core Team | Blockchain Lead",
-    description:
-      "Managing and leading the blockchain division, organizing workshops, and conducting hackathons to promote blockchain technology.",
-    years: "Oct, 2024 - July, 2026",
   },
   {
     company: "TimeOnSolana",
     logo: "/timeonsolana.jpg",
     position: "Backend Developer",
     description:
-      "Fixed authentication and authorization issues with twitter and fixed other bugs in platform.",
+      "Fixed Twitter authentication and authorization issues, and resolved other platform bugs.",
     years: "June, 2024 - July, 2024",
-  },
-  {
-    company: "Superteam",
-    logo: "/superteam.jpg",
-    position: "Contributor",
-    description:
-      "Contributed to OSS Projects under Superteam. Helping me develop my web3 based startups.",
-    years: "June, 2024 - Oct, 2024",
   },
   {
     company: "Freelance",
     logo: "/skeleton.jpg",
     position: "Blockchain Developer",
     description:
-      "Worked on Liquidity Pool, DEX utilizing UniswapV2 on EVM based L2 blockchain.",
+      "Built a liquidity pool and DEX using Uniswap V2 on an EVM-based L2.",
     years: "May, 2024 - June, 2024",
-  },
-  {
-    company: "FOSSCU",
-    logo: "/fosscu.png",
-    position: "Core Member",
-    description:
-      "Contributing and Maintaining Open Source Projects under FOSSCU, a student-run community.",
-    years: "Nov, 2023 - Present",
   },
   {
     company: "Freelance",
     logo: "/skeleton.jpg",
     position: "Python Developer",
     description:
-      "Engineered python based web scraper bypassing Cloudflare bot protection, while streamlining deployment with Docker and earning 5-star reviews.",
+      "Engineered a Python web scraper that bypassed Cloudflare bot protection, containerized deployment with Docker, and earned 5-star client reviews.",
     years: "May, 2023 - June, 2024",
     link: "https://www.upwork.com/freelancers/~015e68d4915ac74f75?mp_source=share",
+  },
+];
+
+export const communityExperiences: Experience[] = [
+  {
+    company: "Superteam",
+    logo: "/superteam.jpg",
+    position: "Member",
+    description:
+      "Building web3 startups and contributing to the Solana ecosystem.",
+    years: "Oct, 2024 - Present",
+  },
+  {
+    company: "FOSSCU",
+    logo: "/fosscu.png",
+    position: "Core Member",
+    description:
+      "Contributing to and maintaining open-source projects under FOSSCU, a student-run community.",
+    years: "Nov, 2023 - Present",
+  },
+  {
+    company: "Innogeeks",
+    logo: "/innogeeks.jpg",
+    position: "Core Team, Blockchain Lead",
+    description:
+      "Led the blockchain division, organizing workshops and hackathons to promote blockchain technology.",
+    years: "Oct, 2024 - July, 2026",
   },
   {
     company: "Innogeeks",
     logo: "/innogeeks.jpg",
     position: "ML Coordinator",
     description:
-      "Led the ML division to increase membership and participation, conducted numerous data science and machine learning training sessions, and fostered peer-to-peer learning among members.",
+      "Led the ML division, ran data science and machine learning training sessions, and grew membership and participation.",
     years: "Dec, 2022 - Oct, 2024",
   },
+];
+
+export const educationExperiences: Experience[] = [
   {
-    company: "KIET",
+    company: "KIET Group of Institutions, Ghaziabad",
     logo: "/kiet.png",
-    position: "Student",
+    position: "B.Tech, Computer Science & Engineering",
     description:
-      "Pursuing Computer Science Engineering degree from KIET Group of Institutions, Ghaziabad.",
+      "Graduated July 2026. Blockchain lead and ML coordinator at Innogeeks, core member at FOSSCU.",
     years: "Nov, 2022 - July, 2026",
   },
 ];
+
 export const aboutYou = {
   name: "Ayush Agrawal",
   description:
-    "👋 Hi, I'm Ayush - a Solana and full-stack web3 developer. I go deep on-chain with native Rust, Pinocchio, Anchor, and MagicBlock, and ship the full product around it: backends, third-party integrations, and multi-chain frontends. I've built production systems across fintech payments, DePIN, and DeFi - from KYC/KYB compliance pipelines to cross-chain investment products. Started out deep in Python, picked up Ethereum and TON along the way, but Solana is home. On the side, I also run a small web3 engineering agency, delivering the same kind of work for clients.",
+    "Hi, I'm Ayush, a Solana and full-stack web3 developer. I go deep on-chain with Pinocchio, Anchor, and MagicBlock, and ship the full product around it: backends, third-party integrations, and multi-chain frontends. I've built production systems across fintech payments, DePIN, and DeFi, from KYC/KYB compliance pipelines to cross-chain investment products. Started out deep in Python, picked up Ethereum and TON along the way, but Solana is home. Alongside my own work, I run a small web3 engineering agency delivering the same kind of work for clients.",
   yearsOfExperience: "4+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
   twitter: "ayushagr91",
 };
-export const logoText = "@a91y";
-export const marketingHeadlines = {
-  mainHeadline: "Hi There 👋",
-  subHeadline: "Eat. Sleep. Code. Repeat.",
+
+export const availability = {
+  open: true,
+  headline: "Available for work",
+  detail:
+    "Open to remote contract or full-time roles, worldwide. Solana programs, backend, and full-stack.",
 };
+
+export const resume = {
+  label: "Resume",
+  href: "https://drive.google.com/file/d/1G-mAvy-nOnWR4VrvJzuNToN5Ka_unvjI/view?usp=sharing",
+};
+
+export const logoText = "@a91y";
+
+export const marketingHeadlines = {
+  mainHeadline: "Hi There👋",
+  subHeadline: "Solana programs, and the systems around them.",
+};
+
 export const websiteMetadata = {
   title: "Ayush Agrawal | Solana & Full-Stack Web3 Developer",
   description:
-    "👋 Hey, Ayush Agrawal here - a Solana and full-stack web3 developer building on-chain programs (Rust, Pinocchio, Anchor, MagicBlock) and the backends and frontends around them, across fintech, DePIN, and DeFi.",
+    "Ayush Agrawal, a Solana and full-stack web3 developer building on-chain programs (Rust, Pinocchio, Anchor, MagicBlock) and the backends and frontends around them, across fintech, DePIN, and DeFi.",
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",
   twitterSite: "@ayushagr91",
   keywords: [
     "Ayush Agrawal",
-    "Developer",
-    "Blockchain",
-    "Python",
+    "Solana Developer",
     "Solana",
+    "Rust",
+    "Pinocchio",
+    "Anchor",
+    "MagicBlock",
+    "x402",
+    "Base",
+    "Blockchain",
+    "Full-Stack Web3",
+    "NestJS",
+    "Python",
+    "Backend Engineer",
+    "DePIN",
+    "Turbin3",
+    "StealthX",
     "Superteam",
     "FOSSCU",
     "Innogeeks",
-    "Ayush TON",
+    "KIET",
     "A91y",
     "Ayush Agr",
-    "Pinocchio",
-    "MagicBlock",
-    "NestJS",
-    "DePIN",
-    "Full-Stack Web3",
-    "Base",
-    "x402",
-    "Turbin3",
-    "StealthX",
-    "KIET",
   ],
 };

@@ -105,6 +105,14 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Pinoc",
+    description:
+      "A command-line tool for building Solana programs with Pinocchio. Pinocchio is deliberately minimal — no build orchestration, no project conventions — so the workflow around it is left to the developer. Pinoc fills that gap with Pinocchio-aware commands, including a `clean` that preserves `keypair` so you don't lose your program ID the way a plain `cargo clean` does.",
+    link: "https://github.com/A91y/pinoc",
+    tags: ["Rust", "CLI", "Solana", "Pinocchio", "Developer Tooling"],
+    featured: true,
+  },
+  {
     title: "Full-Time",
     description:
       "A trust-minimized settlement rail for parametric sports markets on Solana. Settlement is permissionless and proof-based: anyone can submit a TxODDS Merkle proof and the program recomputes the root on-chain via CPI, so there is no admin, oracle key, or dispute committee. Shipped as an installable SDK (@fulltime/settle), an autonomous keeper, and a Next.js reference dApp.",

@@ -396,7 +396,7 @@ export const availability = {
 
 export const resume = {
   label: "Resume",
-  href: "https://drive.google.com/file/d/1G-mAvy-nOnWR4VrvJzuNToN5Ka_unvjI/view?usp=sharing",
+  href: "https://drive.google.com/file/d/1z0_2Vm_N4bpTQ1TKbjnQ6fYR2eHIBfQM/view?usp=sharing",
 };
 
 export const logoText = "@a91y";

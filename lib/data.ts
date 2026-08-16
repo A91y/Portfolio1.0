@@ -262,7 +262,7 @@ export const workExperiences: Experience[] = [
     position: "Full-Stack Fintech Engineer, Freelance",
     description:
       "Freelance engagement delivered through my web3 agency. Full-stack engineering for a B2B fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, and Solana/EVM wallet auth and transaction logic.",
-    years: "Oct, 2025 - Present",
+    years: "Oct, 2025 - July, 2026",
   },
   {
     company: "Turbin3",
@@ -283,7 +283,7 @@ export const workExperiences: Experience[] = [
   {
     company: "Lince Finance",
     logo: "/lince.png",
-    position: "Solana Smart Contract & SDK Engineer, Freelance",
+    position: "Solana Smart Contract & SDK Engineer, Full-Time",
     description:
       "Built yield-aggregation infrastructure on Solana: vault logic, strategy integrations, composition-based rebalancing, and TypeScript SDK development.",
     years: "Aug, 2025 - Feb, 2026",

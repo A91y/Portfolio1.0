@@ -381,7 +381,7 @@ export const aboutYou = {
   name: "Ayush Agrawal",
   description:
     "Hi, I'm Ayush, a Solana and full-stack web3 developer. I go deep on-chain with Pinocchio, Anchor, and MagicBlock, and ship the full product around it: backends, third-party integrations, and multi-chain frontends. I've built production systems across fintech payments, DePIN, and DeFi, from KYC/KYB compliance pipelines to cross-chain investment products. Started out deep in Python, picked up Ethereum and TON along the way, but Solana is home. Alongside my own work, I run a small web3 engineering agency delivering the same kind of work for clients.",
-  yearsOfExperience: "4+ years",
+  yearsOfExperience: "3+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
   twitter: "ayushagr91",

@@ -281,7 +281,7 @@ export interface Experience {
   years: string;
   link?: string;
   // Work entries only: which sub-group of the Work section they render in.
-  section?: "current" | "agency" | "earlier" | "program";
+  section?: "current" | "agency" | "earlier" | "program" | "teaching";
 }
 
 export const workExperiences: Experience[] = [
@@ -302,7 +302,7 @@ export const workExperiences: Experience[] = [
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Contract",
     description:
-      "Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
+      "Owned the business payments flow end to end and led the team that shipped it. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - Jul, 2026",
   },
   {
@@ -322,7 +322,7 @@ export const workExperiences: Experience[] = [
     logo: "/decharge.png",
     position: "Full-Stack & Blockchain Engineer, Freelance",
     description:
-      "Full-stack and on-chain work for a DePIN EV-charging network: built a Solana investment product client, extended it to a second EVM chain, and built the wallet-signature auth layer for the dApp.",
+      "Full-stack and on-chain work for a DePIN EV-charging network: built a Solana investment product client, extended it to Base (EVM), and built the wallet-signature auth layer for the dApp.",
     years: "Apr, 2025 - Apr, 2026",
   },
   {
@@ -410,6 +410,15 @@ export const workExperiences: Experience[] = [
       "Engineered a Python web scraper that bypassed Cloudflare bot protection, containerized deployment with Docker, and earned 5-star client reviews.",
     years: "May, 2023 - Jun, 2024",
     link: "https://www.upwork.com/freelancers/~015e68d4915ac74f75?mp_source=share",
+  },
+  {
+    company: "Pimpri Chinchwad College of Engineering and Research (PCCOER), Pune",
+    section: "teaching",
+    logo: "/skeleton.jpg",
+    position: "Instructor, Faculty Development Program",
+    description:
+      "Taught the Solana smart contract development day of a 5-day faculty program on blockchain technologies, run by PCCOER with ManoRekha Tech Innovations: Rust for Solana, the account and program model, building and deploying an Anchor program to devnet, live and hands-on.",
+    years: "Aug, 2026",
   },
 ];
 
@@ -579,6 +588,122 @@ export const achievements: Achievement[] = [
     date: "Oct 2023",
     detail: "Built Vision Wave, a drowsiness-detection system for user safety.",
     href: "https://github.com/A91y/VisionWave-BinaryBharat",
+  },
+];
+
+export interface ExpertiseProof {
+  label: string;
+  // Internal ("/#id", "/projects/x") or external URL; omitted for plain text.
+  href?: string;
+}
+
+export interface ExpertiseArea {
+  id: string;
+  title: string;
+  claim: string;
+  // Each must be backed by the page it links to.
+  proofs: ExpertiseProof[];
+  // Matches Skill.text where one exists, to reuse its icon.
+  tools: string[];
+  featured: boolean;
+}
+
+export const expertise: ExpertiseArea[] = [
+  {
+    id: "solana-programs",
+    title: "Solana program development",
+    claim: "Native Pinocchio and Anchor programs, measured down to compute units.",
+    proofs: [
+      { label: "Init ~19.5k → ~1.8k CU in native Pinocchio", href: "/projects/stealthx" },
+      { label: "Backroll: lending protocol in no_std Rust on Pinocchio", href: "/#work-backroll" },
+      { label: "Full-Time: 44/44 LiteSVM tests", href: "/projects/full-time" },
+    ],
+    tools: ["Solana", "Rust", "Pinocchio", "Anchor", "Token-2022", "MagicBlock", "LiteSVM"],
+    featured: true,
+  },
+  {
+    id: "payments",
+    title: "Payments & fintech engineering",
+    claim: "Money movement, and the onboarding behind it.",
+    proofs: [
+      { label: "Owned Credible's business payments flow and led the team that shipped it", href: "/#work-credible" },
+      { label: "KYC/KYB compliance pipelines and provider integrations", href: "/#work-credible" },
+      { label: "Private x402 payments for AI agents", href: "/projects/stealthx" },
+    ],
+    tools: ["TypeScript", "NestJS", "RabbitMQ", "MongoDB", "x402"],
+    featured: true,
+  },
+  {
+    id: "defi",
+    title: "DeFi protocol design",
+    claim: "Vaults, leverage, liquidations and settlement.",
+    proofs: [
+      { label: "Backroll: vault shares, collateral tiers, liquidations", href: "/#work-backroll" },
+      { label: "Lince: yield aggregation and rebalancing", href: "/#work-lince-finance" },
+      { label: "Merkle Labs: DLMM liquidity bot", href: "/#work-merkle-labs" },
+      { label: "Proof-based settlement", href: "/projects/full-time" },
+    ],
+    tools: ["Token-2022", "Raydium", "Jupiter", "Pyth"],
+    featured: true,
+  },
+  {
+    id: "rust-tooling",
+    title: "Rust developer tooling",
+    claim: "Tooling for Pinocchio programs.",
+    proofs: [
+      { label: "pinoc on crates.io (v0.4.1)", href: "/projects/pinoc" },
+      { label: "Safety linter with SARIF output", href: "/projects/pinoc" },
+      { label: "setup-pinoc GitHub Action", href: "https://github.com/marketplace/actions/setup-pinoc" },
+    ],
+    tools: ["Rust", "Codama", "mollusk-svm"],
+    featured: true,
+  },
+  {
+    id: "backend",
+    title: "Backend & data",
+    claim: "Keepers, indexers and large databases.",
+    proofs: [
+      { label: "Backroll keeper and Postgres-backed positions", href: "/#work-backroll" },
+      { label: "PostgreSQL at 80M+ records: migrations, indexing, dedup" },
+    ],
+    tools: ["Node", "PostgreSQL", "Redis", "RabbitMQ", "OpenTelemetry", "Docker"],
+    featured: false,
+  },
+  {
+    id: "frontend-multichain",
+    title: "Frontends & multi-chain",
+    claim: "Next.js apps across Solana and EVM.",
+    proofs: [
+      { label: "Extended a Solana investment product to Base (EVM)", href: "/#work-decharge" },
+      { label: "TON/Tact challenge winner, HackCBS 6.0", href: "/#achievements" },
+    ],
+    tools: ["Next.js", "React", "Wagmi", "Viem", "Solidity", "Tact"],
+    featured: false,
+  },
+  {
+    id: "ai-ml",
+    title: "AI, ML & agents",
+    claim: "RL environments and AI agents for Solana.",
+    proofs: [
+      { label: "svm-exploit-gym: RL environment for Solana exploits", href: "/projects/svm-exploit-gym" },
+      { label: "1st place, Solana AI Agent Toolkit bounty", href: "/#achievements" },
+      { label: "Arachnid: transformer-based classifier", href: "/projects/arachnid" },
+    ],
+    tools: ["Python", "PyTorch", "Gymnasium", "Hugging Face Transformers"],
+    featured: false,
+  },
+  {
+    id: "leadership",
+    title: "Leading & teaching",
+    claim: "Founding, leading teams, teaching.",
+    proofs: [
+      { label: "Web3 engineering agency", href: "/#work-agency" },
+      { label: "Founded Octasol: 600+ users in its first month", href: "/projects/octasol" },
+      { label: "Innogeeks blockchain lead", href: "/#community" },
+      { label: "Taught Solana program development to faculty (PCCOER)", href: "/#work-teaching" },
+    ],
+    tools: [],
+    featured: false,
   },
 ];
 

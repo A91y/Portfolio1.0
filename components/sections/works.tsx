@@ -127,6 +127,7 @@ export default function Works() {
       <div id="programs-education" className="space-y-6">
         <h2 className="text-4xl font-bold tracking-tight">Programs & Education</h2>
         <SubGroup label="Programs" experiences={inSection("program")} cardIds />
+        <SubGroup label="Teaching" experiences={inSection("teaching")} sectionId="work-teaching" />
         <SubGroup label="Education" experiences={educationExperiences} />
       </div>
     </section>

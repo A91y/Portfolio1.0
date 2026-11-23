@@ -33,17 +33,15 @@ export interface Skill {
   icon?: IconType | LucideIcon;
   text: string;
   group: "onchain" | "chains" | "backend" | "frontend" | "tooling";
-  // Shown up front in the hero; the rest sit under "Also used".
-  core?: boolean;
 }
 
 export const skills: Skill[] = [
   // On-chain: lead with this. It is the differentiator.
   { icon: SolanaIcon, text: "Solana", group: "onchain" },
-  { icon: SiRust, text: "Rust", group: "onchain", core: true },
-  { icon: Anchor, text: "Anchor", group: "onchain", core: true },
-  { text: "Pinocchio", group: "onchain", core: true },
-  { text: "MagicBlock", group: "onchain", core: true },
+  { icon: SiRust, text: "Rust", group: "onchain" },
+  { icon: Anchor, text: "Anchor", group: "onchain" },
+  { text: "Pinocchio", group: "onchain" },
+  { text: "MagicBlock", group: "onchain" },
   { text: "x402", group: "onchain" },
 
   // Other chains
@@ -56,15 +54,15 @@ export const skills: Skill[] = [
   { text: "Tact", group: "chains" },
 
   // Backend
-  { icon: SiTypescript, text: "TypeScript", group: "backend", core: true },
-  { icon: SiNestjs, text: "NestJS", group: "backend", core: true },
-  { icon: SiNodedotjs, text: "Node", group: "backend", core: true },
+  { icon: SiTypescript, text: "TypeScript", group: "backend" },
+  { icon: SiNestjs, text: "NestJS", group: "backend" },
+  { icon: SiNodedotjs, text: "Node", group: "backend" },
   { icon: SiExpress, text: "Express", group: "backend" },
   { icon: SiPython, text: "Python", group: "backend" },
   { icon: SiDjango, text: "Django", group: "backend" },
-  { icon: BiLogoPostgresql, text: "PostgreSQL", group: "backend", core: true },
-  { icon: SiRedis, text: "Redis", group: "backend", core: true },
-  { icon: SiRabbitmq, text: "RabbitMQ", group: "backend", core: true },
+  { icon: BiLogoPostgresql, text: "PostgreSQL", group: "backend" },
+  { icon: SiRedis, text: "Redis", group: "backend" },
+  { icon: SiRabbitmq, text: "RabbitMQ", group: "backend" },
   { icon: SiMongodb, text: "MongoDB", group: "backend" },
   { icon: SiApachecassandra, text: "Apache Cassandra", group: "backend" },
   { icon: SiOpentelemetry, text: "OpenTelemetry", group: "backend" },

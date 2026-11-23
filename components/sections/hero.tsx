@@ -4,40 +4,11 @@ import {
   availability,
   marketingHeadlines,
   proofPoints,
-  Skill,
-  skills,
 } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import ActionButton from "@/components/action-button";
-import SkillOutline from "@/components/skill-outline";
-
-// Groups skills by their `group` field while preserving source order, both
-// within each group and across groups (on-chain first).
-function groupSkills(list: Skill[]): Skill[][] {
-  const groups: Skill[][] = [];
-  const indexByGroup = new Map<Skill["group"], number>();
-
-  for (const skill of list) {
-    const existing = indexByGroup.get(skill.group);
-    if (existing === undefined) {
-      indexByGroup.set(skill.group, groups.length);
-      groups.push([skill]);
-    } else {
-      groups[existing].push(skill);
-    }
-  }
-
-  return groups;
-}
-
-// The first skill leads the row as context, ahead of the core skills.
-const leadSkills = skills.filter((skill, index) => index === 0 || skill.core);
-const otherSkills = skills.filter((skill) => !leadSkills.includes(skill));
 
 export default function Hero() {
-  const leadGroups = groupSkills(leadSkills);
-  const skillGroups = groupSkills(otherSkills);
-
   return (
     <section id="home" key="home" className="space-y-8">
       <div className="space-y-4">
@@ -86,33 +57,6 @@ export default function Hero() {
             <dd className="text-2xl font-bold leading-none">{aboutYou.location}</dd>
           </div>
         </dl>
-      </div>
-      
-      <div className="space-y-4">
-        <h2 className="text-sm font-semibold uppercase tracking-wider">Tech Stack</h2>
-        <div className="space-y-3">
-          {leadGroups.map((group) => (
-            <div key={group[0].group} className="flex flex-wrap gap-2">
-              {group.map((skill) => (
-                <SkillOutline key={skill.text} Icon={skill.icon} text={skill.text} />
-              ))}
-            </div>
-          ))}
-        </div>
-        <details>
-          <summary className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground">
-            Also used ({otherSkills.length})
-          </summary>
-          <div className="space-y-3 pt-3">
-            {skillGroups.map((group) => (
-              <div key={group[0].group} className="flex flex-wrap gap-2">
-                {group.map((skill) => (
-                  <SkillOutline key={skill.text} Icon={skill.icon} text={skill.text} />
-                ))}
-              </div>
-            ))}
-          </div>
-        </details>
       </div>
     </section>
   );

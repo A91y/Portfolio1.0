@@ -2,6 +2,7 @@ import HashGlow from "@/components/hash-glow";
 import JsonLd from "@/components/json-ld";
 import Achievements from "@/components/sections/achievements";
 import Contact from "@/components/sections/contact";
+import Expertise from "@/components/sections/expertise";
 import Hero from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
 import Works from "@/components/sections/works";
@@ -17,6 +18,7 @@ export default function Home() {
       <JsonLd data={[websiteJsonLd, profilePageJsonLd]} />
       <HashGlow any skip={DEDICATED_GLOW_IDS} />
       <Hero />
+      <Expertise />
       <Projects />
       <Achievements />
       <Works />

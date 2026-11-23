@@ -501,6 +501,8 @@ export const aboutYou = {
   name: "Ayush Agrawal",
   description:
     "Hi, I'm Ayush, a Solana and full-stack web3 developer. I build Solana programs with Pinocchio, Anchor and MagicBlock, and the payment systems around them: backends, integrations and frontends across fintech, DePIN and DeFi. Solana is home. I also run a small web3 engineering agency doing the same work for clients.",
+  // Part of description shown in bold in the sidebar; must appear in description verbatim.
+  descriptionEmphasis: "Solana is home.",
   yearsOfExperience: "3+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",

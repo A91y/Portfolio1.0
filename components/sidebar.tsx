@@ -1,5 +1,12 @@
 import { aboutYou } from "@/lib/data";
 
+const emphasis = aboutYou.description.includes(aboutYou.descriptionEmphasis)
+  ? aboutYou.descriptionEmphasis
+  : "";
+const [before, after] = emphasis
+  ? aboutYou.description.split(emphasis)
+  : [aboutYou.description, ""];
+
 // The name is the page's h1 only on pages without one of their own.
 export default function Sidebar({ nameIsHeading = true }: { nameIsHeading?: boolean }) {
   const Name = nameIsHeading ? "h1" : "p";
@@ -15,7 +22,9 @@ export default function Sidebar({ nameIsHeading = true }: { nameIsHeading?: bool
       
       {/* Description */}
       <p className="text-sm text-muted-foreground leading-relaxed">
-        {aboutYou.description}
+        {before}
+        {emphasis && <strong className="font-semibold text-foreground">{emphasis}</strong>}
+        {after}
       </p>
       
       {/* GitHub Link */}

@@ -289,7 +289,7 @@ export interface Experience {
   years: string;
   link?: string;
   // Work entries only: which sub-group of the Work section they render in.
-  section?: "current" | "agency" | "earlier" | "program" | "teaching";
+  section?: "current" | "earlier" | "program" | "teaching";
 }
 
 export const workExperiences: Experience[] = [
@@ -305,7 +305,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Credible",
-    section: "agency",
+    section: "earlier",
     link: "https://credible.finance",
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Contract",
@@ -325,7 +325,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "DeCharge",
-    section: "agency",
+    section: "earlier",
     link: "https://www.decharge.network",
     logo: "/decharge.png",
     position: "Full-Stack & Blockchain Engineer, Freelance",
@@ -355,7 +355,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "dokreativ",
-    section: "agency",
+    section: "earlier",
     link: "https://www.dokreativ.com",
     logo: "/dokreativ.jpeg",
     position: "Full Stack Engineer, Contract",
@@ -374,7 +374,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Merkle Labs",
-    section: "agency",
+    section: "earlier",
     link: "https://merklelabs.xyz",
     logo: "/merklelabs.png",
     position: "Solana Backend & Smart Contract Engineer, Freelance",
@@ -705,7 +705,7 @@ export const expertise: ExpertiseArea[] = [
     title: "Leading & teaching",
     claim: "Founding, leading teams, teaching.",
     proofs: [
-      { label: "Web3 engineering agency", href: "/#work-agency" },
+      { label: "Web3 engineering agency", href: "/#about" },
       { label: "Founded Octasol: 600+ users in its first month", href: "/projects/octasol" },
       { label: "Innogeeks blockchain lead", href: "/#community" },
       { label: "Taught Solana program development to faculty (PCCOER)", href: "/#work-teaching" },

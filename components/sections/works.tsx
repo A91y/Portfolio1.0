@@ -109,13 +109,6 @@ export default function Works() {
           </p>
         </div>
         <SubGroup label="Current" experiences={inSection("current")} sectionId="work-section" cardIds />
-        <SubGroup
-          label="Web3 engineering practice"
-          note="Client work delivered through my agency."
-          experiences={inSection("agency")}
-          sectionId="work-agency"
-          cardIds
-        />
         <SubGroup label="Earlier" experiences={inSection("earlier")} cardIds />
       </div>
 

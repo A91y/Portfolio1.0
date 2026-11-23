@@ -1,4 +1,5 @@
 import JsonLd from "@/components/json-ld";
+import Achievements from "@/components/sections/achievements";
 import Contact from "@/components/sections/contact";
 import Hero from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
@@ -12,6 +13,7 @@ export default function Home() {
       <JsonLd data={profilePageJsonLd} />
       <Hero />
       <Projects />
+      <Achievements />
       <Works />
       <Contact />
     </SiteShell>

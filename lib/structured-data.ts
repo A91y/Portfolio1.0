@@ -1,5 +1,6 @@
 import {
   aboutYou,
+  achievements,
   blog,
   cratesProfile,
   educationExperiences,
@@ -44,6 +45,7 @@ const person = {
     ...(education.link && { url: education.link }),
   })),
   knowsAbout: skills.map((skill) => skill.text),
+  award: achievements.map((achievement) => `${achievement.title}, ${achievement.event} (${achievement.date})`),
   sameAs: [...socials.map((social) => social.link), blog.href, cratesProfile],
 };
 

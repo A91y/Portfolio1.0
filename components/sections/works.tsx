@@ -7,7 +7,6 @@ import {
   communityExperiences,
   educationExperiences,
 } from "@/lib/data";
-import Collapsible from "@/components/collapsible";
 import WorkShowcase from "@/components/work-showcase";
 
 // Function to handle hash change
@@ -104,8 +103,6 @@ export default function Works() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
-  const earlier = inSection("earlier");
-
   return (
     <section id="work" key="work" className="space-y-12">
       <div className="space-y-6">
@@ -122,11 +119,7 @@ export default function Works() {
           experiences={inSection("agency")}
         />
         <SubGroup label="Founded" experiences={inSection("founded")} />
-        {earlier.length > 0 && (
-          <Collapsible showLabel={`Show earlier roles (${earlier.length})`} hideLabel="Hide earlier roles">
-            <SubGroup label="Earlier" experiences={earlier} />
-          </Collapsible>
-        )}
+        <SubGroup label="Earlier" experiences={inSection("earlier")} />
       </div>
 
       <div className="space-y-6">

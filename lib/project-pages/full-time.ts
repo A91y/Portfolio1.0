@@ -12,7 +12,7 @@ const page: ProjectPage = {
     "An autonomous keeper watches the TxLINE API for finalised matches and submits the proof; the Next.js reference dApp is built on the same SDK.",
   ],
   results: [
-    "#3 in the India track of the TxODDS World Cup Hackathon.",
+    "3rd place in the TxODDS World Cup India Buildathon (Superteam India), 200 USDC prize.",
     "44/44 LiteSVM tests and 7/7 keeper checks passing.",
     "Full lifecycle run on devnet with Circle devnet USDC: the keeper settled a real finalised fixture with no human involved, and the winner claimed.",
   ],

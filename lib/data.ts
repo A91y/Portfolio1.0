@@ -521,9 +521,65 @@ export const marketingHeadlines = {
 
 // Short claims under the hero headline, each linking to the page that backs it.
 export const proofPoints = [
+  { label: "🏆 Colosseum Radar: Reclaim track", href: "/#achievements" },
   { label: "pinoc on crates.io", href: "/projects/pinoc" },
-  { label: "#3 India track: Full-Time", href: "/projects/full-time" },
+  { label: "🏆 India track: Full-Time", href: "/projects/full-time" },
   { label: "Superteam grant: Octasol", href: "/projects/octasol" },
+];
+
+export interface Achievement {
+  title: string;
+  event: string;
+  date: string;
+  detail?: string;
+  // Evidence: the listing, results page or project.
+  href?: string;
+  highlight?: boolean;
+}
+
+export const achievements: Achievement[] = [
+  {
+    title: "3rd place, TxODDS World Cup India Buildathon",
+    event: "Superteam India",
+    date: "Jul 2026",
+    detail: "Won with Full-Time, a proof-based settlement rail on Solana. 200 USDC prize.",
+    href: "https://superteam.fun/earn/listing/txodds-world-cup-buildathon-india",
+  },
+  {
+    title: "1st place, Contribute to the Solana AI Agent Toolkit (Part 2)",
+    event: "SendAI bounty",
+    date: "Jan 2025",
+    detail: "1,000 USDC prize.",
+    href: "https://superteam.fun/earn/listing/contribute-to-the-solana-ai-agent-toolkit-part-2",
+  },
+  {
+    title: "3rd place, Catoff on Blinks mini-game bounty",
+    event: "Catoff bounty",
+    date: "Nov 2024",
+    detail: "200 USDC prize.",
+    href: "https://superteam.fun/earn/listing/catoff-on-blinks-mini-game-dev-bounty",
+  },
+  {
+    title: "Winner, Tact Onboarding and NFT Challenge",
+    event: "HackCBS 6.0",
+    date: "Oct 2024",
+    detail: "Built on the TON network in Tact; awarded 16 Toncoin.",
+  },
+  {
+    title: "3rd place, Reclaim Protocol Side Track",
+    event: "Colosseum Radar hackathon",
+    date: "Oct 2024",
+    detail: "1,000 USDC prize.",
+    href: "https://superteam.fun/earn/listing/reclaim-protocol-side-track",
+    highlight: true,
+  },
+  {
+    title: "Winner, ICHacks 2.0 (IEEE)",
+    event: "Manipal University Jaipur",
+    date: "Oct 2023",
+    detail: "Built Vision Wave, a drowsiness-detection system for user safety.",
+    href: "https://github.com/A91y/VisionWave-BinaryBharat",
+  },
 ];
 
 export const websiteMetadata = {

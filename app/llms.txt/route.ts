@@ -1,5 +1,6 @@
 import {
   aboutYou,
+  achievements,
   availability,
   blog,
   communityExperiences,
@@ -72,6 +73,13 @@ function buildLlmsTxt() {
     ["Skills", skillLines()],
     ["Work", experienceLines(workExperiences)],
     ["Projects", projectLines(projects.filter((project) => project.featured))],
+    [
+      "Achievements",
+      achievements.map(
+        (achievement) =>
+          `- ${linked(achievement.title, achievement.href)}: ${achievement.event}, ${achievement.date}.${achievement.detail ? ` ${achievement.detail}` : ""}`,
+      ),
+    ],
     ["Community", experienceLines(communityExperiences)],
     ["Education", experienceLines(educationExperiences)],
     [

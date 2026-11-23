@@ -358,7 +358,7 @@ export const workExperiences: Experience[] = [
     section: "earlier",
     link: "https://www.dokreativ.com",
     logo: "/dokreativ.jpeg",
-    position: "Full Stack Engineer, Contract",
+    position: "Full-Stack Engineer, Contract",
     description:
       "Contract full-stack engineering with a small team: browser extension development, payment gateway integration, webhooks, Prisma and PostgreSQL with database optimization, and web scraping.",
     years: "Mar, 2025 - Dec, 2025",

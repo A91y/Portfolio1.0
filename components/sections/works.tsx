@@ -118,7 +118,6 @@ export default function Works() {
           note="Client work delivered through my agency."
           experiences={inSection("agency")}
         />
-        <SubGroup label="Founded" experiences={inSection("founded")} />
         <SubGroup label="Earlier" experiences={inSection("earlier")} />
       </div>
 

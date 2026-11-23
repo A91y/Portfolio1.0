@@ -281,7 +281,7 @@ export interface Experience {
   years: string;
   link?: string;
   // Work entries only: which sub-group of the Work section they render in.
-  section?: "current" | "agency" | "founded" | "earlier" | "program";
+  section?: "current" | "agency" | "earlier" | "program";
 }
 
 export const workExperiences: Experience[] = [
@@ -327,7 +327,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Octasol",
-    section: "founded",
+    section: "earlier",
     link: "https://github.com/octasol",
     logo: "/octasol.jpeg",
     position: "Founder & Lead",
@@ -357,7 +357,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Aydilooks",
-    section: "founded",
+    section: "earlier",
     logo: "/aydilooks.jpeg",
     position: "Co-Founder & Backend Lead",
     description: "Co-founded Aydilooks and led its backend development.",
@@ -515,7 +515,7 @@ export const siteUpdated = "2026-11-24";
 export const logoText = "@a91y";
 
 export const marketingHeadlines = {
-  mainHeadline: "Solana programs and the payment systems around them.",
+  mainHeadline: "Solana programs and the payment systems.",
   subHeadline: "I work with Solana protocols and with fintech and payments teams.",
 };
 

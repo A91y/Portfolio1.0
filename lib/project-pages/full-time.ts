@@ -21,6 +21,10 @@ const page: ProjectPage = {
     { label: "Live demo (devnet)", href: "https://fulltime.ayushagr.me" },
     { label: "GitHub repository", href: "https://github.com/A91y/full-time" },
     { label: "TxLINE by TxODDS", href: "https://txline.txodds.com/" },
+    {
+      label: "Buildathon result (3rd place)",
+      href: "https://superteam.fun/earn/listing/txodds-world-cup-buildathon-india",
+    },
   ],
 };
 

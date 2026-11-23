@@ -626,7 +626,6 @@ export const expertise: ExpertiseArea[] = [
     proofs: [
       { label: "Init ~19.5k → ~1.8k CU in native Pinocchio", href: "/projects/stealthx" },
       { label: "Backroll: lending protocol in no_std Rust on Pinocchio", href: "/#work-backroll" },
-      { label: "Full-Time: 44/44 LiteSVM tests", href: "/projects/full-time" },
     ],
     tools: ["Solana", "Rust", "Pinocchio", "Anchor", "Token-2022", "MagicBlock", "LiteSVM"],
     featured: true,

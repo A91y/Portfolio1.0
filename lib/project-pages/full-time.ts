@@ -13,7 +13,7 @@ const page: ProjectPage = {
   ],
   results: [
     "3rd place in the TxODDS World Cup India Buildathon (Superteam India), 200 USDC prize.",
-    "44/44 LiteSVM tests and 7/7 keeper checks passing.",
+    "7/7 keeper checks passing.",
     "Full lifecycle run on devnet with Circle devnet USDC: the keeper settled a real finalised fixture with no human involved, and the winner claimed.",
   ],
   stack: ["Rust", "Anchor", "TypeScript", "Next.js", "Codama", "LiteSVM"],

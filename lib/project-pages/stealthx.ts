@@ -14,7 +14,6 @@ const page: ProjectPage = {
     "Off-chain agent and merchant SDKs, plus an x402 facilitator that co-signs as fee payer so agents pay gaslessly.",
   ],
   results: [
-    "33 LiteSVM integration tests passing, covering each handler's happy path and failure modes.",
     "Full lifecycle (init, delegate, grant access, record, commit, undelegate) run on devnet against the deployed program.",
     "A private ephemeral-to-ephemeral transfer verified on devnet through the PER/TEE validator.",
     "Alongside StealthX in the same cohort, my Pinocchio compute-unit work cut an init instruction from ~19.5k to ~1.8k CU and account checks from ~17.8k to ~1.5k CU.",

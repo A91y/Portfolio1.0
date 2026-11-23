@@ -277,9 +277,9 @@ export const workExperiences: Experience[] = [
     company: "Credible",
     link: "https://credible.finance",
     logo: "/crediblefin.jpeg",
-    position: "Full-Stack Fintech Engineer, Freelance",
+    position: "Full-Stack Fintech Engineer, Contract",
     description:
-      "Freelance engagement delivered through my web3 agency. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
+      "Contract engagement delivered through my web3 agency. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - July, 2026",
   },
   {

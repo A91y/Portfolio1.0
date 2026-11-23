@@ -28,6 +28,27 @@ if (typeof window !== "undefined") {
   handleHashChange();
 }
 
+// "Freelance" names separate clients, not one company, so it never groups.
+const UNGROUPED_COMPANY = "Freelance";
+
+// Adjacent entries with the same company render as one card with several roles.
+function groupByCompany(experiences: Experience[]) {
+  const groups: Experience[][] = [];
+  for (const experience of experiences) {
+    const last = groups[groups.length - 1];
+    if (
+      last &&
+      experience.company !== UNGROUPED_COMPANY &&
+      last[0].company === experience.company
+    ) {
+      last.push(experience);
+    } else {
+      groups.push([experience]);
+    }
+  }
+  return groups;
+}
+
 function ExperienceGroup({
   experiences,
   sectionId,
@@ -35,14 +56,15 @@ function ExperienceGroup({
   experiences: Experience[];
   sectionId?: string;
 }) {
+  const groups = groupByCompany(experiences);
   return (
     <div id={sectionId} className="modern-card shadow-sm">
       <div className="p-6 space-y-6">
-        {experiences.map((experience: Experience, index: number) => (
+        {groups.map((roles, index) => (
           <WorkShowcase
-            key={`${experience.company}-${experience.years}`}
-            experience={experience}
-            whetherlast={experiences.length == index + 1}
+            key={`${roles[0].company}-${roles[0].years}`}
+            roles={roles}
+            whetherlast={groups.length == index + 1}
           />
         ))}
       </div>

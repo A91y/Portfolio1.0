@@ -9,6 +9,7 @@ const LOADERS: Record<string, () => Promise<{ default: ProjectPage }>> = {
   "full-time": () => import("./full-time"),
   octasol: () => import("./octasol"),
   arachnid: () => import("./arachnid"),
+  "svm-exploit-gym": () => import("./svm-exploit-gym"),
 };
 
 export async function loadProjectPage(slug: string): Promise<ProjectPage | undefined> {

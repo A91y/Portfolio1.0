@@ -162,12 +162,22 @@ export const projects: Project[] = [
       "An open-source bounty platform on Solana: escrowed rewards for GitHub issues, paid when the PR merges.",
   },
   {
+    title: "svm-exploit-gym",
+    description:
+      "A verifiable reinforcement-learning environment where an agent must exploit a deliberately vulnerable Solana program. Its transactions run in LiteSVM, and the reward is 1 only when the exploit actually works. 182 verified tasks across 8 bug classes.",
+    link: "https://github.com/A91y/svm-exploit-gym",
+    tags: ["Rust", "LiteSVM", "Python", "Gymnasium", "PPO", "Solana", "Security"],
+    featured: true,
+    slug: "svm-exploit-gym",
+    tagline:
+      "A verifiable RL environment where agents exploit vulnerable Solana programs, scored by execution.",
+  },
+  {
     title: "Arachnid",
     description:
       "An asynchronous web crawler with NLP capabilities, archiving data from Tor and I2P networks to improve availability. Built with Python, HuggingFace Transformers, async programming, and Apache Cassandra.",
     link: "https://github.com/A91y/Arachnid",
     tags: ["Python", "NLP", "Async", "Apache Cassandra"],
-    featured: true,
     slug: "arachnid",
     tagline:
       "An async Python crawler that archives Tor and I2P sites and flags hate speech with a transformer model.",

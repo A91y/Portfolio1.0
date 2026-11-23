@@ -310,7 +310,7 @@ export const workExperiences: Experience[] = [
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Contract",
     description:
-      "Led the foundation of the business payments flow and built it end to end. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
+      "Led and built the foundation of the business payments flow. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - Jul, 2026",
   },
   {
@@ -624,11 +624,10 @@ export const expertise: ExpertiseArea[] = [
     title: "Solana program development",
     claim: "Native Pinocchio and Anchor programs, measured down to compute units.",
     proofs: [
-      { label: "Init ~19.5k → ~1.8k CU in native Pinocchio", href: "/projects/stealthx" },
+      { label: "Init ~19.5k → ~1.8k CU in native Pinocchio", href: "/#work-turbin3" },
       { label: "Backroll: lending protocol in no_std Rust on Pinocchio", href: "/#work-backroll" },
       { label: "StealthX: Pinocchio program with hand-written MagicBlock CPIs", href: "/projects/stealthx" },
       { label: "Full-Time: permissionless settlement program that checks Merkle proofs on-chain", href: "/projects/full-time" },
-      { label: "Lince: yield-aggregation vault logic and strategy integrations", href: "/#work-lince-finance" },
     ],
     tools: ["Solana", "Rust", "Pinocchio", "Anchor", "Token-2022", "MagicBlock", "LiteSVM"],
     featured: true,
@@ -638,7 +637,7 @@ export const expertise: ExpertiseArea[] = [
     title: "Payments & fintech engineering",
     claim: "Money movement, and the onboarding behind it.",
     proofs: [
-      { label: "Led the foundation of a fintech payment provider's business payments flow and built it", href: "/#work-credible" },
+      { label: "Led and built the foundation of a fintech company's business payments flow", href: "/#work-credible" },
       { label: "KYC/KYB compliance pipelines and provider integrations", href: "/#work-credible" },
       { label: "Private x402 payments for AI agents", href: "/projects/stealthx" },
     ],

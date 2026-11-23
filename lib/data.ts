@@ -91,7 +91,7 @@ export const projects: Project[] = [
   {
     title: "StealthX",
     description:
-      "A private-payments protocol on Solana, built with a team as our Turbin3 accelerator capstone. Pinocchio for compute efficiency, hand-written MagicBlock delegation and undelegation CPIs, and x402 machine-payment integration with scoped, compliance-aware disclosure.",
+      "A private, gasless payments protocol for AI agents on Solana, built with a team as our Turbin3 accelerator capstone. Pinocchio for compute efficiency, hand-written MagicBlock delegation and undelegation CPIs, and x402 machine-payment integration with scoped, compliance-aware disclosure.",
     link: "https://github.com/Turbin3/accel-StealthX",
     tags: [
       "Solana",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
   {
     title: "Pinoc",
     description:
-      "A command-line tool for building Solana programs with Pinocchio. Pinocchio is deliberately minimal — no build orchestration, no project conventions — so the workflow around it is left to the developer. Pinoc fills that gap with Pinocchio-aware commands, including a `clean` that preserves `keypair` so you don't lose your program ID the way a plain `cargo clean` does.",
+      "A CLI for scaffolding, building, and deploying Solana programs written with Pinocchio, with IDL and client generation. Pinocchio is deliberately minimal, with no build orchestration or project conventions, so Pinoc supplies the workflow around it, including a `clean` that preserves the program keypair so you don't lose your program ID the way a plain `cargo clean` does.",
     link: "https://github.com/A91y/pinoc",
     tags: ["Rust", "CLI", "Solana", "Pinocchio", "Developer Tooling"],
     featured: true,
@@ -132,7 +132,7 @@ export const projects: Project[] = [
   {
     title: "Octasol",
     description:
-      "An open-source trustless bounty platform on Solana. Escrow, developer profiles, and GitHub authentication, built with Rust, Anchor, Next.js, and TypeScript.",
+      "An open-source trustless bounty platform on Solana, backed by a Superteam grant. Escrow, developer profiles, and GitHub authentication, built with Rust, Anchor, Next.js, and TypeScript.",
     link: "https://github.com/octasol/octasol",
     tags: [
       "Solana",
@@ -265,15 +265,26 @@ export interface Experience {
 
 export const workExperiences: Experience[] = [
   {
+    company: "Backroll",
+    link: "https://backroll.fi",
+    logo: "/backroll.png",
+    position: "Protocol Engineer",
+    description:
+      "Writing an on-chain lending protocol on Solana in no_std Rust on Pinocchio, without Anchor: vault accounting with Token-2022 share tokens, collateral tiers, leverage limits, liquidation thresholds, and trade execution into Raydium pools by CPI. Built the off-chain TypeScript keeper that indexes chain state, simulates, co-signs and sends transactions, and runs liquidations, with positions and share accounting in Postgres so clients read one consistent view.",
+    years: "Sep, 2026 - Present",
+  },
+  {
     company: "Credible",
+    link: "https://credible.finance",
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Freelance",
     description:
-      "Freelance engagement delivered through my web3 agency. Full-stack engineering for a B2B fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, and Solana/EVM wallet auth and transaction logic.",
+      "Freelance engagement delivered through my web3 agency. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - July, 2026",
   },
   {
     company: "Turbin3",
+    link: "https://turbin3.org",
     logo: "/turbin3.jpeg",
     position: "Solana Developer, Accelerated Cohort (Q2 2026)",
     description:
@@ -282,6 +293,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "DeCharge",
+    link: "https://www.decharge.network",
     logo: "/decharge.png",
     position: "Full-Stack & Blockchain Engineer, Freelance",
     description:
@@ -289,7 +301,17 @@ export const workExperiences: Experience[] = [
     years: "Apr, 2025 - Apr, 2026",
   },
   {
+    company: "Octasol",
+    link: "https://github.com/octasol",
+    logo: "/octasol.jpeg",
+    position: "Founder & Lead",
+    description:
+      "Led Octasol, an open-source trustless bounty platform on Solana backed by a Superteam grant: product ideation, feature development, integration strategy, and backend development.",
+    years: "Oct, 2024 - Apr, 2026",
+  },
+  {
     company: "Lince Finance",
+    link: "https://lince.finance",
     logo: "/lince.png",
     position: "Solana Smart Contract & SDK Engineer, Full-Time",
     description:
@@ -297,7 +319,25 @@ export const workExperiences: Experience[] = [
     years: "Aug, 2025 - Feb, 2026",
   },
   {
+    company: "dokreativ",
+    link: "https://www.dokreativ.com",
+    logo: "/dokreativ.jpeg",
+    position: "Full Stack Engineer, Freelance",
+    description:
+      "Freelance full-stack engineering with a small team: browser extension development, payment gateway integration, webhooks, Prisma and PostgreSQL with database optimization, and web scraping.",
+    years: "Mar, 2025 - Dec, 2025",
+  },
+  {
+    company: "Aydilooks",
+    logo: "/aydilooks.jpeg",
+    position: "Co-Founder & Backend Lead",
+    description: "Co-founded Aydilooks and led its backend development.",
+    years: "Aug, 2024 - Dec, 2025",
+    link: "https://www.linkedin.com/company/aydilooks/",
+  },
+  {
     company: "Merkle Labs",
+    link: "https://merklelabs.xyz",
     logo: "/merklelabs.png",
     position: "Solana Backend & Smart Contract Engineer, Freelance",
     description:
@@ -342,6 +382,7 @@ export const workExperiences: Experience[] = [
 export const communityExperiences: Experience[] = [
   {
     company: "Superteam",
+    link: "https://superteam.fun",
     logo: "/superteam.jpg",
     position: "Member",
     description:
@@ -349,39 +390,59 @@ export const communityExperiences: Experience[] = [
     years: "Oct, 2024 - Present",
   },
   {
+    company: "Superteam",
+    link: "https://superteam.fun",
+    logo: "/superteam.jpg",
+    position: "DAO Contributor",
+    description: "Contributed to Superteam DAO before joining as a member.",
+    years: "May, 2024 - Oct, 2024",
+  },
+  {
     company: "FOSSCU",
+    link: "https://fosscu.org",
     logo: "/fosscu.png",
-    position: "Core Member",
+    position: "Member",
     description:
       "Contributing to and maintaining open-source projects under FOSSCU, a student-run community.",
-    years: "Nov, 2023 - Present",
+    years: "Dec, 2023 - Present",
   },
   {
     company: "Innogeeks",
+    link: "https://www.innogeeks.in",
     logo: "/innogeeks.jpg",
     position: "Core Team, Blockchain Lead",
     description:
       "Led the blockchain division, organizing workshops and hackathons to promote blockchain technology.",
-    years: "Oct, 2024 - July, 2026",
+    years: "Sep, 2024 - May, 2026",
   },
   {
     company: "Innogeeks",
+    link: "https://www.innogeeks.in",
     logo: "/innogeeks.jpg",
     position: "ML Coordinator",
     description:
       "Led the ML division, ran data science and machine learning training sessions, and grew membership and participation.",
-    years: "Dec, 2022 - Oct, 2024",
+    years: "Sep, 2023 - Oct, 2024",
+  },
+  {
+    company: "Innogeeks",
+    link: "https://www.innogeeks.in",
+    logo: "/innogeeks.jpg",
+    position: "Member",
+    description: "Joined the Innogeeks technical society as a member.",
+    years: "Dec, 2022 - Sep, 2023",
   },
 ];
 
 export const educationExperiences: Experience[] = [
   {
     company: "KIET Group of Institutions, Ghaziabad",
+    link: "https://www.kiet.edu",
     logo: "/kiet.png",
     position: "B.Tech, Computer Science & Engineering",
     description:
-      "Graduated July 2026. Blockchain lead and ML coordinator at Innogeeks, core member at FOSSCU.",
-    years: "Nov, 2022 - July, 2026",
+      "Graduated May 2026. Blockchain lead and ML coordinator at Innogeeks, member of FOSSCU.",
+    years: "Nov, 2022 - May, 2026",
   },
 ];
 
@@ -437,6 +498,9 @@ export const websiteMetadata = {
     "NestJS",
     "Python",
     "Backend Engineer",
+    "Protocol Engineer",
+    "DeFi",
+    "Backroll",
     "DePIN",
     "Turbin3",
     "StealthX",

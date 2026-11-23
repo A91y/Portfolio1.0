@@ -14,7 +14,8 @@ export default function SiteShell({ children, nameIsHeading = true }: SiteShellP
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Navbar />
         <div className="flex flex-col lg:flex-row gap-8 mt-8">
-          <aside className="lg:w-80 shrink-0">
+          {/* Below lg the sidebar follows the main column, so the hero is the first screen. */}
+          <aside className="order-last lg:order-none lg:w-80 shrink-0">
             <Sidebar nameIsHeading={nameIsHeading} />
           </aside>
           <main className="flex-1 min-w-0 space-y-12">{children}</main>

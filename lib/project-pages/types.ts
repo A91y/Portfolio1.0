@@ -2,6 +2,8 @@
 export interface ProjectPage {
   // Short keyword phrase shown after the name in the page's h1 and title.
   headline: string;
+  // Replaces headline in the <title> when the full title would run past the length limit.
+  shortHeadline?: string;
   problem: string;
   howItWorks: string[];
   results?: string[];

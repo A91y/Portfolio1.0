@@ -11,7 +11,7 @@ import { projectJsonLd, projectUrl } from "@/lib/structured-data";
 
 export const dynamicParams = false;
 
-const TITLE_LIMIT = 60;
+const TITLE_LIMIT = 65;
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -33,9 +33,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const page = await loadProjectPage(slug);
   if (!project || !page) return {};
 
-  const base = `${project.title}: ${page.headline}`;
-  const branded = `${base} | ${aboutYou.name}`;
-  const title = branded.length <= TITLE_LIMIT ? branded : base;
+  const suffix = ` | ${aboutYou.name}`;
+  const full = `${project.title}: ${page.headline}${suffix}`;
+  const title =
+    full.length <= TITLE_LIMIT || !page.shortHeadline
+      ? full
+      : `${project.title}: ${page.shortHeadline}${suffix}`;
   const description = project.tagline;
   const url = projectUrl(project);
 

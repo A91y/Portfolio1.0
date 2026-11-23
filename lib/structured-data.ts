@@ -87,7 +87,7 @@ export function projectJsonLd(project: Project, page: ProjectPage) {
       headline: `${project.title}: ${page.headline}`,
       description: project.tagline,
       url,
-      author: { "@id": PERSON_ID },
+      author: { "@type": "Person", "@id": PERSON_ID, name: aboutYou.name, url: websiteMetadata.url },
       keywords: project.tags?.join(", "),
       ...(sourceCode && {
         codeRepository: sourceCode.repository,

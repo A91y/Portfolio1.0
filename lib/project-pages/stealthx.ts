@@ -2,6 +2,7 @@ import type { ProjectPage } from "./types";
 
 const page: ProjectPage = {
   headline: "private x402 payments for AI agents on Solana",
+  shortHeadline: "private x402 payments on Solana",
   problem:
     "AI agents that pay for APIs over x402 settle on a public ledger, so every payer, merchant and amount is visible to anyone. StealthX (Private MPP, the Private Machine Payment Protocol) moves the payment itself through a private rollup and keeps only a settlement record on Solana, which the merchant can disclose to a chosen reader.",
   howItWorks: [

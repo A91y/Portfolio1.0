@@ -310,7 +310,7 @@ export const workExperiences: Experience[] = [
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Contract",
     description:
-      "Owned the business payments flow end to end and led the team that shipped it. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
+      "Led the foundation of the business payments flow and built it end to end. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - Jul, 2026",
   },
   {
@@ -358,9 +358,9 @@ export const workExperiences: Experience[] = [
     section: "agency",
     link: "https://www.dokreativ.com",
     logo: "/dokreativ.jpeg",
-    position: "Full Stack Engineer, Freelance",
+    position: "Full Stack Engineer, Contract",
     description:
-      "Freelance full-stack engineering with a small team: browser extension development, payment gateway integration, webhooks, Prisma and PostgreSQL with database optimization, and web scraping.",
+      "Contract full-stack engineering with a small team: browser extension development, payment gateway integration, webhooks, Prisma and PostgreSQL with database optimization, and web scraping.",
     years: "Mar, 2025 - Dec, 2025",
   },
   {
@@ -634,7 +634,7 @@ export const expertise: ExpertiseArea[] = [
     title: "Payments & fintech engineering",
     claim: "Money movement, and the onboarding behind it.",
     proofs: [
-      { label: "Owned Credible's business payments flow and led the team that shipped it", href: "/#work-credible" },
+      { label: "Led the foundation of Credible's business payments flow and built it", href: "/#work-credible" },
       { label: "KYC/KYB compliance pipelines and provider integrations", href: "/#work-credible" },
       { label: "Private x402 payments for AI agents", href: "/projects/stealthx" },
     ],

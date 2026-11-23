@@ -8,6 +8,8 @@ interface WorkShowcaseProps {
   // Roles at one company, newest first.
   roles: Experience[];
   whetherlast: boolean;
+  // h4 when the card sits under a sub-group's h3.
+  headingLevel?: "h3" | "h4";
 }
 
 function VisitLink({ href }: { href: string }) {
@@ -32,7 +34,9 @@ function overallSpan(roles: Experience[]) {
 export default function WorkShowcase({
   roles,
   whetherlast,
+  headingLevel = "h3",
 }: WorkShowcaseProps) {
+  const Heading = headingLevel;
   const first = roles[0];
   const grouped = roles.length > 1;
   const link = roles.find((role) => role.link)?.link;
@@ -47,9 +51,9 @@ export default function WorkShowcase({
               <AvatarFallback className="text-xs">{first.company.slice(0, 2).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div className="min-w-0 flex-1">
-              <h3 className="font-semibold text-base leading-tight tracking-tight group-hover:text-primary transition-colors">
+              <Heading className="font-semibold text-base leading-tight tracking-tight group-hover:text-primary transition-colors">
                 {first.company}
-              </h3>
+              </Heading>
               <p className="text-sm font-medium text-muted-foreground mt-0.5">
                 {grouped ? `${roles.length} roles` : first.position}
                 {grouped && !!link && <VisitLink href={link} />}

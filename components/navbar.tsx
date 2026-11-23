@@ -43,14 +43,14 @@ export default function Navbar() {
 
         <div className="flex items-center gap-1">
           <Button asChild variant="ghost" size="sm" className="h-9 no-underline">
-            <Link href="/">
+            <Link href="/" aria-label="Home">
               <Home className="h-4 w-4" />
               <span className="hidden sm:block ml-2">Home</span>
             </Link>
           </Button>
           {SECTIONS.map(({ href, label, Icon }) => (
             <Button key={href} asChild variant="ghost" size="sm" className="h-9 no-underline">
-              <a href={href} onClick={announceRepeatClick}>
+              <a href={href} onClick={announceRepeatClick} aria-label={label}>
                 <Icon className="h-4 w-4" />
                 <span className="hidden sm:block ml-2">{label}</span>
               </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
           ))}
           {EXTERNAL.map(({ href, label, Icon }) => (
             <Button key={href} asChild variant="ghost" size="sm" className="h-9 no-underline">
-              <a href={href} target="_blank" rel="noopener noreferrer">
+              <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
                 <Icon className="h-4 w-4" />
                 <span className="hidden sm:block ml-2">{label}</span>
               </a>

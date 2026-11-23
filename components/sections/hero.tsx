@@ -1,7 +1,9 @@
+import Link from "next/link";
 import {
   aboutYou,
   availability,
   marketingHeadlines,
+  proofPoints,
   Skill,
   skills,
 } from "@/lib/data";
@@ -28,8 +30,13 @@ function groupSkills(list: Skill[]): Skill[][] {
   return groups;
 }
 
+// The first skill leads the row as context, ahead of the core skills.
+const leadSkills = skills.filter((skill, index) => index === 0 || skill.core);
+const otherSkills = skills.filter((skill) => !leadSkills.includes(skill));
+
 export default function Hero() {
-  const skillGroups = groupSkills(skills);
+  const leadGroups = groupSkills(leadSkills);
+  const skillGroups = groupSkills(otherSkills);
 
   return (
     <section id="home" key="home" className="space-y-8">
@@ -49,6 +56,18 @@ export default function Hero() {
         <div className="text-xl text-muted-foreground">
           {marketingHeadlines.subHeadline}
         </div>
+        <ul className="flex flex-wrap gap-2 pt-2">
+          {proofPoints.map((point) => (
+            <li key={point.href}>
+              <Link
+                href={point.href}
+                className="inline-flex items-center rounded-md border border-border px-3 py-1.5 text-sm font-medium no-underline transition-colors hover:bg-accent"
+              >
+                {point.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
       
       <Separator />
@@ -70,20 +89,30 @@ export default function Hero() {
       </div>
       
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold uppercase tracking-wider">Tech Stack</h3>
+        <h2 className="text-sm font-semibold uppercase tracking-wider">Tech Stack</h2>
         <div className="space-y-3">
-          {skillGroups.map((group) => (
+          {leadGroups.map((group) => (
             <div key={group[0].group} className="flex flex-wrap gap-2">
               {group.map((skill) => (
-                <SkillOutline
-                  key={skill.text}
-                  Icon={skill.icon}
-                  text={skill.text}
-                />
+                <SkillOutline key={skill.text} Icon={skill.icon} text={skill.text} />
               ))}
             </div>
           ))}
         </div>
+        <details>
+          <summary className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground">
+            Also used ({otherSkills.length})
+          </summary>
+          <div className="space-y-3 pt-3">
+            {skillGroups.map((group) => (
+              <div key={group[0].group} className="flex flex-wrap gap-2">
+                {group.map((skill) => (
+                  <SkillOutline key={skill.text} Icon={skill.icon} text={skill.text} />
+                ))}
+              </div>
+            ))}
+          </div>
+        </details>
       </div>
     </section>
   );

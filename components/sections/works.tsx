@@ -7,6 +7,7 @@ import {
   communityExperiences,
   educationExperiences,
 } from "@/lib/data";
+import Collapsible from "@/components/collapsible";
 import WorkShowcase from "@/components/work-showcase";
 
 // Function to handle hash change
@@ -46,9 +47,11 @@ function groupByCompany(experiences: Experience[]) {
 function ExperienceGroup({
   experiences,
   sectionId,
+  headingLevel = "h3",
 }: {
   experiences: Experience[];
   sectionId?: string;
+  headingLevel?: "h3" | "h4";
 }) {
   const groups = groupByCompany(experiences);
   return (
@@ -59,12 +62,39 @@ function ExperienceGroup({
             key={`${roles[0].company}-${roles[0].years}`}
             roles={roles}
             whetherlast={groups.length == index + 1}
+            headingLevel={headingLevel}
           />
         ))}
       </div>
     </div>
   );
 }
+
+function SubGroup({
+  label,
+  note,
+  experiences,
+  sectionId,
+}: {
+  label: string;
+  note?: string;
+  experiences: Experience[];
+  sectionId?: string;
+}) {
+  if (experiences.length === 0) return null;
+  return (
+    <div className="space-y-3">
+      <div className="space-y-1">
+        <h3 className="text-sm font-semibold uppercase tracking-wider">{label}</h3>
+        {note && <p className="text-sm text-muted-foreground">{note}</p>}
+      </div>
+      <ExperienceGroup experiences={experiences} sectionId={sectionId} headingLevel="h4" />
+    </div>
+  );
+}
+
+const inSection = (section: Experience["section"]) =>
+  workExperiences.filter((experience) => experience.section === section);
 
 export default function Works() {
   // Runs after hydration so the glow class never differs from the server HTML.
@@ -73,6 +103,8 @@ export default function Works() {
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
+
+  const earlier = inSection("earlier");
 
   return (
     <section id="work" key="work" className="space-y-12">
@@ -83,10 +115,18 @@ export default function Works() {
             My professional journey and contributions
           </p>
         </div>
-        <ExperienceGroup
-          experiences={workExperiences}
-          sectionId="work-section"
+        <SubGroup label="Current" experiences={inSection("current")} sectionId="work-section" />
+        <SubGroup
+          label="Web3 engineering practice"
+          note="Client work delivered through my agency."
+          experiences={inSection("agency")}
         />
+        <SubGroup label="Founded" experiences={inSection("founded")} />
+        {earlier.length > 0 && (
+          <Collapsible showLabel={`Show earlier roles (${earlier.length})`} hideLabel="Hide earlier roles">
+            <SubGroup label="Earlier" experiences={earlier} />
+          </Collapsible>
+        )}
       </div>
 
       <div className="space-y-6">
@@ -95,8 +135,9 @@ export default function Works() {
       </div>
 
       <div className="space-y-6">
-        <h2 className="text-4xl font-bold tracking-tight">Education</h2>
-        <ExperienceGroup experiences={educationExperiences} />
+        <h2 className="text-4xl font-bold tracking-tight">Programs & Education</h2>
+        <SubGroup label="Programs" experiences={inSection("program")} />
+        <SubGroup label="Education" experiences={educationExperiences} />
       </div>
     </section>
   );

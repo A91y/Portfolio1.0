@@ -33,15 +33,17 @@ export interface Skill {
   icon?: IconType | LucideIcon;
   text: string;
   group: "onchain" | "chains" | "backend" | "frontend" | "tooling";
+  // Shown up front in the hero; the rest sit under "Also used".
+  core?: boolean;
 }
 
 export const skills: Skill[] = [
   // On-chain: lead with this. It is the differentiator.
   { icon: SolanaIcon, text: "Solana", group: "onchain" },
-  { icon: SiRust, text: "Rust", group: "onchain" },
-  { icon: Anchor, text: "Anchor", group: "onchain" },
-  { text: "Pinocchio", group: "onchain" },
-  { text: "MagicBlock", group: "onchain" },
+  { icon: SiRust, text: "Rust", group: "onchain", core: true },
+  { icon: Anchor, text: "Anchor", group: "onchain", core: true },
+  { text: "Pinocchio", group: "onchain", core: true },
+  { text: "MagicBlock", group: "onchain", core: true },
   { text: "x402", group: "onchain" },
 
   // Other chains
@@ -54,15 +56,15 @@ export const skills: Skill[] = [
   { text: "Tact", group: "chains" },
 
   // Backend
-  { icon: SiTypescript, text: "TypeScript", group: "backend" },
-  { icon: SiNestjs, text: "NestJS", group: "backend" },
-  { icon: SiNodedotjs, text: "Node", group: "backend" },
+  { icon: SiTypescript, text: "TypeScript", group: "backend", core: true },
+  { icon: SiNestjs, text: "NestJS", group: "backend", core: true },
+  { icon: SiNodedotjs, text: "Node", group: "backend", core: true },
   { icon: SiExpress, text: "Express", group: "backend" },
   { icon: SiPython, text: "Python", group: "backend" },
   { icon: SiDjango, text: "Django", group: "backend" },
-  { icon: BiLogoPostgresql, text: "PostgreSQL", group: "backend" },
-  { icon: SiRedis, text: "Redis", group: "backend" },
-  { icon: SiRabbitmq, text: "RabbitMQ", group: "backend" },
+  { icon: BiLogoPostgresql, text: "PostgreSQL", group: "backend", core: true },
+  { icon: SiRedis, text: "Redis", group: "backend", core: true },
+  { icon: SiRabbitmq, text: "RabbitMQ", group: "backend", core: true },
   { icon: SiMongodb, text: "MongoDB", group: "backend" },
   { icon: SiApachecassandra, text: "Apache Cassandra", group: "backend" },
   { icon: SiOpentelemetry, text: "OpenTelemetry", group: "backend" },
@@ -168,13 +170,15 @@ export const projects: Project[] = [
     link: "https://github.com/A91y/Arachnid",
     tags: ["Python", "NLP", "Async", "Apache Cassandra"],
     featured: true,
+    slug: "arachnid",
+    tagline:
+      "An async Python crawler that archives Tor and I2P sites and flags hate speech with a transformer model.",
   },
   {
     title: "CollectiveX",
     description: "Contributed to a multisig and DAO platform on the SOON SVM.",
     link: "https://github.com/CollectiveX-Org",
     tags: ["Solana", "Rust", "Anchor", "TypeScript", "MultiSig", "DAO"],
-    featured: true,
   },
   {
     title: "Blinks By Ayush",
@@ -182,7 +186,6 @@ export const projects: Project[] = [
       "A directory of Solana Blinks, covering transfers, swaps, and on-chain actions surfaced as shareable links.",
     link: "https://blinks.ayushagr.me/",
     tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript", "Blinks"],
-    featured: true,
   },
 
   // Below the fold
@@ -277,11 +280,14 @@ export interface Experience {
   description: string;
   years: string;
   link?: string;
+  // Work entries only: which sub-group of the Work section they render in.
+  section?: "current" | "agency" | "founded" | "earlier" | "program";
 }
 
 export const workExperiences: Experience[] = [
   {
     company: "Backroll",
+    section: "current",
     link: "https://backroll.fi",
     logo: "/backroll.png",
     position: "Protocol Engineer",
@@ -291,15 +297,17 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Credible",
+    section: "agency",
     link: "https://credible.finance",
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Contract",
     description:
-      "Contract engagement delivered through my web3 agency. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
+      "Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - Jul, 2026",
   },
   {
     company: "Turbin3",
+    section: "program",
     link: "https://turbin3.org",
     logo: "/turbin3.jpeg",
     position: "Solana Developer, Accelerated Cohort (Q2 2026)",
@@ -309,15 +317,17 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "DeCharge",
+    section: "agency",
     link: "https://www.decharge.network",
     logo: "/decharge.png",
     position: "Full-Stack & Blockchain Engineer, Freelance",
     description:
-      "Freelance engagement delivered through my web3 agency. Full-stack and on-chain work for a DePIN EV-charging network: built a Solana investment product client, extended it to a second EVM chain, and built the wallet-signature auth layer for the dApp.",
+      "Full-stack and on-chain work for a DePIN EV-charging network: built a Solana investment product client, extended it to a second EVM chain, and built the wallet-signature auth layer for the dApp.",
     years: "Apr, 2025 - Apr, 2026",
   },
   {
     company: "Octasol",
+    section: "founded",
     link: "https://github.com/octasol",
     logo: "/octasol.jpeg",
     position: "Founder & Lead",
@@ -327,6 +337,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Lince Finance",
+    section: "earlier",
     link: "https://lince.finance",
     logo: "/lince.png",
     position: "Solana Smart Contract & SDK Engineer, Full-Time",
@@ -336,6 +347,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "dokreativ",
+    section: "agency",
     link: "https://www.dokreativ.com",
     logo: "/dokreativ.jpeg",
     position: "Full Stack Engineer, Freelance",
@@ -345,6 +357,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Aydilooks",
+    section: "founded",
     logo: "/aydilooks.jpeg",
     position: "Co-Founder & Backend Lead",
     description: "Co-founded Aydilooks and led its backend development.",
@@ -353,6 +366,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Merkle Labs",
+    section: "agency",
     link: "https://merklelabs.xyz",
     logo: "/merklelabs.png",
     position: "Solana Backend & Smart Contract Engineer, Freelance",
@@ -362,6 +376,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Catoff Gaming",
+    section: "earlier",
     logo: "/catoff.png",
     position: "Backend Intern",
     description:
@@ -370,6 +385,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "TimeOnSolana",
+    section: "earlier",
     logo: "/timeonsolana.jpg",
     position: "Backend Developer",
     description:
@@ -378,6 +394,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Freelance",
+    section: "earlier",
     logo: "/skeleton.jpg",
     position: "Blockchain Developer",
     description:
@@ -386,6 +403,7 @@ export const workExperiences: Experience[] = [
   },
   {
     company: "Freelance",
+    section: "earlier",
     logo: "/skeleton.jpg",
     position: "Python Developer",
     description:
@@ -465,7 +483,7 @@ export const educationExperiences: Experience[] = [
 export const aboutYou = {
   name: "Ayush Agrawal",
   description:
-    "Hi, I'm Ayush, a Solana and full-stack web3 developer. I go deep on-chain with Pinocchio, Anchor, and MagicBlock, and ship the full product around it: backends, third-party integrations, and multi-chain frontends. I've built production systems across fintech payments, DePIN, and DeFi, from KYC/KYB compliance pipelines to cross-chain investment products. Started out deep in Python, picked up Ethereum and TON along the way, but Solana is home. Alongside my own work, I run a small web3 engineering agency delivering the same kind of work for clients.",
+    "Hi, I'm Ayush, a Solana and full-stack web3 developer. I build Solana programs with Pinocchio, Anchor and MagicBlock, and the payment systems around them: backends, integrations and frontends across fintech, DePIN and DeFi. Solana is home. I also run a small web3 engineering agency doing the same work for clients.",
   yearsOfExperience: "3+ years",
   location: "Delhi, India",
   email: "ayush.agr254@gmail.com",
@@ -497,9 +515,16 @@ export const siteUpdated = "2026-11-24";
 export const logoText = "@a91y";
 
 export const marketingHeadlines = {
-  mainHeadline: "Hi There👋",
-  subHeadline: "Solana programs, and the systems around them.",
+  mainHeadline: "Solana programs and the payment systems around them.",
+  subHeadline: "I work with Solana protocols and with fintech and payments teams.",
 };
+
+// Short claims under the hero headline, each linking to the page that backs it.
+export const proofPoints = [
+  { label: "pinoc on crates.io", href: "/projects/pinoc" },
+  { label: "#3 India track: Full-Time", href: "/projects/full-time" },
+  { label: "Superteam grant: Octasol", href: "/projects/octasol" },
+];
 
 export const websiteMetadata = {
   title: "Ayush Agrawal (A91y) | Solana & Full-Stack Web3 Developer",

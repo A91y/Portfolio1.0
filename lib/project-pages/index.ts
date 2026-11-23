@@ -8,6 +8,7 @@ const LOADERS: Record<string, () => Promise<{ default: ProjectPage }>> = {
   pinoc: () => import("./pinoc"),
   "full-time": () => import("./full-time"),
   octasol: () => import("./octasol"),
+  arachnid: () => import("./arachnid"),
 };
 
 export async function loadProjectPage(slug: string): Promise<ProjectPage | undefined> {

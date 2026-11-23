@@ -1,13 +1,15 @@
 import { aboutYou } from "@/lib/data";
 
-export default function Sidebar() {
+// The name is the page's h1 only on pages without one of their own.
+export default function Sidebar({ nameIsHeading = true }: { nameIsHeading?: boolean }) {
+  const Name = nameIsHeading ? "h1" : "p";
   return (
     <div className="modern-card hover-lift rounded-xl shadow-xs flex flex-col space-y-4 p-6 h-fit static md:sticky top-24 md:min-w-[280px] md:max-w-[320px]">
       {/* Title/Name */}
       <div className="space-y-2">
-        <h1 className="text-2xl font-bold tracking-tight">
+        <Name className="text-2xl font-bold tracking-tight">
           {aboutYou.name}
-        </h1>
+        </Name>
         <div className="h-0.5 w-12 bg-foreground/20 rounded-full" />
       </div>
       

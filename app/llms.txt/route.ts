@@ -41,7 +41,8 @@ function experienceLines(experiences: Experience[]) {
 function projectLines(list: Project[]) {
   return list.map((project) => {
     const tags = project.tags?.length ? ` Tags: ${project.tags.join(", ")}.` : "";
-    return `- ${linked(project.title, project.link)}: ${project.description}${tags}`;
+    const href = project.slug ? `${websiteMetadata.url}/projects/${project.slug}` : project.link;
+    return `- ${linked(project.title, href)}: ${project.description}${tags}`;
   });
 }
 

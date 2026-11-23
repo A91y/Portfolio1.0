@@ -87,6 +87,8 @@ export interface Project {
   featured?: boolean;
   // URL segment of the project's own page under /projects.
   slug?: string;
+  // One line under 110 characters; the base of the page's meta description.
+  tagline?: string;
 }
 
 export const projects: Project[] = [
@@ -105,6 +107,9 @@ export const projects: Project[] = [
       "Payments",
     ],
     featured: true,
+    slug: "stealthx",
+    tagline:
+      "Private machine payments on Solana: a Pinocchio program, MagicBlock rollups and x402.",
   },
   {
     title: "Pinoc",
@@ -113,6 +118,9 @@ export const projects: Project[] = [
     link: "https://github.com/A91y/pinoc",
     tags: ["Rust", "CLI", "Solana", "Pinocchio", "Developer Tooling"],
     featured: true,
+    slug: "pinoc",
+    tagline:
+      "A Rust CLI that scaffolds, builds, tests, lints and deploys Solana programs written with Pinocchio.",
   },
   {
     title: "Full-Time",
@@ -130,6 +138,9 @@ export const projects: Project[] = [
       "SDK",
     ],
     featured: true,
+    slug: "full-time",
+    tagline:
+      "Permissionless, proof-based settlement for parametric sports markets on Solana.",
   },
   {
     title: "Octasol",
@@ -146,6 +157,9 @@ export const projects: Project[] = [
       "GitHub",
     ],
     featured: true,
+    slug: "octasol",
+    tagline:
+      "An open-source bounty platform on Solana: escrowed rewards for GitHub issues, paid when the PR merges.",
   },
   {
     title: "Arachnid",

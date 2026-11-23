@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Project, projects } from "@/lib/data";
 import ProjectShowcase from "@/components/project-showcase";
 import { Button } from "@/components/ui/button";
@@ -19,19 +19,18 @@ const handleHashChange = () => {
   }
 };
 
-// Add event listener for hash changes
-if (typeof window !== "undefined") {
-  window.addEventListener("hashchange", handleHashChange);
-  // Check if the current hash is #projects on initial load
-  handleHashChange();
-}
-
 const featuredProjects = projects.filter((project) => project.featured);
 const hasHiddenProjects = featuredProjects.length < projects.length;
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projects : featuredProjects;
+
+  // Runs after hydration so the glow class never differs from the server HTML.
+  useEffect(() => {
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   return (
     <section id="projects" key="projects" className="space-y-6">
@@ -39,9 +38,12 @@ export default function Projects() {
         <h2 className="text-4xl font-bold tracking-tight">Projects</h2>
         <p className="text-muted-foreground">A selection of my recent work and contributions</p>
       </div>
-      <div id="projects-section" className="space-y-4">
-        {visibleProjects.map((project: Project) => (
-          <ProjectShowcase key={project.title} project={project} />
+      {/* Collapsed projects stay in the server HTML so crawlers can read them. */}
+      <div id="projects-section" className="flex flex-col gap-4">
+        {projects.map((project: Project) => (
+          <div key={project.title} hidden={!showAll && !project.featured}>
+            <ProjectShowcase project={project} />
+          </div>
         ))}
       </div>
       {hasHiddenProjects && (

@@ -280,7 +280,7 @@ export const workExperiences: Experience[] = [
     position: "Full-Stack Fintech Engineer, Contract",
     description:
       "Contract engagement delivered through my web3 agency. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
-    years: "Oct, 2025 - July, 2026",
+    years: "Oct, 2025 - Jul, 2026",
   },
   {
     company: "Turbin3",
@@ -358,7 +358,7 @@ export const workExperiences: Experience[] = [
     position: "Backend Developer",
     description:
       "Fixed Twitter authentication and authorization issues, and resolved other platform bugs.",
-    years: "June, 2024 - July, 2024",
+    years: "Jun, 2024 - Jul, 2024",
   },
   {
     company: "Freelance",
@@ -366,7 +366,7 @@ export const workExperiences: Experience[] = [
     position: "Blockchain Developer",
     description:
       "Built a liquidity pool and DEX using Uniswap V2 on an EVM-based L2.",
-    years: "May, 2024 - June, 2024",
+    years: "May, 2024 - Jun, 2024",
   },
   {
     company: "Freelance",
@@ -374,7 +374,7 @@ export const workExperiences: Experience[] = [
     position: "Python Developer",
     description:
       "Engineered a Python web scraper that bypassed Cloudflare bot protection, containerized deployment with Docker, and earned 5-star client reviews.",
-    years: "May, 2023 - June, 2024",
+    years: "May, 2023 - Jun, 2024",
     link: "https://www.upwork.com/freelancers/~015e68d4915ac74f75?mp_source=share",
   },
 ];

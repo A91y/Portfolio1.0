@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import {
   Experience,
   workExperiences,
@@ -20,13 +21,6 @@ const handleHashChange = () => {
     }
   }
 };
-
-// Add event listener for hash changes
-if (typeof window !== "undefined") {
-  window.addEventListener("hashchange", handleHashChange);
-  // Check if the current hash is #work on initial load
-  handleHashChange();
-}
 
 // "Freelance" names separate clients, not one company, so it never groups.
 const UNGROUPED_COMPANY = "Freelance";
@@ -73,6 +67,13 @@ function ExperienceGroup({
 }
 
 export default function Works() {
+  // Runs after hydration so the glow class never differs from the server HTML.
+  useEffect(() => {
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <section id="work" key="work" className="space-y-12">
       <div className="space-y-6">

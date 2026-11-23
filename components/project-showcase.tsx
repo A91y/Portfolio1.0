@@ -15,7 +15,7 @@ export default function ProjectShowcase({ project }: ProjectShowcaseProps) {
       onClick={() => {
         if (project.link) window.open(project.link);
       }}
-      className={`group modern-card shadow-sm ${
+      className={`group modern-card shadow-xs ${
         isClickable 
           ? "cursor-pointer hover-lift" 
           : "cursor-default"
@@ -27,7 +27,7 @@ export default function ProjectShowcase({ project }: ProjectShowcaseProps) {
           <h3 className="text-lg font-semibold leading-tight tracking-tight">
             {project.title}
           </h3>
-          <div className="flex-shrink-0 mt-0.5">
+          <div className="shrink-0 mt-0.5">
             {project.link ? (
               <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
             ) : (

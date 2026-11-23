@@ -19,12 +19,12 @@ import {
   SiRedis,
   SiRabbitmq,
   SiOpentelemetry,
-  SiTwitter,
+  SiX,
   SiGithub,
-  SiLinkedin,
   SiTelegram,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { FaLinkedin } from "react-icons/fa";
 import { IconType } from "react-icons";
 import { Anchor, type LucideIcon } from "lucide-react";
 import SolanaIcon from "@/components/icons/solana";
@@ -244,12 +244,12 @@ export interface Social {
 }
 
 export const socials: Social[] = [
-  { name: "Twitter", link: "https://twitter.com/ayushagr91", icon: SiTwitter },
+  { name: "Twitter", link: "https://twitter.com/ayushagr91", icon: SiX },
   { name: "GitHub", link: "https://github.com/A91y", icon: SiGithub },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/ayushagr91",
-    icon: SiLinkedin,
+    icon: FaLinkedin,
   },
   { name: "Telegram", link: "https://t.me/AyushAgr91", icon: SiTelegram },
 ];

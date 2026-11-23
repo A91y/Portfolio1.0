@@ -2,7 +2,7 @@ import { aboutYou } from "@/lib/data";
 
 export default function Sidebar() {
   return (
-    <div className="modern-card hover-lift rounded-xl shadow-sm flex flex-col space-y-4 p-6 h-fit static md:sticky top-24 md:min-w-[280px] md:max-w-[320px]">
+    <div className="modern-card hover-lift rounded-xl shadow-xs flex flex-col space-y-4 p-6 h-fit static md:sticky top-24 md:min-w-[280px] md:max-w-[320px]">
       {/* Title/Name */}
       <div className="space-y-2">
         <h1 className="text-2xl font-bold tracking-tight">

@@ -55,7 +55,7 @@ export default function WorkShowcase({
               </p>
             </div>
           </div>
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <DateRange date={grouped ? overallSpan(roles) : first.years} />
           </div>
         </div>

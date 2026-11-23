@@ -20,7 +20,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-sm bg-background/80 border-b border-border mb-8">
+    <nav className="sticky top-0 z-50 backdrop-blur-xs bg-background/80 border-b border-border mb-8">
       <div className="flex justify-between items-center py-4">
         <Logo onClick={() => navigateTo("/")} />
         

@@ -58,7 +58,7 @@ function ExperienceGroup({
 }) {
   const groups = groupByCompany(experiences);
   return (
-    <div id={sectionId} className="modern-card shadow-sm">
+    <div id={sectionId} className="modern-card shadow-xs">
       <div className="p-6 space-y-6">
         {groups.map((roles, index) => (
           <WorkShowcase

@@ -33,7 +33,7 @@ export default function Contact() {
       </div>
       <div
         id="contact-section"
-        className="modern-card shadow-sm"
+        className="modern-card shadow-xs"
       >
         <div className="p-6 space-y-4">
           <div className="space-y-2">

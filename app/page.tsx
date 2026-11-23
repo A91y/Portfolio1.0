@@ -13,7 +13,7 @@ export default function Home() {
         <Navbar />
         <div className="flex flex-col lg:flex-row gap-8 mt-8">
           {/* Sidebar */}
-          <aside className="lg:w-80 flex-shrink-0">
+          <aside className="lg:w-80 shrink-0">
             <Sidebar />
           </aside>
           

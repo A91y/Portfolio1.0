@@ -626,6 +626,9 @@ export const expertise: ExpertiseArea[] = [
     proofs: [
       { label: "Init ~19.5k → ~1.8k CU in native Pinocchio", href: "/projects/stealthx" },
       { label: "Backroll: lending protocol in no_std Rust on Pinocchio", href: "/#work-backroll" },
+      { label: "StealthX: Pinocchio program with hand-written MagicBlock CPIs", href: "/projects/stealthx" },
+      { label: "Full-Time: permissionless settlement program that checks Merkle proofs on-chain", href: "/projects/full-time" },
+      { label: "Lince: yield-aggregation vault logic and strategy integrations", href: "/#work-lince-finance" },
     ],
     tools: ["Solana", "Rust", "Pinocchio", "Anchor", "Token-2022", "MagicBlock", "LiteSVM"],
     featured: true,

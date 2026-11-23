@@ -55,18 +55,18 @@ export default function Hero() {
       
       <div className="flex flex-wrap gap-6 items-center justify-between">
         <ActionButton actionText="Get in Touch" />
-        <div className="flex gap-8">
-          <div className="space-y-1.5">
-            <h3 className="text-2xl font-bold leading-none">
+        <dl className="flex gap-8">
+          <div className="flex flex-col-reverse gap-1.5">
+            <dt className="text-xs text-muted-foreground uppercase tracking-wider">Experience</dt>
+            <dd className="text-2xl font-bold leading-none">
               {aboutYou.yearsOfExperience}
-            </h3>
-            <p className="text-xs text-muted-foreground uppercase tracking-wider">Experience</p>
+            </dd>
           </div>
-          <div className="space-y-1.5">
-            <h3 className="text-2xl font-bold leading-none">{aboutYou.location}</h3>
-            <p className="text-xs text-muted-foreground uppercase tracking-wider">Location</p>
+          <div className="flex flex-col-reverse gap-1.5">
+            <dt className="text-xs text-muted-foreground uppercase tracking-wider">Location</dt>
+            <dd className="text-2xl font-bold leading-none">{aboutYou.location}</dd>
           </div>
-        </div>
+        </dl>
       </div>
       
       <div className="space-y-4">

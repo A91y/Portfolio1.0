@@ -1,6 +1,7 @@
 import {
   aboutYou,
   availability,
+  blog,
   communityExperiences,
   educationExperiences,
   Experience,
@@ -77,6 +78,7 @@ function buildLlmsTxt() {
       [
         `- Email: ${aboutYou.email}`,
         `- ${linked(resume.label, resume.href)}`,
+        `- ${linked(blog.label, blog.href)}`,
         ...socials.map((social) => `- ${linked(social.name, social.link)}`),
       ],
     ],

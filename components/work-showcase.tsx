@@ -14,6 +14,7 @@ function VisitLink({ href }: { href: string }) {
   return (
     <a
       target="_blank"
+      rel="noopener noreferrer"
       href={href}
       className="inline-flex items-center gap-1 ml-2 text-primary hover:underline font-medium"
     >

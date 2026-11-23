@@ -1,7 +1,10 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import {
   aboutYou,
+  blog,
+  cratesProfile,
   educationExperiences,
+  siteUpdated,
   skills,
   socials,
   websiteMetadata,
@@ -15,6 +18,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(websiteMetadata.url),
   title: websiteMetadata.title,
   description: websiteMetadata.description,
   // <meta content="text/html; charset=UTF-8" name="Content-Type" />
@@ -55,11 +59,13 @@ const currentRole = workExperiences.find((experience) =>
 
 const person = {
   "@type": "Person",
+  "@id": `${websiteMetadata.url}/#person`,
   name: aboutYou.name,
+  alternateName: websiteMetadata.alternateName,
   url: websiteMetadata.url,
   image: websiteMetadata.logo_url,
   email: `mailto:${aboutYou.email}`,
-  jobTitle: websiteMetadata.title.split(" | ")[1],
+  jobTitle: websiteMetadata.jobTitle,
   description: aboutYou.description,
   address: { "@type": "PostalAddress", addressLocality: aboutYou.location },
   ...(currentRole && {
@@ -75,7 +81,7 @@ const person = {
     ...(education.link && { url: education.link }),
   })),
   knowsAbout: skills.map((skill) => skill.text),
-  sameAs: socials.map((social) => social.link),
+  sameAs: [...socials.map((social) => social.link), blog.href, cratesProfile],
 };
 
 // schema.org ProfilePage data for search engines and LLM crawlers.
@@ -84,6 +90,7 @@ const profilePageJsonLd = {
   "@type": "ProfilePage",
   url: websiteMetadata.url,
   name: websiteMetadata.title,
+  dateModified: siteUpdated,
   mainEntity: person,
 };
 

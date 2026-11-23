@@ -36,3 +36,9 @@ next-env.d.ts
 
 # vscode
 /.vscode/
+
+local-docs/
+
+# app/sitemap.ts and app/robots.ts serve these; a static copy would conflict
+public/sitemap*.xml
+public/robots.txt

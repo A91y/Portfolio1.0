@@ -18,7 +18,8 @@ export default function Sidebar() {
       
       {/* GitHub Link */}
       <a 
-        target="_blank" 
+        target="_blank"
+        rel="noopener noreferrer"
         href="https://github.com/A91y"
         className="group inline-flex items-center gap-1 text-sm font-medium hover:gap-2 transition-all duration-200"
       >

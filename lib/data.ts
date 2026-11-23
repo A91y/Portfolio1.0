@@ -85,6 +85,8 @@ export interface Project {
   link?: string;
   tags?: string[];
   featured?: boolean;
+  // URL segment of the project's own page under /projects.
+  slug?: string;
 }
 
 export const projects: Project[] = [
@@ -468,6 +470,16 @@ export const resume = {
   href: "https://drive.google.com/file/d/1z0_2Vm_N4bpTQ1TKbjnQ6fYR2eHIBfQM/view?usp=sharing",
 };
 
+export const blog = {
+  label: "Blog",
+  href: "https://blog.ayushagr.me/",
+};
+
+export const cratesProfile = "https://crates.io/users/A91y";
+
+// Date of the last content change; feeds the sitemap and structured data.
+export const siteUpdated = "2026-11-24";
+
 export const logoText = "@a91y";
 
 export const marketingHeadlines = {
@@ -476,9 +488,11 @@ export const marketingHeadlines = {
 };
 
 export const websiteMetadata = {
-  title: "Ayush Agrawal | Solana & Full-Stack Web3 Developer",
+  title: "Ayush Agrawal (A91y) | Solana & Full-Stack Web3 Developer",
+  jobTitle: "Solana & Full-Stack Web3 Developer",
+  alternateName: "A91y",
   description:
-    "Ayush Agrawal, a Solana and full-stack web3 developer building on-chain programs (Rust, Pinocchio, Anchor, MagicBlock) and the backends and frontends around them, across fintech, DePIN, and DeFi.",
+    "Ayush Agrawal (A91y), Solana and full-stack web3 developer. Pinocchio and Anchor programs, MagicBlock rollups, x402 machine payments, fintech payment systems.",
   url: "https://ayushagr.me",
   image_url: "https://ayushagr.me/og_image_ayushagr.png",
   logo_url: "https://ayushagr.me/logo.jpg",
@@ -509,6 +523,5 @@ export const websiteMetadata = {
     "Innogeeks",
     "KIET",
     "A91y",
-    "Ayush Agr",
   ],
 };

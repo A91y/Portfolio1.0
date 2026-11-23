@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { aboutYou, socials } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import SocialOutline from "@/components/social-outline";
@@ -17,14 +18,14 @@ const handleHashChange = () => {
   }
 };
 
-// Add event listener for hash changes
-if (typeof window !== "undefined") {
-  window.addEventListener("hashchange", handleHashChange);
-  // Check if the current hash is #contact on initial load
-  handleHashChange();
-}
-
 export default function Contact() {
+  // Runs after hydration so the glow class never differs from the server HTML.
+  useEffect(() => {
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
     <section id="contact" key="contact" className="space-y-6">
       <div className="space-y-2">

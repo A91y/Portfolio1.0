@@ -1,3 +1,5 @@
+import { blog } from "@/lib/data";
+
 export default function Footer() {
   return (
     <footer className="mt-16 py-8 border-t border-border">
@@ -6,15 +8,22 @@ export default function Footer() {
           Built with <span className="font-medium">TypeScript</span>, <span className="font-medium">Next.js</span> & <span className="font-medium">Tailwind CSS</span>
         </p>
         <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
-          <a 
+          <a
+            href={blog.href}
+            className="hover:text-foreground transition-colors font-medium"
+          >
+            {blog.label}
+          </a>
+          <span>•</span>
+          <a
             href="https://github.com/A91y/Portfolio1.0"
             className="hover:text-foreground transition-colors font-medium"
           >
             View Source
           </a>
           <span>•</span>
-          <a 
-            href="https://github.com/A91y/Portfolio1.0/LICENSE"
+          <a
+            href="https://github.com/A91y/Portfolio1.0/blob/main/LICENSE"
             className="hover:text-foreground transition-colors"
           >
             MIT License

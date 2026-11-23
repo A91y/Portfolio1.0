@@ -1,73 +1,69 @@
 "use client";
 
+import Link from "next/link";
+import type { MouseEvent } from "react";
 import { Button } from "./ui/button";
 import Logo from "./logo";
-import { Home, Briefcase, Mail, Presentation, FileText } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { resume } from "@/lib/data";
+import {
+  Home,
+  Briefcase,
+  Mail,
+  Presentation,
+  FileText,
+  PenLine,
+  type LucideIcon,
+} from "lucide-react";
+import { blog, resume } from "@/lib/data";
+
+// Plain anchors, so the browser fires the `hashchange` event the section glow listens for.
+const SECTIONS: { href: string; label: string; Icon: LucideIcon }[] = [
+  { href: "/#projects", label: "Projects", Icon: Presentation },
+  { href: "/#work", label: "Work", Icon: Briefcase },
+  { href: "/#contact", label: "Contact", Icon: Mail },
+];
+
+const EXTERNAL: { href: string; label: string; Icon: LucideIcon }[] = [
+  { href: blog.href, label: blog.label, Icon: PenLine },
+  { href: resume.href, label: resume.label, Icon: FileText },
+];
+
+// Browsers skip `hashchange` when the hash is already current, so repeat clicks announce it.
+function announceRepeatClick(event: MouseEvent<HTMLAnchorElement>) {
+  const target = new URL(event.currentTarget.href);
+  if (target.pathname === window.location.pathname && target.hash === window.location.hash) {
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
+  }
+}
 
 export default function Navbar() {
-  const router = useRouter();
-
-  function navigateTo(path: string) {
-    router.push(path);
-
-    // Emit the hashchange event if the path contains a hash
-    if (path.includes("#")) {
-      window.location.hash = path.split("#")[1];
-      window.dispatchEvent(new HashChangeEvent("hashchange"));
-    }
-  }
-
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-xs bg-background/80 border-b border-border mb-8">
       <div className="flex justify-between items-center py-4">
-        <Logo onClick={() => navigateTo("/")} />
-        
-        {/* Navigation Menus */}
+        <Logo />
+
         <div className="flex items-center gap-1">
-          <Button
-            onClick={() => navigateTo("/")}
-            variant="ghost"
-            size="sm"
-            className="h-9"
-          >
-            <Home className="h-4 w-4" />
-            <span className="hidden sm:block ml-2">Home</span>
+          <Button asChild variant="ghost" size="sm" className="h-9 no-underline">
+            <Link href="/">
+              <Home className="h-4 w-4" />
+              <span className="hidden sm:block ml-2">Home</span>
+            </Link>
           </Button>
-          <Button
-            onClick={() => navigateTo("/#projects")}
-            variant="ghost"
-            size="sm"
-            className="h-9"
-          >
-            <Presentation className="h-4 w-4" />
-            <span className="hidden sm:block ml-2">Projects</span>
-          </Button>
-          <Button
-            onClick={() => navigateTo("/#work")}
-            variant="ghost"
-            size="sm"
-            className="h-9"
-          >
-            <Briefcase className="h-4 w-4" />
-            <span className="hidden sm:block ml-2">Work</span>
-          </Button>
-          <Button
-            onClick={() => navigateTo("/#contact")}
-            variant="ghost"
-            size="sm"
-            className="h-9"
-          >
-            <Mail className="h-4 w-4" />
-            <span className="hidden sm:block ml-2">Contact</span>
-          </Button>
-          <Button asChild variant="ghost" size="sm" className="h-9">
-            <a href={resume.href} target="_blank" rel="noopener noreferrer">
-              <FileText className="h-4 w-4" />
-              <span className="hidden sm:block ml-2">{resume.label}</span>
-            </a>
-          </Button>
+          {SECTIONS.map(({ href, label, Icon }) => (
+            <Button key={href} asChild variant="ghost" size="sm" className="h-9 no-underline">
+              <a href={href} onClick={announceRepeatClick}>
+                <Icon className="h-4 w-4" />
+                <span className="hidden sm:block ml-2">{label}</span>
+              </a>
+            </Button>
+          ))}
+          {EXTERNAL.map(({ href, label, Icon }) => (
+            <Button key={href} asChild variant="ghost" size="sm" className="h-9 no-underline">
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                <Icon className="h-4 w-4" />
+                <span className="hidden sm:block ml-2">{label}</span>
+              </a>
+            </Button>
+          ))}
         </div>
       </div>
     </nav>

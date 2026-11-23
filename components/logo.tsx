@@ -1,16 +1,13 @@
+import Link from "next/link";
 import { logoText } from "@/lib/data";
 
-interface LogoProps {
-  onClick: Function;
-}
-
-export default function Logo({ onClick }: LogoProps) {
+export default function Logo() {
   return (
-    <div
-      onClick={() => onClick()}
-      className="cursor-pointer max-w-fit px-3 py-1.5 rounded-md text-lg font-bold transition-colors hover:text-muted-foreground"
+    <Link
+      href="/"
+      className="block max-w-fit no-underline px-3 py-1.5 rounded-md text-lg font-bold transition-colors hover:text-muted-foreground"
     >
       {logoText}
-    </div>
+    </Link>
   );
 }

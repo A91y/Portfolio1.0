@@ -14,10 +14,9 @@ const DEDICATED_GLOW_IDS = ["work", "projects", "contact"];
 
 export default function Home() {
   return (
-    <SiteShell>
+    <SiteShell intro={<Hero />}>
       <JsonLd data={[websiteJsonLd, profilePageJsonLd]} />
       <HashGlow any skip={DEDICATED_GLOW_IDS} />
-      <Hero />
       <Expertise />
       <Projects />
       <Achievements />

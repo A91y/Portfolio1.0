@@ -4,6 +4,7 @@ import {
   availability,
   blog,
   communityExperiences,
+  expertise,
   educationExperiences,
   Experience,
   Project,
@@ -37,6 +38,20 @@ function linked(text: string, href?: string) {
 
 function pageUrl(project: Project) {
   return `${websiteMetadata.url}/projects/${project.slug}`;
+}
+
+// Internal hrefs ("/#id", "/projects/x") become absolute so the line stands alone.
+function absolute(href: string) {
+  return href.startsWith("/") ? `${websiteMetadata.url}${href}` : href;
+}
+
+function expertiseLines() {
+  return expertise.map((area) => {
+    const proofs = area.proofs
+      .map((proof) => (proof.href ? `${proof.label} (${absolute(proof.href)})` : proof.label))
+      .join(", ");
+    return `- ${area.title}: ${area.claim} Proof: ${proofs}`;
+  });
 }
 
 function experienceLines(experiences: Experience[]) {
@@ -100,6 +115,7 @@ export async function buildLlmsText({ full }: { full: boolean }) {
         `- Experience: ${aboutYou.yearsOfExperience}`,
       ],
     ],
+    ["Expertise", expertiseLines()],
     [
       "Availability",
       [availability.open ? `${availability.headline}. ${availability.detail}` : "Not currently available."],

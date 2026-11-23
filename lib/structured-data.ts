@@ -4,9 +4,9 @@ import {
   blog,
   cratesProfile,
   educationExperiences,
+  expertise,
   Project,
   siteUpdated,
-  skills,
   socials,
   websiteMetadata,
   workExperiences,
@@ -14,6 +14,9 @@ import {
 import type { ProjectPage } from "@/lib/project-pages";
 
 // schema.org data for search engines and LLM crawlers.
+
+// Listed in knowsAbout after the expertise area titles.
+const CORE_TOPICS = ["Rust", "Solana", "Pinocchio", "Anchor", "TypeScript", "PostgreSQL"];
 
 export const PERSON_ID = `${websiteMetadata.url}/#person`;
 
@@ -44,7 +47,7 @@ const person = {
     name: education.company,
     ...(education.link && { url: education.link }),
   })),
-  knowsAbout: skills.map((skill) => skill.text),
+  knowsAbout: [...expertise.map((area) => area.title), ...CORE_TOPICS],
   award: achievements.map((achievement) => `${achievement.title}, ${achievement.event} (${achievement.date})`),
   sameAs: [...socials.map((social) => social.link), blog.href, cratesProfile],
 };

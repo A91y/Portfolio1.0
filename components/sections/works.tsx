@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import {
   Experience,
   workExperiences,
@@ -8,19 +5,7 @@ import {
   educationExperiences,
 } from "@/lib/data";
 import WorkShowcase from "@/components/work-showcase";
-
-// Function to handle hash change
-const handleHashChange = () => {
-  if (window.location.hash === "#work") {
-    const workSection = document.getElementById("work-section");
-    if (workSection) {
-      workSection.classList.add("glow-border");
-      setTimeout(() => {
-        workSection.classList.remove("glow-border");
-      }, 3000); // Remove the glow effect after 3 seconds
-    }
-  }
-};
+import HashGlow from "@/components/hash-glow";
 
 // "Freelance" names separate clients, not one company, so it never groups.
 const UNGROUPED_COMPANY = "Freelance";
@@ -96,15 +81,9 @@ const inSection = (section: Experience["section"]) =>
   workExperiences.filter((experience) => experience.section === section);
 
 export default function Works() {
-  // Runs after hydration so the glow class never differs from the server HTML.
-  useEffect(() => {
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
   return (
     <section id="work" key="work" className="space-y-12">
+      <HashGlow hash="#work" targetId="work-section" />
       <div className="space-y-6">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold tracking-tight">Work</h2>

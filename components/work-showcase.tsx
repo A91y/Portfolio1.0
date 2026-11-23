@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { Experience } from "@/lib/data";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import DateRange from "./date-range";
 import { ExternalLink } from "lucide-react";
@@ -46,10 +46,13 @@ export default function WorkShowcase({
       <div className="space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
           <div className="flex items-center gap-3 flex-1 min-w-0">
-            <Avatar className="h-12 w-12 border-2 border-border">
-              <AvatarImage src={first.logo} alt={first.company} />
-              <AvatarFallback className="text-xs">{first.company.slice(0, 2).toUpperCase()}</AvatarFallback>
-            </Avatar>
+            <Image
+              src={first.logo}
+              alt={`${first.company} logo`}
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 rounded-full border-2 border-border object-cover"
+            />
             <div className="min-w-0 flex-1">
               <Heading className="font-semibold text-base leading-tight tracking-tight group-hover:text-primary transition-colors">
                 {first.company}

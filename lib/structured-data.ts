@@ -49,6 +49,19 @@ const person = {
   sameAs: [...socials.map((social) => social.link), blog.href, cratesProfile],
 };
 
+// Google reads WebSite name and alternateName for the site name shown in results.
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${websiteMetadata.url}/#website`,
+  url: websiteMetadata.url,
+  name: aboutYou.name,
+  alternateName: [websiteMetadata.alternateName, "ayushagr.me"],
+  description: websiteMetadata.description,
+  inLanguage: "en",
+  publisher: { "@id": PERSON_ID },
+};
+
 export const profilePageJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",

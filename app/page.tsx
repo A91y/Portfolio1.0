@@ -5,12 +5,12 @@ import Hero from "@/components/sections/hero";
 import Projects from "@/components/sections/projects";
 import Works from "@/components/sections/works";
 import SiteShell from "@/components/site-shell";
-import { profilePageJsonLd } from "@/lib/structured-data";
+import { profilePageJsonLd, websiteJsonLd } from "@/lib/structured-data";
 
 export default function Home() {
   return (
     <SiteShell>
-      <JsonLd data={profilePageJsonLd} />
+      <JsonLd data={[websiteJsonLd, profilePageJsonLd]} />
       <Hero />
       <Projects />
       <Achievements />

@@ -1,33 +1,12 @@
-"use client";
-
-import { useEffect } from "react";
 import { aboutYou, socials } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
+import HashGlow from "@/components/hash-glow";
 import SocialOutline from "@/components/social-outline";
 
-// Function to handle hash change
-const handleHashChange = () => {
-  if (window.location.hash === "#contact") {
-    const contactSection = document.getElementById("contact-section");
-    if (contactSection) {
-      contactSection.classList.add("glow-border");
-      setTimeout(() => {
-        contactSection.classList.remove("glow-border");
-      }, 3000); // Remove the glow effect after 3 seconds
-    }
-  }
-};
-
 export default function Contact() {
-  // Runs after hydration so the glow class never differs from the server HTML.
-  useEffect(() => {
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
   return (
     <section id="contact" key="contact" className="space-y-6">
+      <HashGlow hash="#contact" targetId="contact-section" />
       <div className="space-y-2">
         <h2 className="text-4xl font-bold tracking-tight">Get In Touch</h2>
         <p className="text-muted-foreground">Let&apos;s connect and build something amazing</p>

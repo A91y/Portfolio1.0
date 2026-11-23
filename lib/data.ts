@@ -634,7 +634,7 @@ export const expertise: ExpertiseArea[] = [
     title: "Payments & fintech engineering",
     claim: "Money movement, and the onboarding behind it.",
     proofs: [
-      { label: "Led the foundation of Credible's business payments flow and built it", href: "/#work-credible" },
+      { label: "Led the foundation of a fintech payment provider's business payments flow and built it", href: "/#work-credible" },
       { label: "KYC/KYB compliance pipelines and provider integrations", href: "/#work-credible" },
       { label: "Private x402 payments for AI agents", href: "/projects/stealthx" },
     ],

@@ -28,14 +28,23 @@ function groupByCompany(experiences: Experience[]) {
   return groups;
 }
 
+// Anchor id for a work card, such as "work-lince-finance".
+function cardId(company: string) {
+  const slug = company.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  return `work-${slug}`;
+}
+
 function ExperienceGroup({
   experiences,
   sectionId,
   headingLevel = "h3",
+  cardIds = false,
 }: {
   experiences: Experience[];
   sectionId?: string;
   headingLevel?: "h3" | "h4";
+  // Set only where each company appears once, so ids stay unique.
+  cardIds?: boolean;
 }) {
   const groups = groupByCompany(experiences);
   return (
@@ -47,6 +56,7 @@ function ExperienceGroup({
             roles={roles}
             whetherlast={groups.length == index + 1}
             headingLevel={headingLevel}
+            id={cardIds && roles[0].company !== UNGROUPED_COMPANY ? cardId(roles[0].company) : undefined}
           />
         ))}
       </div>
@@ -59,11 +69,13 @@ function SubGroup({
   note,
   experiences,
   sectionId,
+  cardIds = false,
 }: {
   label: string;
   note?: string;
   experiences: Experience[];
   sectionId?: string;
+  cardIds?: boolean;
 }) {
   if (experiences.length === 0) return null;
   return (
@@ -72,7 +84,12 @@ function SubGroup({
         <h3 className="text-sm font-semibold uppercase tracking-wider">{label}</h3>
         {note && <p className="text-sm text-muted-foreground">{note}</p>}
       </div>
-      <ExperienceGroup experiences={experiences} sectionId={sectionId} headingLevel="h4" />
+      <ExperienceGroup
+        experiences={experiences}
+        sectionId={sectionId}
+        headingLevel="h4"
+        cardIds={cardIds}
+      />
     </div>
   );
 }
@@ -91,23 +108,25 @@ export default function Works() {
             My professional journey and contributions
           </p>
         </div>
-        <SubGroup label="Current" experiences={inSection("current")} sectionId="work-section" />
+        <SubGroup label="Current" experiences={inSection("current")} sectionId="work-section" cardIds />
         <SubGroup
           label="Web3 engineering practice"
           note="Client work delivered through my agency."
           experiences={inSection("agency")}
+          sectionId="work-agency"
+          cardIds
         />
-        <SubGroup label="Earlier" experiences={inSection("earlier")} />
+        <SubGroup label="Earlier" experiences={inSection("earlier")} cardIds />
       </div>
 
-      <div className="space-y-6">
+      <div id="community" className="space-y-6">
         <h2 className="text-4xl font-bold tracking-tight">Community</h2>
         <ExperienceGroup experiences={communityExperiences} />
       </div>
 
-      <div className="space-y-6">
+      <div id="programs-education" className="space-y-6">
         <h2 className="text-4xl font-bold tracking-tight">Programs & Education</h2>
-        <SubGroup label="Programs" experiences={inSection("program")} />
+        <SubGroup label="Programs" experiences={inSection("program")} cardIds />
         <SubGroup label="Education" experiences={educationExperiences} />
       </div>
     </section>

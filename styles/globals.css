@@ -162,6 +162,10 @@
   * {
     @apply border-border;
   }
+  /* Sticky navbar height (73px) plus 1rem, so anchor targets land below it. */
+  html {
+    scroll-padding-top: 5.5rem;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;

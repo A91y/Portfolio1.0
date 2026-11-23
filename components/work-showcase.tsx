@@ -10,6 +10,8 @@ interface WorkShowcaseProps {
   whetherlast: boolean;
   // h4 when the card sits under a sub-group's h3.
   headingLevel?: "h3" | "h4";
+  // Anchor target, such as "work-credible".
+  id?: string;
 }
 
 function VisitLink({ href }: { href: string }) {
@@ -35,6 +37,7 @@ export default function WorkShowcase({
   roles,
   whetherlast,
   headingLevel = "h3",
+  id,
 }: WorkShowcaseProps) {
   const Heading = headingLevel;
   const first = roles[0];
@@ -42,7 +45,7 @@ export default function WorkShowcase({
   const link = roles.find((role) => role.link)?.link;
 
   return (
-    <div className="group">
+    <div id={id} className="group">
       <div className="space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
           <div className="flex items-center gap-3 flex-1 min-w-0">

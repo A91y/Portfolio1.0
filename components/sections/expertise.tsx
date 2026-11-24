@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { expertise, ExpertiseArea, ExpertiseProof, Skill, skills } from "@/lib/data";
 import SkillOutline from "@/components/skill-outline";
 
@@ -26,7 +26,7 @@ function ProofLink({ proof }: { proof: ExpertiseProof }) {
     return (
       <Link href={proof.href} className="font-medium">
         {proof.label}
-        <ArrowRight className="ml-1 inline h-3 w-3 align-[-0.1em]" />
+        <ArrowUpRight className="ml-1 inline h-3 w-3 align-[-0.1em]" />
       </Link>
     );
   }

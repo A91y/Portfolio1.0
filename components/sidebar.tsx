@@ -35,7 +35,7 @@ export default function Sidebar({ nameIsHeading = true }: { nameIsHeading?: bool
         className="group inline-flex items-center gap-1 text-sm font-medium hover:gap-2 transition-all duration-200"
       >
         <span>View My GitHub</span>
-        <span className="group-hover:translate-x-1 transition-transform">→</span>
+        <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
       </a>
     </div>
   );

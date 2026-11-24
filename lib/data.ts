@@ -307,7 +307,7 @@ export const workExperiences: Experience[] = [
     logo: "/backroll.png",
     position: "Protocol Engineer",
     description:
-      "Writing an on-chain lending protocol on Solana in no_std Rust on Pinocchio, without Anchor: vault accounting with Token-2022 share tokens, collateral tiers, leverage limits, liquidation thresholds, and trade execution into Raydium pools by CPI. Built the off-chain TypeScript keeper that indexes chain state, simulates, co-signs and sends transactions, and runs liquidations, with positions and share accounting in Postgres so clients read one consistent view.",
+      "Building Backroll, an on-chain prop trading desk on Solana: investors fund a shared USDC vault, and traders post first-loss collateral to trade spot with up to 10x it in vault capital. Wrote the program in no_std Rust on Pinocchio, without Anchor; it holds every dollar: brUSDC vault shares (Token-2022) priced against NAV, borrow-on-trade leverage tiers, swaps into Raydium CPMM and AMM v4 pools by CPI with the pool and destination pinned, profit splits, and liquidations re-checked against live reserves. Built the TypeScript keeper that cosigns trades, marks positions from pool reserves and runs liquidations, with Postgres behind its API; it sets policy but cannot move funds. Also built the Next.js app where traders and investors both work. Live on devnet.",
     years: "Sep, 2026 - Present",
   },
   {
@@ -633,7 +633,7 @@ export const expertise: ExpertiseArea[] = [
     claim: "Native Pinocchio and Anchor programs, measured down to compute units.",
     proofs: [
       { label: "Init ~19.5k → ~1.8k CU in native Pinocchio", href: "/#work-turbin3" },
-      { label: "Backroll: lending protocol in no_std Rust on Pinocchio", href: "/#work-backroll" },
+      { label: "Backroll: on-chain prop trading program in no_std Rust on Pinocchio", href: "/#work-backroll" },
       { label: "StealthX: Pinocchio program with hand-written MagicBlock CPIs", href: "/projects/stealthx" },
       { label: "Full-Time: permissionless settlement program that checks Merkle proofs on-chain", href: "/projects/full-time" },
     ],
@@ -657,7 +657,7 @@ export const expertise: ExpertiseArea[] = [
     title: "DeFi protocol design",
     claim: "Vaults, leverage, liquidations and settlement.",
     proofs: [
-      { label: "Backroll: vault shares, collateral tiers, liquidations", href: "/#work-backroll" },
+      { label: "Backroll: brUSDC vault shares, leverage tiers, liquidations checked on-chain", href: "/#work-backroll" },
       { label: "Lince: yield aggregation and rebalancing", href: "/#work-lince-finance" },
       { label: "Merkle Labs: DLMM liquidity bot", href: "/#work-merkle-labs" },
       { label: "Proof-based settlement", href: "/projects/full-time" },
@@ -682,7 +682,7 @@ export const expertise: ExpertiseArea[] = [
     title: "Backend & data",
     claim: "Keepers, indexers and large databases.",
     proofs: [
-      { label: "Backroll keeper and Postgres-backed positions", href: "/#work-backroll" },
+      { label: "Backroll keeper: cosigns trades, marks positions, runs liquidations", href: "/#work-backroll" },
       { label: "PostgreSQL at 80M+ records: migrations, indexing, dedup" },
     ],
     tools: ["Node", "PostgreSQL", "Redis", "RabbitMQ", "OpenTelemetry", "Docker"],

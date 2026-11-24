@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { aboutYou, socials } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import HashGlow from "@/components/hash-glow";
@@ -20,9 +21,10 @@ export default function Contact() {
             <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Email</h3>
             <a 
               href={`mailto:${aboutYou.email}`}
-              className="text-base font-medium hover:underline underline-offset-4 inline-block transition-all"
+              className="text-base font-medium inline-flex items-center gap-1 transition-all"
             >
               {aboutYou.email}
+              <ArrowUpRight className="h-4 w-4 shrink-0" />
             </a>
           </div>
           <Separator />

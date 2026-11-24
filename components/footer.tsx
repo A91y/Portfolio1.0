@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { blog } from "@/lib/data";
 
 export default function Footer() {
@@ -10,23 +11,26 @@ export default function Footer() {
         <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
           <a
             href={blog.href}
-            className="hover:text-foreground transition-colors font-medium"
+            className="inline-flex items-center gap-0.5 hover:text-foreground transition-colors font-medium"
           >
             {blog.label}
+            <ArrowUpRight className="h-3 w-3" />
           </a>
           <span>•</span>
           <a
             href="https://github.com/A91y/Portfolio1.0"
-            className="hover:text-foreground transition-colors font-medium"
+            className="inline-flex items-center gap-0.5 hover:text-foreground transition-colors font-medium"
           >
             View Source
+            <ArrowUpRight className="h-3 w-3" />
           </a>
           <span>•</span>
           <a
             href="https://github.com/A91y/Portfolio1.0/blob/main/LICENSE"
-            className="hover:text-foreground transition-colors"
+            className="inline-flex items-center gap-0.5 hover:text-foreground transition-colors"
           >
             MIT License
+            <ArrowUpRight className="h-3 w-3" />
           </a>
           <span>•</span>
           <span>Deployed on Vercel</span>

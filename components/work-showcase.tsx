@@ -20,7 +20,7 @@ function VisitLink({ href }: { href: string }) {
       target="_blank"
       rel="noopener noreferrer"
       href={href}
-      className="inline-flex items-center gap-1 ml-2 text-primary hover:underline font-medium"
+      className="inline-flex items-center gap-1 ml-2 text-primary font-medium"
     >
       Visit <ExternalLink className="h-3 w-3" />
     </a>

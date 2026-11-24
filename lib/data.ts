@@ -525,7 +525,7 @@ export const availability = {
 
 export const resume = {
   label: "Resume",
-  href: "https://drive.google.com/file/d/1z0_2Vm_N4bpTQ1TKbjnQ6fYR2eHIBfQM/view?usp=sharing",
+  href: "https://drive.google.com/file/d/1AND3s_oTKcu3ZwKIOY3G0bXi4riRZVfe/view?usp=sharing",
 };
 
 export const blog = {

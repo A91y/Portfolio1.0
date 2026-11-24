@@ -13,6 +13,7 @@ const page: ProjectPage = {
   results: [
     "600+ users in its first month, with no paid marketing.",
     "Backed by a Superteam grant.",
+    "32 stars and 19 forks on GitHub (Nov 2026).",
   ],
   credit: "Founded and led by me, built with a team of 3 along with more open-source contributors.",
   stack: ["Rust", "Anchor", "Solana", "Next.js", "TypeScript", "Prisma", "PostgreSQL"],

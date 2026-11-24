@@ -195,6 +195,13 @@ export const projects: Project[] = [
     link: "https://blinks.ayushagr.me/",
     tags: ["Solana", "Rust", "Anchor", "Next.js", "TypeScript", "Blinks"],
   },
+  {
+    title: "PayInUSDC",
+    description:
+      "Pay any Solana address in the token you hold while it receives an exact USDC amount: a Jupiter ExactOut swap delivers USDC straight to the receiver's token account. Built with Next.js and the Solana wallet adapter.",
+    link: "https://github.com/A91y/PayInUSDC",
+    tags: ["Solana", "Jupiter", "USDC", "Payments", "Next.js", "TypeScript"],
+  },
 
   // Below the fold
   {
@@ -310,7 +317,7 @@ export const workExperiences: Experience[] = [
     logo: "/crediblefin.jpeg",
     position: "Full-Stack Fintech Engineer, Contract",
     description:
-      "Led and built the foundation of the business payments flow. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, third-party financial integrations, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
+      "Led and built the foundation of the business payments flow. Full-stack engineering for a B2B and B2C fintech company: KYC/KYB compliance pipelines, provider and ramp integrations, settlement and reconciliation, async messaging, Solana/EVM wallet auth and transaction logic, user-facing and internal portals, and a stablecoin yield portal.",
     years: "Oct, 2025 - Jul, 2026",
   },
   {
@@ -568,7 +575,8 @@ export const achievements: Achievement[] = [
     title: "1st place, Contribute to the Solana AI Agent Toolkit (Part 2)",
     event: "SendAI bounty",
     date: "Jan 2025",
-    detail: "1,000 USDC prize.",
+    detail:
+      "Built the kit's Squads multisig integration: create a multisig, deposit, transfer from the vault, and create, approve, reject and execute proposals. 1,000 USDC prize.",
     href: "https://superteam.fun/earn/listing/contribute-to-the-solana-ai-agent-toolkit-part-2",
   },
   {
@@ -638,7 +646,7 @@ export const expertise: ExpertiseArea[] = [
     claim: "Money movement, and the onboarding behind it.",
     proofs: [
       { label: "Led and built the foundation of a fintech company's business payments flow", href: "/#work-credible" },
-      { label: "KYC/KYB compliance pipelines and provider integrations", href: "/#work-credible" },
+      { label: "KYC/KYB pipelines, provider and ramp integrations, settlement and reconciliation", href: "/#work-credible" },
       { label: "Private x402 payments for AI agents", href: "/projects/stealthx" },
     ],
     tools: ["TypeScript", "NestJS", "RabbitMQ", "MongoDB", "x402"],
@@ -697,7 +705,10 @@ export const expertise: ExpertiseArea[] = [
     claim: "RL environments and AI agents for Solana.",
     proofs: [
       { label: "svm-exploit-gym: RL environment for Solana exploits", href: "/projects/svm-exploit-gym" },
-      { label: "1st place, Solana AI Agent Toolkit bounty", href: "/#achievements" },
+      {
+        label: "Solana Agent Kit: built its Squads multisig integration (1st place, SendAI bounty)",
+        href: "https://github.com/sendaifun/solana-agent-kit/tree/v2/packages/plugin-misc/src/squads",
+      },
       { label: "Arachnid: transformer-based classifier", href: "/projects/arachnid" },
     ],
     tools: ["Python", "PyTorch", "Gymnasium", "Hugging Face Transformers"],

@@ -15,6 +15,7 @@ const page: ProjectPage = {
   results: [
     "Published on crates.io as pinoc (v0.4.1): cargo install pinoc, or cargo binstall pinoc for a prebuilt binary.",
     "Ships a GitHub Action that installs a pinned pinoc in CI.",
+    "2,500+ downloads on crates.io and 17 stars on GitHub (Nov 2026).",
   ],
   stack: ["Rust", "Pinocchio", "Solana", "mollusk-svm", "Codama"],
   links: [
